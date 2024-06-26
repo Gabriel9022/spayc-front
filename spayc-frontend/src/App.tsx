@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Services from './Components/Services/Services';
 import CareOptions from './Components/CareOptions/CareOptions';
@@ -15,14 +16,15 @@ const App: React.FC = () => {
 
   return (
     <Router>
+      <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/servicios" element={<Services/>}/>
         <Route path="/opciones-de-cuidados" element={<CareOptions/>}/>
         <Route path="/corporativo" element={<InstitutionalServices/>}/>
-        <Route path="/trabaja-con-nosotros" element={<WorkWithUs/>}/>
-        <Route path="/contactanos" element={<Contact/>}/>
         <Route path="/nosotros" element={<AboutUs/>}/>
+        <Route path="/trabaja-con-nosotros" element={<WorkWithUs/>}/>
+        <Route path="/contacto" element={<Contact/>}/>
         <Route path="/loggin" element={<Loggin/>}/>
         <Route path="/panel" element={<EditPanel/>}/>        
       </Routes>

@@ -1,9 +1,36 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Header: React.FC = () => {
   return (
-    <div>Header</div>
+    <header className='Header' id='Header'>
+      <nav className='Header_nav'>
+        <ul className='Header_nav_menu'>
+          <li className='Header_nav_menu_item'>
+            <NavLink to="/">INICIO</NavLink>
+          </li>
+          <li className='Header_nav_menu_item'>
+            <NavLink to="/servicios">SERVICIOS</NavLink>
+          </li>
+          <li className='Header_nav_menu_item'>
+            <NavLink to="/opciones-de-cuidados">OPCIONES DE CUIDADOS</NavLink>
+          </li>
+          <li className='Header_nav_menu_item'>
+            <NavLink to="/corporativo">CORPORTATIVO</NavLink>
+          </li>
+          <li className='Header_nav_menu_item'>
+            <NavLink to="/nosotros">NOSOTROS</NavLink>
+          </li>
+          <li className='Header_nav_menu_item'>
+            <NavLink to="/trabaja-con-nosotros">TRABAJA CON NOSOTROS</NavLink>
+          </li>
+          <li className='Header_nav_menu_item'>
+            <NavLink to="/contacto">CONTACTO</NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
   )
 }
 
-export default Header
+export default Header;
