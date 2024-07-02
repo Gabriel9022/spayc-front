@@ -1,0 +1,13 @@
+.InstitutionalServices_component {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.InstitutionalServices_title {
+    display: flex;
+    padding: 20px 0;
+}
+
+.InstitutionalServices_ul {
+    padding-left: 20px;
+}
