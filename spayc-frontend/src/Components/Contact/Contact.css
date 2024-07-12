@@ -1,0 +1,30 @@
+.Contact_component {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Contact_sections {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Contact_form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.Contact_name_lastName {
+    display: flex;
+    column-gap: 5px
+}
+
+.Contact_name, .Contact_lastName {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.Contact_errors {
+    color: red;
+}
