@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
 import Services from './Components/Services/Services';
 import CareOptions from './Components/CareOptions/CareOptions';
@@ -28,6 +29,7 @@ const App: React.FC = () => {
         <Route path="/loggin" element={<Loggin/>}/>
         <Route path="/panel" element={<EditPanel/>}/>        
       </Routes>
+      <Footer/>
     </Router>
   )
 }
