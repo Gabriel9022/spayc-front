@@ -1,0 +1,51 @@
+.Services_card_section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+.Services_card_container {
+    display: flex;
+    justify-content: center;
+}
+
+.Services_card {
+    display: flex;
+    flex-direction: row;
+}
+
+.Services_card_info {
+    margin-left: 20px;
+    padding: 20px 10px;
+}
+
+.Services_card_info h2 {
+    margin-bottom: 20px;
+}
+
+.Services_card_info ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.Services_description {
+    font-size: 20px;
+}
+
+.Services_card_img {
+    margin-right: 10px;
+    width: 350px;
+    height: 350px;
+}
+
+.Services_img {
+    width: 100%;
+    height: auto;
+}
