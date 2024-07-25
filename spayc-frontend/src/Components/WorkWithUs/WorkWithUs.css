@@ -113,3 +113,7 @@ textarea.WorkWithUs_input {
     background-color: darkblue;
     border: darkblue ;
 }
+
+.Contact_errors {
+    color: red;
+}
