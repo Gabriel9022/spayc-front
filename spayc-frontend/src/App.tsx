@@ -4,7 +4,7 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
 import Services from './Components/Services/Services';
-import CareOptions from './Components/CareOptions/CareOptions';
+import Profesionals from './Components/Profesionals/Profesionals';
 import InstitutionalServices from './Components/InstitutionalServices/InstitutionalServices';
 import WorkWithUs from './Components/WorkWithUs/WorkWithUs';
 import Contact from './Components/Contact/Contact';
@@ -21,8 +21,8 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/servicios" element={<Services/>}/>
-        <Route path="/opciones-de-cuidados" element={<CareOptions/>}/>
-        <Route path="/corporativo" element={<InstitutionalServices/>}/>
+        <Route path="/instituciones" element={<InstitutionalServices/>}/>
+        <Route path="/profesionales" element={<Profesionals/>}/>
         <Route path="/nosotros" element={<AboutUs/>}/>
         <Route path="/trabaja-con-nosotros" element={<WorkWithUs/>}/>
         <Route path="/contacto" element={<Contact/>}/>

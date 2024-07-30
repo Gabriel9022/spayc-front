@@ -14,10 +14,10 @@ const Header: React.FC = () => {
             <NavLink to="/servicios">SERVICIOS</NavLink>
           </li>
           <li className='Header_nav_menu_item'>
-            <NavLink to="/opciones-de-cuidados">OPCIONES DE CUIDADOS</NavLink>
+            <NavLink to="/instituciones">INSTITUCIONES</NavLink>
           </li>
           <li className='Header_nav_menu_item'>
-            <NavLink to="/corporativo">CORPORTATIVO</NavLink>
+            <NavLink to="/profesionales">PROFESIONALES</NavLink>
           </li>
           <li className='Header_nav_menu_item'>
             <NavLink to="/nosotros">NOSOTROS</NavLink>

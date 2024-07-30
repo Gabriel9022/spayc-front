@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 import WorkWithUsImage from '../../assets/images/WorkWithUs/WorkWithUs_img.png';
 import './WorkWithUs.css'
 
@@ -74,11 +75,17 @@ const WorkWithUs: React.FC = () => {
           <div className='WorkWithUs_info_container'>
             <div className='WorkWithUs_info'>
               <h1 className='WorkWithUs_info_title'>Únete a SPAYC: Trabaja con Nosotros</h1>
-              <p className='WorkWithUs_info_description'>En SPAYC, Servicios Profesionales de Apoyos y Cuidados para Personas Mayores, contamos con una sólida trayectoria en el cuidado y acompañamiento de personas mayores. Nos dedicamos a ofrecer servicios de la más alta calidad, enfocados en mejorar la calidad de vida de nuestros usuarios y sus familias.</p>
-              <p className='WorkWithUs_info_description'>Buscamos profesionales comprometidos y altamente capacitados que compartan nuestra pasión por el cuidado y el bienestar de las personas mayores. Si tienes experiencia en el rubro y un fuerte deseo de hacer una diferencia en la vida de nuestros clientes, ¡queremos conocerte! Únete a nuestro equipo y sé parte de una organización que valora la dedicación, el profesionalismo y el respeto.</p>
+              <p className='WorkWithUs_info_description'>En SPAYC, Servicios Profesionales de Apoyos y Cuidados para Personas Mayores, contamos con una sólida trayectoria en el cuidado y acompañamiento de personas mayores. Nos dedicamos a ofrecer servicios de la más alta calidad, enfocados en mejorar la calidad de vida de las personas mayores y sus familias.</p>
+              <p className='WorkWithUs_info_description'>Buscamos profesionales comprometidos y altamente capacitados que compartan nuestra pasión por el cuidado y el bienestar.</p>
+              <p className='WorkWithUs_info_description'>Si tiene conocimientos, experiencia en el rubro y un fuerte deseo de hacer una diferencia positiva en la vida de las personas mayores y sus familias, CONTACTESE con nosotros y forme parte de nuestro equipo!</p>
             </div>
             <div className='WorkWithUs_image_container'>
               <img className='WorkWithUs_image' src={WorkWithUsImage} alt="imagen trabaja con nosotros" />
+            </div>
+          </div>
+          <div className='WorkWithUs_perfil_container'>
+            <div className='WorkWithUs_perfil'>
+              <p className='WorkWithUs_perfil_description'>Conozca el <Link to="/profesionales">PERFIL DE NUESTROS PROFESIONALES</Link></p>
             </div>
           </div>
         </div>
