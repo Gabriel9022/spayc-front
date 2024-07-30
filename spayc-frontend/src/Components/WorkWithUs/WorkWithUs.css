@@ -1,3 +1,10 @@
+.WorkWithUs_section_info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+}
+
 .WorkWithUs_info_container {
     max-width: 1000px;
     display: flex;
@@ -29,6 +36,26 @@
 .WorkWithUs_image {
     width: 516px;
     height: 786px;
+}
+
+.WorkWithUs_perfil {
+    padding: 40px 0;
+}
+
+.WorkWithUs_perfil_description {
+    font-size: 24px;
+}
+
+.WorkWithUs_perfil_description a {
+    padding: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.WorkWithUs_perfil_description a:hover {
+    background-color: #009DD9;
 }
 
 .WorkWithUs_section_form {
