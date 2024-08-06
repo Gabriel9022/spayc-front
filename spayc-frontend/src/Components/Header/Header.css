@@ -1,7 +1,25 @@
+.Header_content_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.Header_logo_container {
+    display: flex;
+    width: 150px;
+}
+
+.logo {
+    width: 100%;
+    align-self: center;
+}
+
 .Header_nav {
     display: flex;
     justify-content: flex-end;
-    padding: 30px;
+    align-self: center;
+    height: 120px;
+    padding: 30px 0;
 }
 
 .Header_nav_menu {
