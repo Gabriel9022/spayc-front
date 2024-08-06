@@ -4,12 +4,55 @@ import './AboutUs.css';
 const AboutUs: React.FC = () => {
   return (
     <div className='AboutUs_component'>
-      <p className='AboutUs_p'>
-      Somos un equipo multidisciplinario, liderado por Licenciadas en Trabajo Social, con formación y experiencia en el trabajo con personas mayores.<br/> 
-      Porque no hay nada mejor que envejecer en casa, en un entorno hogareño, confortable, accesible, significativo y seguro.<br/>
-      SPAYC te ofrece personal altamente capacitado para brindar a las personas mayores y su familia, un servicio de apoyos y cuidados para el desarrollo de las actividades básicas, instrumentales y/o avanzadas de la vida diaria. Siempre identificando y respetando necesidades, gustos, deseos y preferencias de la persona mayor.<br/>
-      Nos caracterizamos por trabajar desde un enfoque de derechos, con perspectiva de género y mirada gerontológica. Nuestros profesionales se distinguen por realizar sus intervenciones desde el modelo de atención centrada en la persona, un “modelo de atención personalizado y profesionalizado que busca mejorar la calidad de vida de las personas mayores que precisan cuidados, dando máxima importancia al respeto a su individualidad, a su modo de vida y a sus decisiones o preferencias en el día a día”.
-      </p>
+      <div className='AboutUs_sections'>
+        <div className='AboutUs_intro_section'>
+          <p>Somos una empresa dedicada al cuidado integral y personalizado de personas mayores, comprometida en ofrecer servicios de alta calidad que mejoren su vida y promuevan su bienestar y autonomía. Con un equipo especializado en gerontología y una profunda vocación de servicio, nos dedicamos a proporcionar soluciones adaptadas a las necesidades únicas de cada individuo y su familia, diseñando planes de cuidados personalizados que abarcan desde la asistencia en actividades básicas de la vida diaria hasta el apoyo y estimulación biopsicosocial.</p>
+        </div>
+        <div className='AboutUs_description_section'>
+          <div className='AboutUs_description_container'>
+            <p>En SPAYC nos caracterizamos por:</p>
+            <div className='description_container'>
+              <p>Selección y capacitación de profesionales</p>
+              <p>Proceso riguroso de selección que incluye entrevistas, verificación de antecedentes, referencias y certificaciones para asegurar la idoneidad y confiabilidad de los profesionales.
+              Capacitación continua en habilidades técnicas, buen trato y derechos de las personas mayores, promoviendo el respeto y la empatía en la atención.</p>
+            </div>
+            <div className='description_container'>
+              <p>Adaptabilidad y personalización del servicio</p>
+              <p>Evaluación detallada de las necesidades específicas de cada persona y adaptación de los cuidados según sus condiciones de salud, preferencias y rutinas diarias.</p>
+            </div>
+            <div className='description_container'>
+              <p>Supervisión y apoyo continuo</p>
+              <p>Apoyo emocional, asesoramiento profesional y monitoreo constante del desempeño de los cuidadores para garantizar la calidad del servicio y la satisfacción con la prestación.</p>
+            </div>
+            <div className='description_container'>
+              <p>Coordinación con instituciones de salud y familiares</p>
+              <p>Colaboración estrecha con instituciones médicas y sociales para asegurar un cuidado integral y coordinado.
+              Comunicación abierta y regular con los familiares.</p>
+            </div>
+            <div className='description_container'>
+              <p>Evaluación de satisfacción y mejora continua</p>
+              <p>Retroalimentación constante con las personas mayores y familiares para evaluar la satisfacción con los servicios prestados e implementar mejoras continuas en los procesos.</p>
+            </div>
+          </div>
+        </div>
+        <div className='AboutUs_mision_vision_section'>
+          <div className='AboutUs_mision_vision_description_container'>
+            <div className='AboutUs_mision_vision_container'>
+              <div className='AboutUs_mision'>
+                <h2>Nuestra misión</h2>
+                <p>es proporcionar un entorno seguro, respetuoso y enriquecedor para las personas mayores, ofreciendo servicios de apoyos y cuidados que promuevan su bienestar físico, emocional y social.</p>
+              </div>
+              <div className='AboutUs_vision'>
+                <h2>Nuestra visión</h2>
+                <p>es ser líderes en el sector del cuidado gerontológico, conocidos por nuestra excelencia en la prestación de servicios y nuestra dedicación al bienestar de las personas mayores, promoviendo la dignidad y el respeto en cada etapa del proceso de envejecimiento.</p>
+              </div>
+            </div>
+            <div className='AboutUs_mv_description_container'>
+              <p>Para conocer más sobre cómo podemos ayudarle, no dude en contactarnos, estamos aquí para usted y su familia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
