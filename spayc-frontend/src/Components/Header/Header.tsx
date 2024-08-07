@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from "../../assets/images/Header/SPAYC_logo.png"
+import logo from "../../assets/images/Header/spayc_logo.svg"
 import './Header.css';
 
 const Header: React.FC = () => {
