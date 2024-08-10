@@ -18,11 +18,11 @@ const Contact: React.FC = () => {
     formState: {errors},
   } = useForm<Inputs>({
     defaultValues: {
-      firstName: 'Gabriel',
-      lastName: 'Machado',
-      email: 'gabi300709@gmail.com',
-      tel: '3541666702',
-      message: 'prubea ficticia'
+      firstName: '',
+      lastName: '',
+      email: '',
+      tel: '',
+      message: ''
     }
   });
 
