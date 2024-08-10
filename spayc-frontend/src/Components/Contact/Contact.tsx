@@ -7,7 +7,7 @@ type Inputs = {
   lastName: string,
   email: string,
   tel: string,
-  description: string
+  message: string
 };
 
 const Contact: React.FC = () => {
@@ -22,17 +22,37 @@ const Contact: React.FC = () => {
       lastName: '',
       email: '',
       tel: '',
-      description: ''
+      message: ''
     }
   });
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    try {
+      const response = await fetch('http://localhost:3001/contact/contact-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body:  JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log('Success:', result);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+  
 
   return (
     <div className='Contact_component'>
       <div className='Contact_sections'>
         <div className='Contact_intro_section'>
-          <p className='Contact_intro_title'>¡Ponte en <h1>Contacto</h1> con Nosotros!</p>
+          <p className='Contact_intro_title'>¡Ponte en Contacto con Nosotros!</p>
           <p className='Contact_intro_description'>En SPAYC valoramos la comunicación directa y efectiva, si tiene alguna consulta o necesita más información sobre nuestros servicios, no dude en contactarnos y un asesor se comunicará con Ud.</p>
         </div>
         <div className='Contact_info_form_sections'>
@@ -131,7 +151,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div className='Contact_container_message'>
                   <label>Mensaje</label>
-                  <textarea className='Contact_input' placeholder='Mensaje' {...register("description",
+                  <textarea className='Contact_input' placeholder='Mensaje' {...register("message",
                     {
                       required: "Este campo es obligatorio",
                       maxLength: {
@@ -140,7 +160,7 @@ const Contact: React.FC = () => {
                       }
                     }
                   )} />
-                  {errors.description && <p className='Contact_errors'>{errors.description?.message}</p>}
+                  {errors.message && <p className='Contact_errors'>{errors.message?.message}</p>}
                 </div>
                 <input className='Contact_submit' type="submit" />
               </form>
@@ -152,4 +172,4 @@ const Contact: React.FC = () => {
   )
 }
 
-export default Contact
+export default Contact;
