@@ -54,8 +54,6 @@ const WorkWithUs: React.FC = () => {
     formData.append('message', data.message);
     formData.append('file', data.file[0]);
 
-    console.log("Esto es data: ", data)
-
     try {
       const response = await fetch('http://localhost:3001/workWithUs/workWithUs-contact-email', {
         method: 'POST',
