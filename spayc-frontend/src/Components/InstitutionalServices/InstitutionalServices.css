@@ -1,13 +1,101 @@
 .InstitutionalServices_component {
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
 }
 
-.InstitutionalServices_title {
-    display: flex;
+.InstitutionalServices_sections {
     padding: 20px 0;
+    position: relative;
 }
 
-.InstitutionalServices_ul {
-    padding-left: 20px;
+.InstitutionalServices_introduction, .InstitucionalServices_why {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(0,65,115,0.5) 0%, rgba(182,255,255,0.5) 100%);
+    padding: 40px 0 60px 0;
+    position: relative;
+}
+
+.InstitutionalServices_introduction {
+    z-index: 1;
+}
+
+.InstitucionalServices_why {
+    z-index: 3;
+}
+
+.InstitutionalServices_introduction p {
+    width: 50%;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.InstitutionalServices_services {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -50px 30%;
+    background: linear-gradient(90deg, rgba(0, 65, 115, 0.5) 0%, rgba(182, 255, 255, 0.5) 100%);
+    border-radius: 40%;
+    padding: 1%;
+    position: relative;
+    z-index: 2;
+}
+
+.InstitutionalServices_services_container {
+    display: flex;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.InstitucionalServices_services_left, .InstitucionalServices_services_right {
+    width: 50%;
+}
+
+.InstitucionalServices_services_left {
+    padding: 0 10px 20px 120px;
+}
+
+.InstitucionalServices_services_right {
+    padding: 0 120px 20px 10px;
+}
+
+.InstitutionalServices_services_container ul {
+    list-style: none;
+}
+
+.InstitutionalServices_services_container li {
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.InstitucionalServices_why {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 40px 0; 
+}
+
+.InstitutionalServices_why_section {
+    width: 600px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.InstitutionalServices_why_section li {
+    padding: 10px 0;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.InstitutionalServices_sections h2 {
+    font-size: 24px;
+}
+
+.InstitutionalServices_sections h3 {
+    font-size: 22px;
 }
