@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Contact.css'
 import { useForm, SubmitHandler } from 'react-hook-form';
 
@@ -11,10 +11,11 @@ type Inputs = {
 };
 
 const Contact: React.FC = () => {
-
+  const [isLoading, setIsLoading] = useState(false)
   const {
     register,
     handleSubmit,
+    reset,
     formState: {errors},
   } = useForm<Inputs>({
     defaultValues: {
@@ -27,6 +28,7 @@ const Contact: React.FC = () => {
   });
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    setIsLoading(true);
     try {
       const response = await fetch('http://localhost:3001/contact/contact-email', {
         method: 'POST',
@@ -42,8 +44,11 @@ const Contact: React.FC = () => {
 
       const result = await response.json();
       console.log('Success:', result);
+      reset();
     } catch (error) {
       console.error('Error:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
   
@@ -162,7 +167,13 @@ const Contact: React.FC = () => {
                   )} />
                   {errors.message && <p className='Contact_errors'>{errors.message?.message}</p>}
                 </div>
-                <input className='Contact_submit' type="submit" />
+                <button className='Contact_submit' type="submit" disabled={isLoading}>
+                  {isLoading ? (
+                    <div className="spinner"></div>
+                    ) : (
+                      'Enviar'
+                    )}
+                </button>
               </form>
             </div>
           </div>

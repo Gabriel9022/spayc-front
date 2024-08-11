@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import WorkWithUsImage from '../../assets/images/WorkWithUs/WorkWithUs_img.png';
@@ -15,10 +15,11 @@ type WorkWithUs_Inputs = {
 const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2MB
 
 const WorkWithUs: React.FC = () => {
-
+  const [isLoading, setIsLoading] = useState(false)
   const { 
     register,
     handleSubmit,
+    reset,
     formState: { errors },
     setError,
     clearErrors } = useForm<WorkWithUs_Inputs>({
@@ -42,7 +43,7 @@ const WorkWithUs: React.FC = () => {
   };
 
   const onSubmit: SubmitHandler<WorkWithUs_Inputs> = async (data) => {
-
+    setIsLoading(true);
     if (!validateFileSize(data.file)) {
       return;
     }
@@ -61,8 +62,11 @@ const WorkWithUs: React.FC = () => {
       });
       const result = await response.json();
       console.log('Success:', result);
+      reset();
     } catch (error) {
       console.error('Error:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -164,7 +168,13 @@ const WorkWithUs: React.FC = () => {
                   />
                   {errors.file && <p className='Contact_errors'>{errors.file.message}</p>}
                 </div>
-                <button className='WorkWithUs_submit' type="submit">Enviar</button>
+                <button className='WorkWithUs_submit' type="submit" disabled={isLoading}>
+                  {isLoading ? (
+                    <div className="spinner"></div>
+                    ) : (
+                      'Enviar'
+                    )}
+                </button>
               </form>
             </div>
           </div>
