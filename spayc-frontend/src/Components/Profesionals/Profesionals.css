@@ -1,0 +1,151 @@
+.professional_sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.professional_profile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.professional_profile_intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    padding: 30px 0;
+    width: 100%;
+    background: linear-gradient(90deg, #b6ffff, #eaffff);
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0 5px #e9e9e9;
+}
+
+.professional_profile_intro p {
+    font-size: 18px;
+    line-height: 2;
+    padding: 20px;
+    width: 720px;
+}
+
+.professional_profile_skills {
+    display: flex;
+    width: 1000px;
+    margin-top: 50px;
+    width: 100%;
+    background: linear-gradient(90deg, #b6ffff, #eaffff);
+    justify-content: center;
+    box-shadow: 0 5px #e9e9e9;
+}
+
+.professional_profile_skills_description{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.professional_profile_skills_skill {
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 4px 4px #7cdaf9;
+    border: #0cb7f2;
+    border-width: 1px;
+    border-style: ridge;
+}
+
+.professional_profile_skills_skill span {
+    width: 150px;
+    padding: 5px;
+    align-self: center;
+    font-size: 18px;
+    line-height: 2;
+    font-weight: bold;
+}
+
+.professional_profile_skills_skill p {
+    width: 250px;
+    align-self: center;
+}
+
+.professional_profile_skills_image {
+    padding: 0 50px;
+}
+
+.professional_profile_skills_image img {
+    width: 430px;
+    height: 672px;
+}
+
+.professional_profile_functions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    padding: 30px 0;
+    width: 100%;
+    background: linear-gradient(90deg, #b6ffff, #eaffff);
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0 5px #e9e9e9;
+}
+
+.professional_profile_functions_container {
+    padding-top: 20px;
+}
+
+.professional_profile_functions_items {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    padding: 20px 0;
+}
+
+.professional_profile_functions_item {
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 4px 4px #7cdaf9;
+    border: #0cb7f2;
+    border-width: 1px;
+    border-style: ridge;
+    margin: 0 50px;
+    padding: 20px;
+}
+
+.professional_profile_functions_item span {
+    font-size: 18px;
+    line-height: 2;
+    font-weight: bold;
+}
+
+.professional_profile_functions_item p {
+    width: 250px;
+    margin-top: 10px;
+}
+
+.professional_profile_conclusion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    padding: 30px 0;
+    width: 100%;
+    background: linear-gradient(90deg, #b6ffff, #eaffff);
+    margin: 50px 0;
+    text-align: center;
+    box-shadow: 0 5px #e9e9e9;
+}
+
+.professional_profile_conclusion p {
+    width: 1000px;
+    font-size: 18px;
+    line-height: 2;
+    font-weight: bold;
+    align-self: center;
+}
