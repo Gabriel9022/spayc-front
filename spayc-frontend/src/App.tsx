@@ -11,12 +11,14 @@ import Contact from './Components/Contact/Contact';
 import AboutUs from './Components/AboutUs/AboutUs';
 import Loggin from './Components/Loggin/Loggin';
 import EditPanel from './Components/EditPanel/EditPanel';
+import ScrollToTop from './hooks/scrollToTop';
 import './App.css'
 
 const App: React.FC = () => {
 
   return (
     <Router>
+      <ScrollToTop/>
       <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
