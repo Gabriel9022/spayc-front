@@ -101,11 +101,11 @@ textarea.Contact_input {
     height: 30px;
     margin: 0 auto;
     border-radius: 20px;
-    background-color: blue;
-    border: solid blue 1px;
+    background-color: #0cb7f2;
+    border: solid 1px #0cb7f2;
     position: relative;
-    color: white;
-    font-weight: 500;
+    color: #004173;
+    font-weight: bold;
     outline: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -115,8 +115,9 @@ textarea.Contact_input {
 }
 
 .Contact_submit:hover {
-    background-color: darkblue;
-    border: darkblue ;
+    background-color: #004173;
+    border: #004173 ;
+    color: #fff;
 }
 
 .spinner {
