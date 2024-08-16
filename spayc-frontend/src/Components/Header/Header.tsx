@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from "../../assets/images/Header/spayc_logo.svg"
+import { Link } from 'react-router-dom';
+import logo from "../../assets/images/Header/spayc_logo.svg";
 import './Header.css';
 import NavDesktop from './nav/NavDesktop';
 import NavMobile from './nav/NavMobile';
@@ -13,7 +14,9 @@ const Header: React.FC = () => {
     <header className='Header' id='Header'>
       <div className='Header_content_container'>
         <div className='Header_logo_container'>
-          <img src={logo} alt="Logo SPAYC" className='logo' />
+          <Link to="/">
+            <img src={logo} alt="Logo SPAYC" className='logo' />
+          </Link>
         </div>
         {isMobile ? <NavMobile/> : <NavDesktop/>}
       </div>
