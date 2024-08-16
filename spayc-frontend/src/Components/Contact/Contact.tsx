@@ -57,22 +57,22 @@ const Contact: React.FC = () => {
     <div className='Contact_component'>
       <div className='Contact_sections'>
         <div className='Contact_intro_section'>
-          <p className='Contact_intro_title'>¡Ponte en Contacto con Nosotros!</p>
+          <h1 className='Contact_intro_title'>¿Cómo Contactar con nosotros?</h1>
           <p className='Contact_intro_description'>En SPAYC valoramos la comunicación directa y efectiva, si tiene alguna consulta o necesita más información sobre nuestros servicios, no dude en contactarnos y un asesor se comunicará con Ud.</p>
         </div>
         <div className='Contact_info_form_sections'>
           <div className='Contact_section_info'>
-            <p className='Contact_info_title'>Contactanos</p>
+            <h2 className='Contact_info_title'>Contactanos</h2>
             <div className='Contact_info_container'>
-                <p>Ciudad: Córdoba</p>
-                <p>Teléfono: XXX XXXX XXXX</p>
-                <p>Mail: spaycserviciosprofesionales@gmail.com</p>
-                <p>Instagram: @spaycok</p>
-                <p>Facebook: /spaycok</p>
+                <p>Ciudad: <span>Córdoba</span></p>
+                <p>Teléfono: <span>XXX XXXX XXXX</span></p>
+                <p>Mail: <span>spaycserviciosprofesionales@gmail.com</span></p>
+                <p>Instagram: <a href='https://www.instagram.com/spaycserviciospersonasmayores/' target="_blank" rel="noopener noreferrer"><span>@spaycserviciospersonasmayores</span></a></p>
+                <p>Facebook: <span>/spaycok</span></p>
             </div>
           </div>
           <div className='Contact_section_form'>
-            <p className='Contact_form_title'>Escribinos</p>
+            <h2 className='Contact_form_title'>Escribinos</h2>
             <div className='Contact_form_container'>
               <form className='Contact_form' onSubmit={handleSubmit(onSubmit)}>
                 <div className='Contact_container_name_lastName'>
