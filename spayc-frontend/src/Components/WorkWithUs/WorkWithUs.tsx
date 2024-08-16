@@ -73,11 +73,11 @@ const WorkWithUs: React.FC = () => {
   return (
     <div className='WorkWithUs_component'>
       <div className='WorkWithUs_sections'>
+              <h1 className='WorkWithUs_info_title'>¡Trabaja con Nosotros!</h1>
         <div className='WorkWithUs_section_info'>
           <div className='WorkWithUs_info_container'>
             <div className='WorkWithUs_info'>
-              <h1 className='WorkWithUs_info_title'>Únete a SPAYC: Trabaja con Nosotros</h1>
-              <p className='WorkWithUs_info_description'>En SPAYC, Servicios Profesionales de Apoyos y Cuidados para Personas Mayores, contamos con una sólida trayectoria en el cuidado y acompañamiento de personas mayores. Nos dedicamos a ofrecer servicios de la más alta calidad, enfocados en mejorar la calidad de vida de las personas mayores y sus familias.</p>
+              <p className='WorkWithUs_info_description'>En SPAYC, Servicios Profesionales de Apoyo y Cuidado para Personas Mayores, contamos con una sólida trayectoria en el cuidado y acompañamiento de personas mayores. Nos dedicamos a ofrecer servicios de la más alta calidad, enfocados en mejorar la calidad de vida de las personas mayores y sus familias.</p>
               <p className='WorkWithUs_info_description'>Buscamos profesionales comprometidos y altamente capacitados que compartan nuestra pasión por el cuidado y el bienestar.</p>
               <p className='WorkWithUs_info_description'>Si tiene conocimientos, experiencia en el rubro y un fuerte deseo de hacer una diferencia positiva en la vida de las personas mayores y sus familias, CONTACTESE con nosotros y forme parte de nuestro equipo!</p>
             </div>
@@ -93,7 +93,7 @@ const WorkWithUs: React.FC = () => {
         </div>
         <div className='WorkWithUs_section_form'>
           <div className='WorkWithUs_section_form_container'>
-            <p className='WorkWithUs_form_title'>Si querés trabajar con nosotros completa el siguiente formulario</p>
+            <h2 className='WorkWithUs_form_title'>Si querés formar parte de SPAYC completa el siguiente formulario</h2>
             <div className='WorkWithUs_form_container'>
               <form className='WorkWithUs_form' onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
                 <div className='WorkWithUs_container_name'>
