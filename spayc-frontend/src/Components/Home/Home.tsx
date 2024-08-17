@@ -86,8 +86,7 @@ const Home: React.FC = () => {
             </div>
             <div className="home_compromise_service">
               <p className="home_compromise_service_link">
-                Para ello ofrecemos 
-                <Link to="/servicios">SERVICIOS PARA PERSONAS MAYORES</Link>
+                Para ello ofrecemos <Link to="/servicios">SERVICIOS PARA PERSONAS MAYORES</Link>
               </p>
             </div>
           </div>
