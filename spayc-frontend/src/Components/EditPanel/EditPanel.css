@@ -3,7 +3,7 @@
 }
 
 .Edit_panel_menu {
-    width: 200px;
+    width: 15vw;
     border: solid 1px grey;
 }
 
@@ -13,6 +13,7 @@
 }
 
 .Edit_panel_visualizer {
+    width: 85vw;
     border: solid 1px grey;
 }
 
