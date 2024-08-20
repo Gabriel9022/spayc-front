@@ -21,8 +21,3 @@
     min-height: 600px;
     padding: 20px;
 }
-
-.Visualizer_container .Services_card_section h1, 
-.Visualizer_container .Services_careOptionInfo_section {
-    display: none;
-}
