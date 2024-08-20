@@ -12,26 +12,29 @@ import AboutUs from './Components/AboutUs/AboutUs';
 import Loggin from './Components/Loggin/Loggin';
 import EditPanel from './Components/EditPanel/EditPanel';
 import ScrollToTop from './hooks/scrollToTop';
+import { ServicesProvider } from './utils/getAllServices';
 import './App.css'
 
 const App: React.FC = () => {
 
   return (
     <Router>
-      <ScrollToTop/>
-      <Header/>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/servicios" element={<Services/>}/>
-        <Route path="/instituciones" element={<InstitutionalServices/>}/>
-        <Route path="/profesionales" element={<Profesionals/>}/>
-        <Route path="/nosotros" element={<AboutUs/>}/>
-        <Route path="/trabaja-con-nosotros" element={<WorkWithUs/>}/>
-        <Route path="/contacto" element={<Contact/>}/>
-        <Route path="/loggin" element={<Loggin/>}/>
-        <Route path="/panel" element={<EditPanel/>}/>   
-      </Routes>
-      <Footer/>
+      <ScrollToTop />
+      <Header />
+      <ServicesProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/servicios" element={<Services />} />
+          <Route path="/instituciones" element={<InstitutionalServices />} />
+          <Route path="/profesionales" element={<Profesionals />} />
+          <Route path="/nosotros" element={<AboutUs />} />
+          <Route path="/trabaja-con-nosotros" element={<WorkWithUs />} />
+          <Route path="/contacto" element={<Contact />} />
+          <Route path="/loggin" element={<Loggin />} />
+          <Route path="/panel" element={<EditPanel />} />
+        </Routes>
+      </ServicesProvider>
+      <Footer />
     </Router>
   )
 }

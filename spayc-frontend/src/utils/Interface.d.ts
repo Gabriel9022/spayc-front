@@ -5,3 +5,7 @@ export interface ServicesType {
     image: string;
     isActive: boolean;
   }
+
+export interface MappingServicesProps {
+    services: ServicesType[];
+  }

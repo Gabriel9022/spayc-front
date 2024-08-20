@@ -1,45 +1,15 @@
-import React, { useEffect, useState } from "react";
-import getAllServices from "../../../utils/getAllServices";
-import { ServicesType } from "../../../utils/Interface";
+import React from "react";
+import { MappingServicesProps } from "../../../utils/Interface";
+import { useServicesContext } from "../../../hooks/useServicesContext";
 
 
+const MappingServices: React.FC<MappingServicesProps> = () => {
 
+  const { servicesArray: services, loading, error } = useServicesContext();
 
-const MappingServices: React.FC = () => {
+  if (loading) return <div>Cargando...</div>;
 
-  const [services, setServices] = useState<ServicesType[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchServices = async () => {
-      try {
-        const data = await getAllServices();
-        setServices(data);
-        setLoading(false);
-      } catch (error: unknown) {
-        if (error instanceof Error) {
-          setError(error.message);
-        } else {
-          setError("An unknown error occurred");
-        }
-        setLoading(false);
-      }
-    };
-
-    fetchServices();
-  }, []);
-
-
-  if (loading) {
-    return <div>Cargando...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-
-
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <div>
@@ -53,8 +23,8 @@ const MappingServices: React.FC = () => {
                     <div className="Services_card_info">
                       <h2>{service.title}</h2>
                       <ul>
-                        {service.description.map((description) => (
-                          <li className="Services_description">
+                        {service.description.map((description, index) => (
+                          <li key={index} className="Services_description">
                             {description}
                           </li>
                         ))}
@@ -76,7 +46,7 @@ const MappingServices: React.FC = () => {
           } else {
             return (
               <div key={service.id} className="Services_card_container">
-                {service.isActive == true ? (
+                {service.isActive ? (
                   <div className="Services_card">
                     <div className="Services_card_img_left">
                       <img
@@ -88,8 +58,8 @@ const MappingServices: React.FC = () => {
                     <div className="Services_card_info">
                       <h2>{service.title}</h2>
                       <ul>
-                        {service.description.map((description) => (
-                          <li className="Services_description">
+                        {service.description.map((description, index) => (
+                          <li key={index} className="Services_description">
                             {description}
                           </li>
                         ))}
@@ -106,7 +76,6 @@ const MappingServices: React.FC = () => {
         )
       }
     </div>
-
   )
 }
 
