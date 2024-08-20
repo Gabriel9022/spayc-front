@@ -30,7 +30,6 @@ const App: React.FC = () => {
         <Route path="/contacto" element={<Contact/>}/>
         <Route path="/loggin" element={<Loggin/>}/>
         <Route path="/panel" element={<EditPanel/>}/>   
-        <Route path="/panel" element={<Loggin/>} />     
       </Routes>
       <Footer/>
     </Router>
