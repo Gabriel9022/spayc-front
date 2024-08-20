@@ -1,0 +1,27 @@
+.Edit_panel_sections {
+    display: flex;
+}
+
+.Edit_panel_menu {
+    width: 200px;
+    border: solid 1px grey;
+}
+
+.Create_element, .Edit_elements {
+    padding: 10px;
+    border: solid 1px grey;
+}
+
+.Edit_panel_visualizer {
+    border: solid 1px grey;
+}
+
+.Visualizer_container {
+    padding: 20px;
+}
+
+.Services_card_section h1, 
+.Services_careOptionInfo_section {
+    display: none; 
+    /* pisa el archivo services, buscar alternativa */
+}
