@@ -7,7 +7,7 @@
     border: solid 1px grey;
 }
 
-.Create_element, .Edit_elements {
+.Edit_panel_item, .Create_element, .Edit_elements {
     padding: 10px;
     border: solid 1px grey;
 }
@@ -17,6 +17,8 @@
 }
 
 .Visualizer_container {
+    min-width: 1000px;
+    min-height: 600px;
     padding: 20px;
 }
 
