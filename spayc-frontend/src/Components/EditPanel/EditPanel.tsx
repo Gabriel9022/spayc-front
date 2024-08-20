@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Services from '../Services/Services';
+import MappingServices from '../Services/MapServices/MappingServices';
 import './EditPanel.css';
 
 const EditPanel: React.FC = () => {
@@ -38,7 +38,7 @@ const EditPanel: React.FC = () => {
         </div>
         <div className='Edit_panel_visualizer'>
           <div className='Visualizer_container'>
-            {menu ? <Services /> : null}
+            {menu ? <MappingServices /> : null}
           </div>
         </div>
       </div>
