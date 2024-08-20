@@ -29,7 +29,8 @@ const App: React.FC = () => {
         <Route path="/trabaja-con-nosotros" element={<WorkWithUs/>}/>
         <Route path="/contacto" element={<Contact/>}/>
         <Route path="/loggin" element={<Loggin/>}/>
-        <Route path="/panel" element={<EditPanel/>}/>        
+        <Route path="/panel" element={<EditPanel/>}/>   
+        <Route path="/panel" element={<Loggin/>} />     
       </Routes>
       <Footer/>
     </Router>
