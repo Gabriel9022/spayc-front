@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import MappingServices from '../Services/MapServices/MappingServices';
+import { useServicesContext } from '../../hooks/useServicesContext';
 import './EditPanel.css';
 
 const EditPanel: React.FC = () => {
+
+  const { servicesArray } = useServicesContext();
 
   const [menu, setMenu] = useState(false);
 
@@ -10,9 +13,6 @@ const EditPanel: React.FC = () => {
   const expandMenu = () => {
     setMenu(!menu);
   };
-
-
-
 
   return (
     <div className='Edit_panel_component'>
@@ -31,14 +31,19 @@ const EditPanel: React.FC = () => {
                            */}
                 Edit Element
               </div>
-            </div> : 
-            <div></div>
+            </div> :
+              <div></div>
             }
           </div>
         </div>
         <div className='Edit_panel_visualizer'>
           <div className='Visualizer_container'>
-            {menu ? <MappingServices /> : null}
+            {
+              menu ?
+                  <MappingServices services={servicesArray} />
+                 :
+                null
+            }
           </div>
         </div>
       </div>

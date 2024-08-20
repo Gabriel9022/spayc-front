@@ -1,15 +1,18 @@
 import React from "react";
 import MappingServices from './MapServices/MappingServices';
+import { useServicesContext } from "../../hooks/useServicesContext";
 import "./Services.css";
 
 const Services: React.FC = () => {
+
+  const { servicesArray } = useServicesContext();
 
   return (
     <div className="Services_component">
       <div className="Services_sections">
         <div className="Services_card_section">
           <h1>Nuestros Servicios</h1>
-          <MappingServices/>
+            <MappingServices services={servicesArray}/>
         </div>
         <div className="Services_careOptionInfo_section">
           <div className="Services_careOptionInfo_container">
