@@ -22,3 +22,25 @@
     min-height: 600px;
     padding: 20px;
 }
+
+.create_modal {
+    position: fixed;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px 1200px rgba(0, 0, 0, 0.493);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+    max-width: 440px;
+    width: 100%;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.create_errors {
+    color: red;
+}
