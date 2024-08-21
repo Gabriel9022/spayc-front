@@ -11,6 +11,7 @@ const EditPanel: React.FC = () => {
   const { servicesArray } = useServicesContext();
   const [menu, setMenu] = useState<boolean>(false);
   const [createModal, setCreateModal] = useState<boolean>(false);
+  const [editModal, setEditModal] = useState<boolean>(false);
   const [descriptionArray, setDescriptionArray] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -19,6 +20,7 @@ const EditPanel: React.FC = () => {
 
   const expandMenu = () => setMenu(!menu);
   const handleCreateModal = () => setCreateModal(!createModal);
+  const handleEditModal = () => setEditModal(!editModal);
 
   const onSubmit: SubmitHandler<ServicesType> = async (data) => {
     try {
@@ -41,6 +43,7 @@ const EditPanel: React.FC = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
         setCreateModal(false);
+        setEditModal(false);
       }
     };
 
@@ -60,7 +63,7 @@ const EditPanel: React.FC = () => {
                 <div className='Create_element' onClick={handleCreateModal}>
                   Create Element
                 </div>
-                <div className='Edit_elements'>
+                <div className='Edit_elements' onClick={handleEditModal}>
                   {/*opcion 1: botón que agregar el lapiz y cruz a todos los elementos,
                            opcion 2: desplegable con n elementos como servicios existen y al hacer clic en cada uno muestre el servicio correspondiente ya listo para ser editado o borrado
                            */}
@@ -87,6 +90,15 @@ const EditPanel: React.FC = () => {
               />
             </div>
           </div>
+        )}
+        {editModal && (
+          <div className='edit_modal' ref={modalRef}>
+          <div className='modal_content'>
+            <h2>Editar servicio</h2>
+
+
+          </div>
+        </div>
         )}
       </div>
     </div>

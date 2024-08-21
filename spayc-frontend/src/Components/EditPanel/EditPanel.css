@@ -23,7 +23,7 @@
     padding: 20px;
 }
 
-.create_modal {
+.create_modal, .edit_modal {
     position: fixed;
     background-color: #FFF;
     border-radius: 10px;
