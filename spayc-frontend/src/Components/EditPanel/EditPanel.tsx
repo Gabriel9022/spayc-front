@@ -87,6 +87,7 @@ const EditPanel: React.FC = () => {
                 isLoading={isLoading}
                 descriptionArray={descriptionArray}
                 setDescriptionArray={setDescriptionArray}
+                handleCreateModal={handleCreateModal}
               />
             </div>
           </div>
