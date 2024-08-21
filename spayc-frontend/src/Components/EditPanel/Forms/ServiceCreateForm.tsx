@@ -7,9 +7,10 @@ interface ServiceCreateFormProps {
   isLoading: boolean;
   descriptionArray: string[];
   setDescriptionArray: React.Dispatch<React.SetStateAction<string[]>>;
+  handleCreateModal: () => void;
 }
 
-const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoading, descriptionArray, setDescriptionArray }) => {
+const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoading, descriptionArray, setDescriptionArray, handleCreateModal }) => {
   const [newDescription, setNewDescription] = useState<string>('');
   const [errorDescription, setErrorDescription] = useState<string>('');
 
@@ -100,7 +101,7 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
           )}
         </div>
       </div>
-      <button className='cancel_button' type="button">Close</button>
+      <button className='cancel_button' type="button" onClick={handleCreateModal}>Close</button>
       <button className='service_submit' type="submit" disabled={!descriptionArray.length || isLoading}>
         {isLoading ? <div className='spinner'></div> : 'Crear'}
       </button>
