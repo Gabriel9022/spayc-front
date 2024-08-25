@@ -21,34 +21,37 @@ const InstitutionalServices: React.FC = () => {
             <h2>Nuestros servicios incluyen</h2>
           </div>
           <div className="InstitutionalServices_services_container">
-            <div className="InstitucionalServices_services_left">
-              <ul>
-                <li>
-                  <p><span>Desarrollo de políticas y programas: </span>Diseño de políticas públicas adaptadas a las necesidades locales y regionales, considerando aspectos como la accesibilidad, la equidad y la sostenibilidad. Creación de programas integrales que aborden desde la prevención hasta la atención especializada, involucrando la promoción de la salud en todas sus dimensiones, desde una perspectiva de derechos.</p>
-                </li>
-                <li>
-                  <p><span>Implementación y gestión: </span>Puesta en marcha de programas piloto y evaluación continua de su efectividad para ajustar estrategias según los resultados obtenidos. Coordinación interinstitucional y colaboración con organizaciones no gubernamentales y sector privado para maximizar los recursos y la eficiencia de los servicios.</p>
-                </li>
-                <li>
-                  <p><span>Análisis y diagnóstico: </span>Evaluación exhaustiva de las necesidades y desafíos específicos en el ámbito de los cuidados y personas mayores, para determinar áreas de mejora. Estudios demográficos y análisis de tendencias para entender las dinámicas poblacionales y sus implicaciones.</p>
-                </li>
-              </ul>
+            <div className="InstitucionalServices_services_up">
+              <div className="InstitutionalServices_card">
+                <h3>Implementación y gestión</h3>
+                <p>Puesta en marcha de programas piloto y evaluación continua de su efectividad para ajustar estrategias según los resultados obtenidos. Coordinación interinstitucional y colaboración con organizaciones no gubernamentales y sector privado para maximizar los recursos y la eficiencia de los servicios.</p>
+              </div>
+              <div className="InstitutionalServices_card">
+                <h3>Desarrollo de políticas y programas</h3>
+                <p>Diseño de políticas públicas adaptadas a las necesidades locales y regionales, considerando aspectos como la accesibilidad, la equidad y la sostenibilidad. Creación de programas integrales que aborden desde la prevención hasta la atención especializada, involucrando la promoción de la salud en todas sus dimensiones, desde una perspectiva de derechos.</p>
+              </div>
+              <div className="InstitutionalServices_card">
+                <h3>Análisis y diagnóstico</h3>
+                <p>Evaluación exhaustiva de las necesidades y desafíos específicos en el ámbito de los cuidados y personas mayores, para determinar áreas de mejora. Estudios demográficos y análisis de tendencias para entender las dinámicas poblacionales y sus implicaciones.</p>
+              </div>
             </div>
-            <div className="InstitucionalServices_services_right">
-              <ul>
-                <li>
-                  <p><span>Transparencia y rendición de cuentas: </span>Transparencia en la gestión de recursos públicos. Informes regulares y evaluaciones externas para garantizar la rendición de cuentas y la mejora continua del servicio.</p>
-                </li>
-                <li>
-                  <p><span>Monitoreo y evaluación: </span>Establecimiento de indicadores de rendimiento y mecanismos de monitoreo para asegurar la calidad y la eficacia de los servicios. Evaluación periódica de impacto social y económico de las políticas implementadas, ajustando estrategias según los resultados obtenidos.</p>
-                </li>
-                <li>
-                  <p>Asesoramiento y orientación para la contratación de personal altamente calificado, (para Residencias de larga estadía, Geriátricos, Centros de día), garantizando profesionalización y calidad humana.</p>
-                </li>
-                <li>
-                  <p><span>Formación y capacitación: </span>Formación continua del personal involucrado en el trabajo con personas mayores. Capacitación a cuidadores familiares y comunitarios para fortalecer el apoyo en el entorno familiar y comunitario.</p>
-                </li>
-              </ul>
+            <div className="InstitucionalServices_services_down">
+              <div className="InstitutionalServices_card">
+                <h3>Transparencia y rendición de cuentas</h3>
+                <p>Transparencia en la gestión de recursos públicos. Informes regulares y evaluaciones externas para garantizar la rendición de cuentas y la mejora continua del servicio.</p>
+              </div>
+              <div className="InstitutionalServices_card">
+                <h3>Monitoreo y evaluación</h3>
+                <p>Establecimiento de indicadores de rendimiento y mecanismos de monitoreo para asegurar la calidad y la eficacia de los servicios. Evaluación periódica de impacto social y económico de las políticas implementadas, ajustando estrategias según los resultados obtenidos.</p>
+              </div>
+              <div className="InstitutionalServices_card">
+                <h3></h3>
+                <p>Asesoramiento y orientación para la contratación de personal altamente calificado, (para Residencias de larga estadía, Geriátricos, Centros de día), garantizando profesionalización y calidad humana.</p>
+              </div>
+              <div className="InstitutionalServices_card">
+                <h3>Formación y capacitación</h3>
+                <p>Formación continua del personal involucrado en el trabajo con personas mayores. Capacitación a cuidadores familiares y comunitarios para fortalecer el apoyo en el entorno familiar y comunitario.</p>
+              </div>
             </div>
           </div>
         </div>
