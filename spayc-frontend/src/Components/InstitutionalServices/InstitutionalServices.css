@@ -28,12 +28,6 @@
     border-bottom: solid 1px #fff;
 }
 
-/* .InstitutionalServices_banner_title p {
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-} */
-
 .InstitutionalServices_introduction, .InstitucionalServices_why {
     display: flex;
     flex-direction: column;
