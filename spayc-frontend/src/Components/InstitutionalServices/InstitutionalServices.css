@@ -58,6 +58,7 @@
 .InstitutionalServices_card {
     border: solid 1px lightgrey;
     border-radius: 20px;
+    overflow: hidden;
     width: 300px;
     box-shadow: 10px 10px 10px #e9e9e9;
 }
@@ -65,18 +66,17 @@
 .InstitutionalServices_card h3 {
     background-color: #004173;
     color: #fff;
-    border-radius: 20px 20px 0 0;
+    box-sizing: content-box;
     min-height: 50px;
     font-size: 20px;
     padding: 10px;
     align-content: center;
-    margin-bottom: 10px;
 }
 
 .InstitutionalServices_card p {
-    padding: 0 15px 10px 15px;
+    padding: 10px 15px;
     line-height: 1.5;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.5px;
 }
 
 .InstitucionalServices_why {
