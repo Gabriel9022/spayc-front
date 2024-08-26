@@ -45,22 +45,6 @@ const Home: React.FC = () => {
             </div>
             <div className="home_compromise_description">
               <div className="home_compromise_description_card">
-                <h4>Ofrecer atención personalizada</h4>
-                <p>
-                  Adaptar nuestros servicios a las necesidades individuales de
-                  cada persona mayor, asegurando que reciban el cuidado adecuado
-                  en todo momento.
-                </p>
-              </div>
-              <div className="home_compromise_description_card">
-                <h4>Fomentar la independencia</h4>
-                <p>
-                  Ayudar a las personas mayores a mantener su autonomía y
-                  dignidad, proporcionando la asistencia necesaria para que
-                  puedan llevar una vida activa, saludable y gratificante.
-                </p>
-              </div>
-              <div className="home_compromise_description_card">
                 <h4>Crear un ambiente de respeto</h4>
                 <p>
                   Tratar a cada persona con el máximo respeto y consideración,
@@ -81,6 +65,22 @@ const Home: React.FC = () => {
                   Colaborar estrechamente con las familias para proporcionar el
                   apoyo necesario y mantener la comunicación abierta, asegurando
                   que sus seres queridos reciban el mejor cuidado posible.
+                </p>
+              </div>
+              <div className="home_compromise_description_card">
+                <h4>Ofrecer atención personalizada</h4>
+                <p>
+                  Adaptar nuestros servicios a las necesidades individuales de
+                  cada persona mayor, asegurando que reciban el cuidado adecuado
+                  en todo momento.
+                </p>
+              </div>
+              <div className="home_compromise_description_card">
+                <h4>Fomentar la independencia</h4>
+                <p>
+                  Ayudar a las personas mayores a mantener su autonomía y
+                  dignidad, proporcionando la asistencia necesaria para que
+                  puedan llevar una vida activa, saludable y gratificante.
                 </p>
               </div>
             </div>
