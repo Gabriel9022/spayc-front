@@ -6,6 +6,28 @@
     position: relative;
 }
 
+.InstitutionalServices_banner {
+    position: relative;
+}
+
+.InstitutionalServices_banner_title {
+    background: linear-gradient(90deg, rgba(0,65,115,1) 10%, rgba(255,255,255,0) 70%);
+    height: 100%;
+    align-content: center;
+    padding-left: 90px;
+}
+
+.InstitutionalServices_banner_title h1 {
+    font-size: 42px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    position: relative;
+    width: min-content;
+    transform: translateY(-35px);
+    padding-bottom: 15px;
+    border-bottom: solid 1px #fff;
+}
+
 .InstitutionalServices_introduction, .InstitucionalServices_why {
     display: flex;
     flex-direction: column;
@@ -15,7 +37,7 @@
     position: relative;
 }
 
- .InstitutionalServices_introduction h1, .InstitucionalServices_why h2 {
+.InstitucionalServices_why h2 {
     padding: 60px 0 0 0;
 }
 
