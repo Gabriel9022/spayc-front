@@ -3,14 +3,15 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { ServicesType } from '../../../utils/Interface';
 
 interface ServiceCreateFormProps {
-  onSubmit: SubmitHandler<ServicesType>;
+  onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean; }>;
   isLoading: boolean;
-  descriptionArray: string[];
-  setDescriptionArray: React.Dispatch<React.SetStateAction<string[]>>;
+  service: ServicesType;
+  setService: React.Dispatch<React.SetStateAction<ServicesType>>;
   handleCreateModal: () => void;
+  panelSource: boolean;
 }
 
-const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoading, descriptionArray, setDescriptionArray, handleCreateModal }) => {
+const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoading, service, setService, handleCreateModal, panelSource }) => {
   const [newDescription, setNewDescription] = useState<string>('');
   const [errorDescription, setErrorDescription] = useState<string>('');
 
@@ -19,11 +20,10 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
     handleSubmit,
     formState: { errors },
     setValue
-  } = useForm<ServicesType>({
+  } = useForm<{ service: ServicesType; panelSource: boolean }>({
     defaultValues: {
-      title: '',
-      description: [],
-      image: '',
+      service: service,
+      panelSource: panelSource,
     }
   });
 
@@ -42,9 +42,12 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
 
   const handleAddDescription = () => {
     if (validateDescription(newDescription)) {
-      setDescriptionArray((prevArray) => [...prevArray, newDescription]);
+      setService((prevObjeto) => ({
+        ...prevObjeto,
+        description: [...prevObjeto.description, newDescription],
+      }));
       setNewDescription('');
-      setValue('description', []);
+      setValue('service.description', []);
     }
   };
 
@@ -58,13 +61,13 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
               className='title_content'
               type="text"
               placeholder='Título'
-              {...register('title', {
+              {...register('service.title', {
                 required: "Este campo es requerido.",
                 minLength: { value: 5, message: "La cantidad mínima de caracteres es 5." },
                 maxLength: { value: 40, message: "La cantidad máxima de caracteres es 40." }
               })}
             />
-            {errors.title && <p className='create_errors'>{errors.title.message}</p>}
+            {errors.service?.title && <p className='create_errors'>{errors.service.title.message}</p>}
           </div>
         </div>
         <div className='description'>
@@ -74,8 +77,8 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
               className='description_content'
               placeholder='Descripción'
               value={newDescription}
-              {...register('description', {
-                validate: () => descriptionArray.length > 0 || newDescription.trim() !== '' || 'Este campo es requerido.',
+              {...register('service.description', {
+                validate: () => service.description.length > 0 || newDescription.trim() !== '' || 'Este campo es requerido.',
                 minLength: { value: 20, message: "La cantidad mínima de caracteres es 20." },
                 maxLength: { value: 300, message: "La cantidad máxima de caracteres es 300." },
                 onChange: (e) => {
@@ -87,11 +90,11 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
           </div>
           <button type='button' disabled={!!errorDescription} onClick={handleAddDescription}>+ Agregar descripción</button>
           {errorDescription && <p className='create_errors'>{errorDescription}</p>}
-          {errors.description && <p className='create_errors'>{errors.description.message}</p>}
-          {descriptionArray.length > 0 && (
+          {errors.service?.description && <p className='create_errors'>{errors.service.description.message}</p>}
+          {service.description.length > 0 && (
             <div className='description_array_container'>
               <ul>
-                {descriptionArray.map((description, index) => (
+                {service.description.map((description, index) => (
                   <li key={index} className="services_description">
                     {description}
                   </li>
@@ -102,7 +105,7 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
         </div>
       </div>
       <button className='cancel_button' type="button" onClick={handleCreateModal}>Close</button>
-      <button className='service_submit' type="submit" disabled={!descriptionArray.length || isLoading}>
+      <button className='service_submit' type="submit" disabled={!service.description.length || isLoading}>
         {isLoading ? <div className='spinner'></div> : 'Crear'}
       </button>
     </form>

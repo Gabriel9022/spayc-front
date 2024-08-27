@@ -20,32 +20,45 @@ const EditPanel: React.FC = () => {
     image: '',
     isActive: true,
   });
-  const [descriptionArray, setDescriptionArray] = useState<string[]>([]);
+  const [serviceCreate, setServiceCreate] = useState<ServicesType>({
+    id: -1,
+    title: '',
+    description: [],
+    image: '',
+    isActive: true,
+  });
+  //const [descriptionArray, setDescriptionArray] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [panelSource, setPanelSource] = useState<boolean>(true)
 
-console.log('que sera?', servicesArray)
   const modalRef = useRef<HTMLDivElement>(null);
 
   const expandMenu = () => setMenu(!menu);
   const expandEditMenu = () => setEditMenu(!editMenu);
 
-  const handleCreateModal = () => setCreateModal(!createModal);
-  const handleEditModal = () => setEditModal(!editModal);
+  const handleCreateModal = () => {
+    setCreateModal(!createModal);
+    setPanelSource(true);
+  };
+  const handleEditModal = () => {
+    setEditModal(!editModal);
+    setPanelSource(false);
+  };
 
   const handleEditService = (service: ServicesType) => {
-    console.log('Aqui estoy!!', service);
     handleEditModal();
     setServiceEdit(service);
   }
 
-  const onSubmit: SubmitHandler<ServicesType> = async (data) => {
+  const onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean }> = (data) => {
     try {
       setIsLoading(true);
       // const response = await sendDataToServer({ ...data, description: descriptionArray });
       // if (response.status === 200) { 
-      console.log('Form submitted successfully', { ...data, description: descriptionArray });
+      console.log(panelSource)
+      console.log('Form submitted successfully', { ...data.service, description: data.service.description });
       // reset();
-      setDescriptionArray([]);
+      //setDescriptionArray([]);
       // }
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -110,9 +123,10 @@ console.log('que sera?', servicesArray)
               <ServiceCreateForm
                 onSubmit={onSubmit}
                 isLoading={isLoading}
-                descriptionArray={descriptionArray}
-                setDescriptionArray={setDescriptionArray}
+                service={serviceCreate}
+                setService={setServiceCreate}
                 handleCreateModal={handleCreateModal}
+                panelSource={panelSource}
               />
             </div>
           </div>
@@ -124,9 +138,10 @@ console.log('que sera?', servicesArray)
               <ServiceCreateForm
                 onSubmit={onSubmit}
                 isLoading={isLoading}
-                descriptionArray={serviceEdit.description}
-                setDescriptionArray={setDescriptionArray}
+                service={serviceEdit}
+                setService={setServiceEdit}
                 handleCreateModal={handleEditModal}
+                panelSource={panelSource}
               />
           </div>
         </div>
