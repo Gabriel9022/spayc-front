@@ -10,17 +10,33 @@ const EditPanel: React.FC = () => {
 
   const { servicesArray } = useServicesContext();
   const [menu, setMenu] = useState<boolean>(false);
+  const [editMenu, setEditMenu] = useState<boolean>(false);
   const [createModal, setCreateModal] = useState<boolean>(false);
   const [editModal, setEditModal] = useState<boolean>(false);
+  const [serviceEdit, setServiceEdit] = useState<ServicesType>({
+    id: -1,
+    title: '',
+    description: [],
+    image: '',
+    isActive: true,
+  });
   const [descriptionArray, setDescriptionArray] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-
+console.log('que sera?', servicesArray)
   const modalRef = useRef<HTMLDivElement>(null);
 
   const expandMenu = () => setMenu(!menu);
+  const expandEditMenu = () => setEditMenu(!editMenu);
+
   const handleCreateModal = () => setCreateModal(!createModal);
   const handleEditModal = () => setEditModal(!editModal);
+
+  const handleEditService = (service: ServicesType) => {
+    console.log('Aqui estoy!!', service);
+    handleEditModal();
+    setServiceEdit(service);
+  }
 
   const onSubmit: SubmitHandler<ServicesType> = async (data) => {
     try {
@@ -61,14 +77,23 @@ const EditPanel: React.FC = () => {
             {menu && (
               <div>
                 <div className='Create_element' onClick={handleCreateModal}>
-                  Create Element
+                  Crear nuevo servicio
                 </div>
-                <div className='Edit_elements' onClick={handleEditModal}>
+                <div className='Edit_elements' onClick={expandEditMenu}>
                   {/*opcion 1: botón que agregar el lapiz y cruz a todos los elementos,
                            opcion 2: desplegable con n elementos como servicios existen y al hacer clic en cada uno muestre el servicio correspondiente ya listo para ser editado o borrado
                            */}
-                  Edit Element
+                  Editar servicio
                 </div>
+                {editMenu && (
+                    <div className='Edit_menu'>
+                      {servicesArray.map((service) => {
+                        return (
+                          <div key={service.id} className='Edit_menu_option' onClick={() => handleEditService(service)}>{service.title}</div>
+                        )
+                      })}
+                    </div>
+                  )}
               </div>
             )}
           </div>
@@ -94,10 +119,15 @@ const EditPanel: React.FC = () => {
         )}
         {editModal && (
           <div className='edit_modal' ref={modalRef}>
-          <div className='modal_content'>
-            <h2>Editar servicio</h2>
-
-
+            <div className='modal_content'>
+              <h2>Editar servicio</h2>
+              <ServiceCreateForm
+                onSubmit={onSubmit}
+                isLoading={isLoading}
+                descriptionArray={serviceEdit.description}
+                setDescriptionArray={setDescriptionArray}
+                handleCreateModal={handleEditModal}
+              />
           </div>
         </div>
         )}
