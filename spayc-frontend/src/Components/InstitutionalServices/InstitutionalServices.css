@@ -8,6 +8,13 @@
 
 .InstitutionalServices_banner {
     position: relative;
+    width: 100%;
+    height: 475px;
+    background-image: url('../../assets/images/Banners/banner_institutional.webp');
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
 }
 
 .InstitutionalServices_banner_title {

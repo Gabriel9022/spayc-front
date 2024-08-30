@@ -1,6 +1,38 @@
 .AboutUs_component {
-    /* max-width: 1200px; */
     margin: 0 auto;
+}
+
+.AboutUs_sections {
+    position: relative;
+}
+
+.AboutUs_banner {
+    position: relative;
+    width: 100%;
+    height: 475px;
+    background-image: url('../../assets/images/Banners/banner_institutional.webp');
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+}
+
+.AboutUs_banner_title {
+    background: linear-gradient(90deg, rgba(0,65,115,1) 10%, rgba(255,255,255,0) 70%);
+    height: 100%;
+    align-content: center;
+    padding-left: 90px;
+}
+
+.AboutUs_banner_title h1 {
+    font-size: 42px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    position: relative;
+    width: min-content;
+    transform: translateY(-35px);
+    padding-bottom: 15px;
+    border-bottom: solid 1px #fff;
 }
 
 .AboutUs_intro_section {
@@ -68,11 +100,6 @@
 .description_container p:nth-child(2) {
     width: 60%;
   }
-
-.AboutUs_mision_vision_description_container {
-    /* padding: 30px;
-    background-color: #007dad */
-}
 
 .AboutUs_mision_vision_container {
     display: flex;

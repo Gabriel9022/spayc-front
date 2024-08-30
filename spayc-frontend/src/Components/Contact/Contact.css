@@ -1,17 +1,42 @@
+.Contact_sections {
+    position: relative;
+}
+
+.Contact_banner {
+    position: relative;
+    width: 100%;
+    height: 475px;
+    background-image: url('../../assets/images/Banners/banner_institutional.webp');
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+}
+
+.Contact_banner_title {
+    background: linear-gradient(90deg, rgba(0,65,115,1) 10%, rgba(255,255,255,0) 70%);
+    height: 100%;
+    align-content: center;
+    padding-left: 90px;
+}
+
+.Contact_banner_title h1 {
+    font-size: 42px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    position: relative;
+    width: min-content;
+    transform: translateY(-35px);
+    padding-bottom: 15px;
+    border-bottom: solid 1px #fff;
+}
+
 .Contact_intro_section {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     padding: 30px;
-}
-
-.Contact_intro_title {
-    display: flex;
-    align-items: center;
-    font-size: 32px;
-    font-weight: bold;
-    padding: 20px 0;
 }
 
 .Contact_intro_description {

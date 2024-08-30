@@ -1,5 +1,5 @@
 import React from "react";
-import handsImage from "../../assets/images/Home/manos.png";
+import handsImage from "../../assets/images/Home/manos.webp";
 import attendingPerson from "../../assets/images/Home/old-patient-suffering-from-parkinson.jpg";
 import "./Home.css";
 import { Link } from "react-router-dom";
@@ -8,15 +8,17 @@ const Home: React.FC = () => {
   return (
     <div className="home_component">
       <div className="home_sections">
-        <div className="home_introduction">
-          <div className="home_introduction_container">
-            <div className="home_introduction_title">
+      <div className="home_banner">
+            <div className="home_banner_title">
               <h1>Bienvenidos a SPAYC</h1>
               <span>
                 Servicios Profesionales de Apoyo y Cuidado para Personas
                 Mayores
               </span>
             </div>
+        </div>
+        <div className="home_introduction">
+          <div className="home_introduction_container">
             <div className="home_introduction_image">
               <img src={handsImage} alt="Imagen de manos" />
             </div>

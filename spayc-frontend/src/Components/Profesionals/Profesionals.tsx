@@ -6,9 +6,13 @@ const Profesionals: React.FC = () => {
   return (
     <div className="professional_component">
       <div className="professional_sections">
+      <div className="professional_banner">
+            <div className="professional_banner_title">
+              <h1>Perfil de nuestros profesionales</h1>
+            </div>
+        </div>
         <div className="professional_profile">
           <div className="professional_profile_intro">
-            <h1>Perfil de nuestros profesionales</h1>
             <p>
               El perfil de los profesionales en cuidados es fundamental para
               garantizar una atención de calidad y adaptada a las necesidades
@@ -17,7 +21,6 @@ const Profesionals: React.FC = () => {
             </p>
           </div>
           <div className="professional_profile_skills">
-            {/* <div className='professional_profile_skills_first'> */}
             <div className="professional_profile_skills_description">
               <div className="professional_profile_skills_skill">
                 <span>Empatía y Paciencia</span>
@@ -97,7 +100,6 @@ const Profesionals: React.FC = () => {
               </div>
             </div>
           </div>
-          {/* </div> */}
         </div>
         <div className="professional_profile_functions">
           <h2>Funciones de los profesionales en cuidados</h2>
