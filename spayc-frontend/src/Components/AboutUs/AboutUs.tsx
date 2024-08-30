@@ -5,6 +5,11 @@ const AboutUs: React.FC = () => {
   return (
     <div className='AboutUs_component'>
       <div className='AboutUs_sections'>
+      <div className="AboutUs_banner">
+            <div className="AboutUs_banner_title">
+              <h1>Sobre nosotros</h1>
+            </div>
+        </div>
         <div className='AboutUs_intro_section'>
           <p>Somos una empresa dedicada al cuidado integral y personalizado de personas mayores, comprometida en ofrecer servicios de alta calidad que mejoren su vida y promuevan su bienestar y autonomía. Con un equipo especializado en gerontología y una profunda vocación de servicio, nos dedicamos a proporcionar soluciones adaptadas a las necesidades únicas de cada individuo y su familia, diseñando planes de cuidados personalizados que abarcan desde la asistencia en actividades básicas de la vida diaria hasta el apoyo y estimulación biopsicosocial.</p>
         </div>

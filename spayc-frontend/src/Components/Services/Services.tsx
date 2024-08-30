@@ -10,8 +10,12 @@ const Services: React.FC = () => {
   return (
     <div className="Services_component">
       <div className="Services_sections">
+      <div className="Services_banner">
+            <div className="Services_banner_title">
+              <h1>Nuestros Servicios</h1>
+            </div>
+        </div>
         <div className="Services_card_section">
-          <h1>Nuestros Servicios</h1>
             <MappingServices services={servicesArray}/>
         </div>
         <div className="Services_careOptionInfo_section">

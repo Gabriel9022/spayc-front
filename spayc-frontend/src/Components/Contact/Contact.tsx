@@ -56,8 +56,12 @@ const Contact: React.FC = () => {
   return (
     <div className='Contact_component'>
       <div className='Contact_sections'>
+      <div className="Contact_banner">
+            <div className="Contact_banner_title">
+              <h1>¿Cómo Contactar con nosotros?</h1>
+            </div>
+        </div>
         <div className='Contact_intro_section'>
-          <h1 className='Contact_intro_title'>¿Cómo Contactar con nosotros?</h1>
           <p className='Contact_intro_description'>En SPAYC valoramos la comunicación directa y efectiva, si tiene alguna consulta o necesita más información sobre nuestros servicios, no dude en contactarnos y un asesor se comunicará con Ud.</p>
         </div>
         <div className='Contact_info_form_sections'>

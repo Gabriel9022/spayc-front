@@ -73,7 +73,11 @@ const WorkWithUs: React.FC = () => {
   return (
     <div className='WorkWithUs_component'>
       <div className='WorkWithUs_sections'>
-              <h1 className='WorkWithUs_info_title'>¡Trabaja con Nosotros!</h1>
+      <div className="WorkWithUs_banner">
+            <div className="WorkWithUs_banner_title">
+              <h1>¡Trabaja con Nosotros!</h1>
+            </div>
+        </div>
         <div className='WorkWithUs_section_info'>
           <div className='WorkWithUs_info_container'>
             <div className='WorkWithUs_info'>

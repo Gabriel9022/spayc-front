@@ -1,19 +1,11 @@
 import React from "react";
-import banner from "../../assets/images/Banners/banner_institutional.webp";
 import "./InstitutionalServices.css";
 
 const InstitutionalServices: React.FC = () => {
   return (
     <div className="InstitutionalServices_component">
       <div className="InstitutionalServices_sections">
-        <div className="InstitutionalServices_banner" style={{
-          backgroundImage: `url(${banner})`,
-          objectFit: 'contain',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          width: '100%',
-          height: '475px'
-          }}>
+        <div className="InstitutionalServices_banner">
             <div className="InstitutionalServices_banner_title">
               <h1>Servicios para instituciones</h1>
             </div>

@@ -1,5 +1,44 @@
 .home_sections {
     width: 100%;
+    position: relative;
+}
+
+.home_banner {
+    position: relative;
+    width: 100%;
+    height: 475px;
+    background-image: url('../../assets/images/Banners/banner_institutional.webp');
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+}
+
+.home_banner_title {
+    background: linear-gradient(90deg, rgba(0,65,115,1) 10%, rgba(255,255,255,0) 70%);
+    height: 100%;
+    align-content: center;
+    padding-left: 90px;
+}
+
+.home_banner_title h1 {
+    font-size: 42px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    position: relative;
+    width: min-content;
+    transform: translateY(-35px);
+    padding-bottom: 15px;
+    border-bottom: solid 1px #fff;
+}
+
+.home_banner_title span {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    display: flex;
+    width: 300px;
 }
 
 .home_introduction {
@@ -7,70 +46,42 @@
     flex-direction: column;
     align-items: center;
     max-height: min-content;
-    margin-top: 20px;
 }
 
 .home_introduction_container {
     width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
     text-align: center;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-}
-
-.home_introduction_title {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    padding: 20px;
-    z-index: 2;
-    position: relative;
-}
-
-.home_introduction_title h1 {
-    font-size: 54px;
-    color: #004173;
-}
-
-.home_introduction_title span {
-    font-size: 28px;
-    line-height: 40px;
-    letter-spacing: 2px;
-    padding-top: 10px;
-    width: 600px;
-    text-shadow: 2px 2px 20px #fff;
+    padding: 0 30px;
 }
 
 .home_introduction_image {
-    background: linear-gradient(0deg, #004173, #ffffff);
     width: 100%;
     display: flex;
-    justify-content: center;
-    margin-top: -100px;
-    margin-bottom: -500px;
-    z-index: 1;
     position: relative;
 }
 
 .home_introduction_image img {
-    width: 900px;
+    width: 100%;
     height: auto;
-    filter: blur(2px);
+    display: block;
 }
 
 .home_introduction_us {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    z-index: 2;
 }
 
 .home_introduction_us p {
-    font-size: 22px;
+    width: 80%;
+    font-size: 20px;
     line-height: 40px;
-    letter-spacing: 1px;
-    width: 600px;
     align-self: center;
-    text-shadow: 2px 2px 20px #fff;
-    padding: 20px 0;
+    padding: 20px 10px;
 }
 
 .home_compromise_container {
@@ -162,10 +173,6 @@
     line-height: 40px;
     letter-spacing: 1px;
     font-size: 20px;
-}
-
-.home_services_introduction p {
-    text-justify: center;
 }
 
 .home_services_description {
