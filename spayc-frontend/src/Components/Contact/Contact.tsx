@@ -86,11 +86,11 @@ const Contact: React.FC = () => {
                       {
                         required: "Este campo es obligatorio",
                         minLength: {
-                          value: 4,
+                          value: 3,
                           message: 'Debe contener al menos 4 letras.'
                         },
                         maxLength: {
-                          value: 10,
+                          value: 15,
                           message: "La cantidad máxima de letras es 10."
                         },
                         pattern: {
@@ -107,12 +107,12 @@ const Contact: React.FC = () => {
                       {
                         required: "Este campo es obligatorio",
                         minLength: {
-                          value: 4,
-                          message: 'Debe contener al menos 4 letras.'
+                          value: 3,
+                          message: 'Debe contener al menos 3 letras.'
                         },
                         maxLength: {
-                          value: 10,
-                          message: "La cantidad máxima de letras es 10."
+                          value: 15,
+                          message: "La cantidad máxima de letras es 15."
                         },
                         pattern: {
                           value: /^[A-Za-z]+$/,
