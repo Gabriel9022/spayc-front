@@ -27,7 +27,7 @@ const EditPanel: React.FC = () => {
     image: '',
     isActive: true,
   });
-  //const [descriptionArray, setDescriptionArray] = useState<string[]>([]);
+  const [descriptionArray, setDescriptionArray] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [panelSource, setPanelSource] = useState<boolean>(true)
 
@@ -39,10 +39,13 @@ const EditPanel: React.FC = () => {
   const handleCreateModal = () => {
     setCreateModal(!createModal);
     setPanelSource(true);
+    setDescriptionArray([]);
   };
+
   const handleEditModal = () => {
     setEditModal(!editModal);
     setPanelSource(false);
+    //setDescriptionArray(serviceEdit.description);
   };
 
   const handleEditService = (service: ServicesType) => {
@@ -50,13 +53,13 @@ const EditPanel: React.FC = () => {
     setServiceEdit(service);
   }
 
-  const onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean }> = (data) => {
+  const onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean; descriptionArray: string[] }> = (data) => {
     try {
       setIsLoading(true);
       // const response = await sendDataToServer({ ...data, description: descriptionArray });
       // if (response.status === 200) { 
-      console.log(panelSource)
-      console.log('Form submitted successfully', { ...data.service, description: data.service.description });
+     // console.log("veamos que es la data esta", data)
+      console.log('Form submitted successfully', { ...data.service, description: descriptionArray });
       // reset();
       //setDescriptionArray([]);
       // }
@@ -93,9 +96,6 @@ const EditPanel: React.FC = () => {
                   Crear nuevo servicio
                 </div>
                 <div className='Edit_elements' onClick={expandEditMenu}>
-                  {/*opcion 1: botón que agregar el lapiz y cruz a todos los elementos,
-                           opcion 2: desplegable con n elementos como servicios existen y al hacer clic en cada uno muestre el servicio correspondiente ya listo para ser editado o borrado
-                           */}
                   Editar servicio
                 </div>
                 {editMenu && (
@@ -127,6 +127,8 @@ const EditPanel: React.FC = () => {
                 setService={setServiceCreate}
                 handleCreateModal={handleCreateModal}
                 panelSource={panelSource}
+                descriptionArray={descriptionArray}
+                setDescriptionArray={setDescriptionArray}
               />
             </div>
           </div>
@@ -142,6 +144,8 @@ const EditPanel: React.FC = () => {
                 setService={setServiceEdit}
                 handleCreateModal={handleEditModal}
                 panelSource={panelSource}
+                descriptionArray={descriptionArray}
+                setDescriptionArray={setDescriptionArray}
               />
           </div>
         </div>

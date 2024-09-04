@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { ServicesType } from '../../../utils/Interface';
 
 interface ServiceCreateFormProps {
-  onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean; }>;
+  onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean; descriptionArray: string[] }>;
   isLoading: boolean;
   service: ServicesType;
   setService: React.Dispatch<React.SetStateAction<ServicesType>>;
   handleCreateModal: () => void;
   panelSource: boolean;
+  descriptionArray: string[];
+  setDescriptionArray: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoading, service, setService, handleCreateModal, panelSource }) => {
+const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoading, service, handleCreateModal, panelSource, descriptionArray, setDescriptionArray }) => {
   const [newDescription, setNewDescription] = useState<string>('');
   const [errorDescription, setErrorDescription] = useState<string>('');
 
@@ -19,11 +21,12 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
     register,
     handleSubmit,
     formState: { errors },
-    setValue
-  } = useForm<{ service: ServicesType; panelSource: boolean }>({
+    setValue,
+  } = useForm<{ service: ServicesType; panelSource: boolean; descriptionArray: string[] }>({
     defaultValues: {
       service: service,
       panelSource: panelSource,
+      descriptionArray: descriptionArray,
     }
   });
 
@@ -42,14 +45,16 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
 
   const handleAddDescription = () => {
     if (validateDescription(newDescription)) {
-      setService((prevObjeto) => ({
-        ...prevObjeto,
-        description: [...prevObjeto.description, newDescription],
-      }));
+      const updatedArray = [...descriptionArray, newDescription];
+      setDescriptionArray(updatedArray);
       setNewDescription('');
-      setValue('service.description', []);
+      setValue('descriptionArray', updatedArray);
     }
   };
+
+  useEffect(() => {
+    setValue('descriptionArray', descriptionArray);
+  }, [descriptionArray, setValue]);
 
   return (
     <form className='form_modal' onSubmit={handleSubmit(onSubmit)}>
@@ -77,24 +82,18 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
               className='description_content'
               placeholder='Descripción'
               value={newDescription}
-              {...register('service.description', {
-                validate: () => service.description.length > 0 || newDescription.trim() !== '' || 'Este campo es requerido.',
-                minLength: { value: 20, message: "La cantidad mínima de caracteres es 20." },
-                maxLength: { value: 300, message: "La cantidad máxima de caracteres es 300." },
-                onChange: (e) => {
-                  setNewDescription(e.target.value);
-                  validateDescription(e.target.value);
-                }
-              })}
+              onChange={(e) => {
+                setNewDescription(e.target.value);
+                validateDescription(e.target.value);
+              }}
             />
           </div>
           <button type='button' disabled={!!errorDescription} onClick={handleAddDescription}>+ Agregar descripción</button>
           {errorDescription && <p className='create_errors'>{errorDescription}</p>}
-          {errors.service?.description && <p className='create_errors'>{errors.service.description.message}</p>}
-          {service.description.length > 0 && (
+          {descriptionArray.length > 0 && (
             <div className='description_array_container'>
               <ul>
-                {service.description.map((description, index) => (
+                {descriptionArray.map((description, index) => (
                   <li key={index} className="services_description">
                     {description}
                   </li>
@@ -105,7 +104,7 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
         </div>
       </div>
       <button className='cancel_button' type="button" onClick={handleCreateModal}>Close</button>
-      <button className='service_submit' type="submit" disabled={!service.description.length || isLoading}>
+      <button className='service_submit' type="submit" disabled={!descriptionArray.length || isLoading}>
         {isLoading ? <div className='spinner'></div> : 'Crear'}
       </button>
     </form>
