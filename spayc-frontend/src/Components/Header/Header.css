@@ -1,13 +1,13 @@
 .Header_content_container {
-    background: linear-gradient(135deg, rgba(255,255,255,1) 20%, rgba(0, 65, 115,1) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 10%, rgba(0, 65, 115,1) 55%);
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    padding: 10px 0 20px 30px;
 }
 
 .Header_logo_container {
     display: flex;
-    width: 150px;
+    width: 120px;
 }
 
 .logo {
@@ -15,8 +15,126 @@
     align-self: center;
 }
 
+.Header_right_container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.Header_info_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 0 0 20px;
+    color: #fff;
+}
+
+.Header_info_block {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Header_info_block:nth-child(2), 
+.Header_info_block:nth-child(4) {
+    flex: 0.5;
+}
+
+.Header_info_block:nth-child(3){
+    border: solid 1px #fff;
+    padding: 10px 15px;
+    border-radius: 25px;
+    max-width: max-content;
+}
+
+.Header_info_block p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.Header_info_block a {
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+}
+
+.phone_icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg) brightness(1) contrast(1);
+
+}
+
+.socialMedia_container_h {
+    display: flex;
+    column-gap: 10px;
+}
+
+.Header_divisor {
+    height: 2px;
+    background-color: #fff;
+    width: 100%;
+    align-self: center;
+}
+
+.Header_nav_container {
+    padding-right: 20px;
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 65, 115, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    padding: 10px 20px;
+}
+
+/* Responsive */
+
 @media screen and (max-width: 1279px) {
     .Header_content_container {
         height: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Header_content_container {
+        height: unset;
+        background: rgba(0, 65, 115,1);
+        padding: 10px 20px 10px 10px;
+    }
+
+    .Header_logo_container {
+        width: 100px;
+        align-items: center;
+    }
+
+    .Header_right_container {
+        align-self: center;
+        flex-direction: unset;
+    }
+
+    .Header_right_container p {
+        text-align: center;
+        padding: 0 20px;
+        font-size: 14px;
+        letter-spacing: 0.3px;
+        color: #fff;
+        font-weight: bold;
+        margin-right: 1px;
     }
 }
