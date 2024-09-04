@@ -20,32 +20,48 @@ const EditPanel: React.FC = () => {
     image: '',
     isActive: true,
   });
+  const [serviceCreate, setServiceCreate] = useState<ServicesType>({
+    id: -1,
+    title: '',
+    description: [],
+    image: '',
+    isActive: true,
+  });
   const [descriptionArray, setDescriptionArray] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [panelSource, setPanelSource] = useState<boolean>(true)
 
-console.log('que sera?', servicesArray)
   const modalRef = useRef<HTMLDivElement>(null);
 
   const expandMenu = () => setMenu(!menu);
   const expandEditMenu = () => setEditMenu(!editMenu);
 
-  const handleCreateModal = () => setCreateModal(!createModal);
-  const handleEditModal = () => setEditModal(!editModal);
+  const handleCreateModal = () => {
+    setCreateModal(!createModal);
+    setPanelSource(true);
+    setDescriptionArray([]);
+  };
+
+  const handleEditModal = () => {
+    setEditModal(!editModal);
+    setPanelSource(false);
+    //setDescriptionArray(serviceEdit.description);
+  };
 
   const handleEditService = (service: ServicesType) => {
-    console.log('Aqui estoy!!', service);
     handleEditModal();
     setServiceEdit(service);
   }
 
-  const onSubmit: SubmitHandler<ServicesType> = async (data) => {
+  const onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean; descriptionArray: string[] }> = (data) => {
     try {
       setIsLoading(true);
       // const response = await sendDataToServer({ ...data, description: descriptionArray });
       // if (response.status === 200) { 
-      console.log('Form submitted successfully', { ...data, description: descriptionArray });
+     // console.log("veamos que es la data esta", data)
+      console.log('Form submitted successfully', { ...data.service, description: descriptionArray });
       // reset();
-      setDescriptionArray([]);
+      //setDescriptionArray([]);
       // }
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -80,9 +96,6 @@ console.log('que sera?', servicesArray)
                   Crear nuevo servicio
                 </div>
                 <div className='Edit_elements' onClick={expandEditMenu}>
-                  {/*opcion 1: botón que agregar el lapiz y cruz a todos los elementos,
-                           opcion 2: desplegable con n elementos como servicios existen y al hacer clic en cada uno muestre el servicio correspondiente ya listo para ser editado o borrado
-                           */}
                   Editar servicio
                 </div>
                 {editMenu && (
@@ -110,9 +123,12 @@ console.log('que sera?', servicesArray)
               <ServiceCreateForm
                 onSubmit={onSubmit}
                 isLoading={isLoading}
+                service={serviceCreate}
+                setService={setServiceCreate}
+                handleCreateModal={handleCreateModal}
+                panelSource={panelSource}
                 descriptionArray={descriptionArray}
                 setDescriptionArray={setDescriptionArray}
-                handleCreateModal={handleCreateModal}
               />
             </div>
           </div>
@@ -124,9 +140,12 @@ console.log('que sera?', servicesArray)
               <ServiceCreateForm
                 onSubmit={onSubmit}
                 isLoading={isLoading}
-                descriptionArray={serviceEdit.description}
-                setDescriptionArray={setDescriptionArray}
+                service={serviceEdit}
+                setService={setServiceEdit}
                 handleCreateModal={handleEditModal}
+                panelSource={panelSource}
+                descriptionArray={descriptionArray}
+                setDescriptionArray={setDescriptionArray}
               />
           </div>
         </div>
