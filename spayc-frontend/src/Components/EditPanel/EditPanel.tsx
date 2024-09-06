@@ -8,7 +8,7 @@ import './EditPanel.css';
 
 const EditPanel: React.FC = () => {
 
-  const { servicesArray } = useServicesContext();
+  const { servicesArray, refreshServices } = useServicesContext();
   const [menu, setMenu] = useState<boolean>(false);
   const [editMenu, setEditMenu] = useState<boolean>(false);
   const [createModal, setCreateModal] = useState<boolean>(false);
@@ -45,31 +45,37 @@ const EditPanel: React.FC = () => {
   const handleEditModal = () => {
     setEditModal(!editModal);
     setPanelSource(false);
-    //setDescriptionArray(serviceEdit.description);
   };
 
   const handleEditService = (service: ServicesType) => {
     handleEditModal();
     setServiceEdit(service);
-  }
+  };
 
-  const onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean; descriptionArray: string[] }> = (data) => {
+  const onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean; descriptionArray: string[]; file: FileList }> = async (data) => {
     try {
       setIsLoading(true);
-      // const response = await sendDataToServer({ ...data, description: descriptionArray });
-      // if (response.status === 200) { 
-     // console.log("veamos que es la data esta", data)
-      console.log('Form submitted successfully', { ...data.service, description: descriptionArray });
-      // reset();
-      //setDescriptionArray([]);
-      // }
+
+      const formData = new FormData();
+      formData.append('title', data.service.title);
+      formData.append('description', data.descriptionArray.join('-.-'));
+      formData.append('file', data.file[0]);
+
+      const response = await fetch('http://localhost:3001/admin/newService', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        await refreshServices();
+      }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error:', error);
     } finally {
       setIsLoading(false);
+      setCreateModal(!createModal);
     }
-  }
-
+  };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -82,7 +88,6 @@ const EditPanel: React.FC = () => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [createModal]);
-
 
   return (
     <div className='Edit_panel_component'>

@@ -3,7 +3,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { ServicesType } from '../../../utils/Interface';
 
 interface ServiceCreateFormProps {
-  onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean; descriptionArray: string[] }>;
+  onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean; descriptionArray: string[]; file: FileList }>;
   isLoading: boolean;
   service: ServicesType;
   setService: React.Dispatch<React.SetStateAction<ServicesType>>;
@@ -11,7 +11,10 @@ interface ServiceCreateFormProps {
   panelSource: boolean;
   descriptionArray: string[];
   setDescriptionArray: React.Dispatch<React.SetStateAction<string[]>>;
+ // file: FileList;
 }
+
+const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2MB
 
 const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoading, service, handleCreateModal, panelSource, descriptionArray, setDescriptionArray }) => {
   const [newDescription, setNewDescription] = useState<string>('');
@@ -21,8 +24,10 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
     register,
     handleSubmit,
     formState: { errors },
+    setError,
     setValue,
-  } = useForm<{ service: ServicesType; panelSource: boolean; descriptionArray: string[] }>({
+    clearErrors,
+  } = useForm<{ service: ServicesType; panelSource: boolean; descriptionArray: string[]; file: FileList }>({
     defaultValues: {
       service: service,
       panelSource: panelSource,
@@ -55,6 +60,17 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
   useEffect(() => {
     setValue('descriptionArray', descriptionArray);
   }, [descriptionArray, setValue]);
+
+  const validateFileSize = (file: FileList | null): boolean => {
+    if (file && file[0] && file[0].size > MAX_FILE_SIZE) {
+      setError("file", {
+        type: "manual",
+        message: "El archivo excede el tamaño máximo de 2MB",
+      });
+      return false;
+    }
+    return true;
+  };
 
   return (
     <form className='form_modal' onSubmit={handleSubmit(onSubmit)}>
@@ -101,6 +117,20 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
               </ul>
             </div>
           )}
+        </div>
+        <div className='Image_file'>
+          <label>Adjuntar imagen</label>
+          <input className='Image_file_input'
+            type="file"
+            {...register('file', {
+              required: 'La imagen es requerido.'
+            })}
+            onChange={(e) => {
+              clearErrors("file");
+              validateFileSize(e?.target.files);
+            }}
+          />
+          {errors.file && <p className='Contact_errors'>{errors.file.message}</p>}
         </div>
       </div>
       <button className='cancel_button' type="button" onClick={handleCreateModal}>Close</button>
