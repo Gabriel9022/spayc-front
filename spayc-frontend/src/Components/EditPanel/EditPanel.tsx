@@ -48,32 +48,57 @@ const EditPanel: React.FC = () => {
   };
 
   const handleEditService = (service: ServicesType) => {
-    handleEditModal();
     setServiceEdit(service);
+    setDescriptionArray(service.description);
+    handleEditModal();
   };
 
-  const onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean; descriptionArray: string[]; file: FileList }> = async (data) => {
+  const onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean; descriptionArray: string[]; file: FileList | null}> = async (data) => {
     try {
       setIsLoading(true);
 
-      const formData = new FormData();
-      formData.append('title', data.service.title);
-      formData.append('description', data.descriptionArray.join('-.-'));
-      formData.append('file', data.file[0]);
+      if (panelSource) {
+        const formData = new FormData();
+        formData.append('title', data.service.title);
+        formData.append('description', data.descriptionArray.join('-.-'));
+        if (data.file && data.file.length > 0) formData.append('file', data.file[0]);
 
-      const response = await fetch('http://localhost:3001/admin/newService', {
-        method: 'POST',
-        body: formData,
-      });
+        const response = await fetch('http://localhost:3001/admin/newService', {
+          method: 'POST',
+          body: formData,
+        });
 
-      if (response.ok) {
-        await refreshServices();
+        if (response.ok) {
+          await refreshServices();
+        }
+      } else {
+        console.log('entre bien, el panelsource es ', panelSource)
+        const formData = new FormData();
+        formData.append('id', data.service.id.toString());
+        formData.append('title', data.service.title);
+        formData.append('description', data.descriptionArray.join('-.-'));
+        formData.append('isActive', data.service.isActive.toString());
+        if (data.file && data.file.length > 0) {
+          formData.append('file', data.file[0]);
+        } else {
+          formData.append('file', '');
+        }
+
+        const response = await fetch('http://localhost:3001/admin/editService', {
+          method: 'PUT',
+          body: formData,
+        });
+        
+        if (response.ok) {
+          await refreshServices();
+        }
       }
     } catch (error) {
       console.error('Error:', error);
     } finally {
       setIsLoading(false);
-      setCreateModal(!createModal);
+      setCreateModal(false);
+      setEditModal(false);
     }
   };
 
