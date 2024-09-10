@@ -84,7 +84,7 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
 
   const handleEditButton = (index: number) => {
     setEditIndividualDescription(true);
-    setOldDescription({description: descriptionArray[index], index});
+    setOldDescription({ description: descriptionArray[index], index });
   };
 
   const handleDeleteButton = (index: number) => {
@@ -160,53 +160,56 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
           {panelSource ? (<>
             <label>Adjuntar imagen</label>
             <input className='Image_file_input'
-            type="file"
-            {...register('file', {
-              required: 'La imagen es requerido.'
-            })}
-            onChange={(e) => {
-              clearErrors("file");
-              validateFileSize(e?.target.files);
-            }}
-          />
+              type="file"
+              {...register('file', {
+                required: 'La imagen es requerido.'
+              })}
+              onChange={(e) => {
+                clearErrors("file");
+                validateFileSize(e?.target.files);
+              }}
+            />
           </>) :
-          <>
-          <label>Editar imagen</label>
-          <input className='Image_file_input'
-          type="file"
-          {...register('file')}
-          onChange={(e) => {
-            clearErrors("file");
-            validateFileSize(e?.target.files);
-          }}
-        />
-        </>
+            <>
+              <label>Editar imagen</label>
+              <input className='Image_file_input'
+                type="file"
+                {...register('file')}
+                onChange={(e) => {
+                  clearErrors("file");
+                  validateFileSize(e?.target.files);
+                }}
+              />
+            </>
           }
           {errors.file && <p className='Contact_errors'>{errors.file.message}</p>}
         </div>
-      </div>
-      <button className='cancel_button' type="button" onClick={handleCreateModal}>Close</button>
-      <button className='service_submit' type="submit" disabled={!descriptionArray.length || isLoading}>
-        {panelSource ?
-        isLoading ? <div className='spinner'></div> : 'Crear' : 
-        isLoading ? <div className='spinner'></div> : 'Guardar'}
-      </button>
-      {editIndividualDescription && (
-        <div className='edit_individual_description'>
-          <textarea 
-          className='description_content'
-          value={oldDescription.description}
-          onChange={(e) => {
-            setOldDescription({
-              ...oldDescription,
-              description: e.target.value});
-            validateDescription(e.target.value);
-          }}/>
-          {editIndividualDescription && errorDescription && <p className='create_errors'>{errorDescription}</p>}
-          <button className='' type='button' onClick={handleSaveEditDescripcion}>Guardar</button>
-          <button className='' type='button' onClick={handleCancelEditDescription}>Cancelar</button>
+        <div className='form_buttons'>
+          <button className='cancel_button' type="button" onClick={handleCreateModal}>Close</button>
+          <button className='service_submit' type="submit" disabled={!descriptionArray.length || isLoading}>
+            {panelSource ?
+              isLoading ? <div className='spinner'></div> : 'Crear' :
+              isLoading ? <div className='spinner'></div> : 'Guardar'}
+          </button>
         </div>
-      )}
+        {editIndividualDescription && (
+          <div className='edit_individual_description'>
+            <textarea
+              className='description_content'
+              value={oldDescription.description}
+              onChange={(e) => {
+                setOldDescription({
+                  ...oldDescription,
+                  description: e.target.value
+                });
+                validateDescription(e.target.value);
+              }} />
+            {editIndividualDescription && errorDescription && <p className='create_errors'>{errorDescription}</p>}
+            <button className='' type='button' onClick={handleSaveEditDescripcion}>Guardar</button>
+            <button className='' type='button' onClick={handleCancelEditDescription}>Cancelar</button>
+          </div>
+        )}
+      </div>
     </form>
   );
 };
