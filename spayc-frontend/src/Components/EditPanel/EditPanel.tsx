@@ -72,7 +72,6 @@ const EditPanel: React.FC = () => {
           await refreshServices();
         }
       } else {
-        console.log('entre bien, el panelsource es ', panelSource)
         const formData = new FormData();
         formData.append('id', data.service.id.toString());
         formData.append('title', data.service.title);
@@ -119,24 +118,37 @@ const EditPanel: React.FC = () => {
       <div className='Edit_panel_sections'>
         <div className='Edit_panel_menu'>
           <div className='Edit_panel_item'>
-            <div onClick={expandMenu}>SERVICIOS</div>
+            <div className='Edit_panel_title' onClick={expandMenu} >SERVICIOS</div>
             {menu && (
-              <div>
-                <div className='Create_element' onClick={handleCreateModal}>
+              <div className='Edit_panel_elements'>
+                <div className='Edit_element' onClick={handleCreateModal} >
                   Crear nuevo servicio
                 </div>
-                <div className='Edit_elements' onClick={expandEditMenu}>
+                <div className='Edit_element' onClick={expandEditMenu}>
                   Editar servicio
                 </div>
                 {editMenu && (
+                  <div>
+                    <div className='Edit_panel_subtitle'>Activos</div>
                     <div className='Edit_menu'>
                       {servicesArray.map((service) => {
-                        return (
-                          <div key={service.id} className='Edit_menu_option' onClick={() => handleEditService(service)}>{service.title}</div>
-                        )
-                      })}
+                        if (service.isActive === true) {
+                          return (
+                            <div key={service.id} className='Edit_menu_option' onClick={() => handleEditService(service)}>{service.title}</div>
+                          );
+                        }})}
                     </div>
-                  )}
+                    <div className='Edit_panel_subtitle'>Inactivos</div>
+                    <div className='Edit_menu'>
+                      {servicesArray.map((service) => {
+                        if (service.isActive === false) {
+                          return (
+                            <div key={service.id} className='Edit_menu_option' onClick={() => handleEditService(service)}>{service.title}</div>
+                          );
+                        }})}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -153,6 +165,7 @@ const EditPanel: React.FC = () => {
               <ServiceCreateForm
                 onSubmit={onSubmit}
                 isLoading={isLoading}
+                setIsLoading={setIsLoading}
                 service={serviceCreate}
                 setService={setServiceCreate}
                 handleCreateModal={handleCreateModal}
@@ -170,6 +183,7 @@ const EditPanel: React.FC = () => {
               <ServiceCreateForm
                 onSubmit={onSubmit}
                 isLoading={isLoading}
+                setIsLoading={setIsLoading}
                 service={serviceEdit}
                 setService={setServiceEdit}
                 handleCreateModal={handleEditModal}
