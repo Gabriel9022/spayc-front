@@ -1,12 +1,17 @@
 .Loggin_component {
     display: flex;
     justify-content: center;
-    padding: 50px 0;
+    padding: 5vh 0;
+}
+
+.Loggin_component button {
+    cursor: pointer;
+    width: 100%;
 }
 
 .Loggin_container {
     width: 300px;
-    height: 200px;
+    min-height: 200px;
     border: solid 1px grey;
     border-radius: 20px;
     padding: 20px;
@@ -21,4 +26,30 @@
 .userName_container, .password_container {
     display: flex;
     flex-direction: column;
+}
+
+.forgotPassword_label {
+    cursor: pointer;
+}
+
+.forgotPassword_label:hover {
+    text-decoration: underline;
+}
+
+.input_error {
+    border-color: red;
+}
+
+.Loggin_errors {
+    color: red;
+    font-size: 14px;
+}
+
+button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: #f0f0f0;
 }
