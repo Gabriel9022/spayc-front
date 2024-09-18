@@ -7,9 +7,34 @@
     border: solid 1px grey;
 }
 
-.Edit_panel_item, .Create_element, .Edit_elements {
-    padding: 10px;
+.Edit_panel_item {
     border: solid 1px grey;
+}
+
+.Edit_panel_title {
+    padding: 10px;
+}
+
+.Edit_element {
+    padding: 8px;
+    border: solid 1px grey;
+}
+
+.Edit_panel_subtitle {
+    padding: 5px 20px;
+}
+
+.Edit_menu {
+    margin: 0 10px;
+    border-left: solid 1px grey;
+    border-right: solid 1px grey;
+    display: flex;
+    flex-direction: column;
+}
+
+.Edit_menu_option {
+    border: solid 1px grey;
+    padding: 6px 4px;
 }
 
 .Edit_panel_visualizer {
@@ -23,20 +48,33 @@
     padding: 20px;
 }
 
-.create_modal, .edit_modal, .edit_individual_description {
+.close_button {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    background-color: #d9534f;
+    border: solid 1px #d9534f;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.create_modal, .edit_modal, .edit_individual_description, .confirm_is_active_service {
     position: fixed;
     background-color: #FFF;
     border-radius: 10px;
-    padding: 20px;
+    padding: 30px;
     box-shadow: 0 0 10px 1200px rgba(0, 0, 0, 0.493);
     left: 50%;
     transform: translateX(-50%);
     top: 200px;
-    max-width: 440px;
+    max-width: 540px;
     width: 100%;
 }
 
-.input_container {
+.input_container, .edit_individual_description {
     display: flex;
     flex-direction: column;
 }
@@ -76,4 +114,141 @@
 .description_content {
     line-height: 20px;
     height: 80px;
+}
+
+.description_add_button {
+    width: 170px;
+    height: 30px;
+    margin: 5px auto;
+    border-radius: 20px;
+    background-color: #0cb7f2;
+    border: solid 1px #0cb7f2 ;
+    position: relative;
+    color: #004173;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.description_array_container {
+    margin: 0 20px;
+    padding-bottom: 10px;
+}
+
+.description_array_container li {
+    padding: 5px 0;
+}
+
+.services_description {
+    display: flex;
+    list-style: none;
+    border-bottom: solid 1px gray;
+    justify-content: space-between;
+}
+
+.description_buttons {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.edit_button_description, .delete_button_description {
+    height: 25px;
+    width: 25px;
+    margin: 5px auto;
+    border-radius: 5px;
+    position: relative;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete_button_description {
+    background-color: #d9534f;
+    border: solid 1px #d9534f;
+    color: white;
+}
+
+.edit_button_description {
+    background-color: #6c757d;
+    border: solid 1px #6c757d;
+    color: white;
+}
+
+.edit_button_description:hover {
+    background-color: #3b3f43;
+    border: solid 1px #3b3f43;
+    font-weight: bolder;
+}
+
+.image_file {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.form_buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.service_submit, .is_active_button, .cancel_button, .is_active_button_confirm {
+    width: 80px;
+    height: 30px;
+    margin: 5px 0;
+    border-radius: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.service_submit, .is_active_button_confirm {
+    background-color: #0cb7f2;
+    border: solid 1px #0cb7f2 ;
+    color: #004173;
+}
+
+.description_add_button:hover, .service_submit:hover, .is_active_button_confirm:hover {
+    background-color: #004173;
+    border: #004173 ;
+    color: #fff;
+}
+
+.is_active_button, .cancel_button {
+    background-color: #d9534f;
+    border: solid 1px #d9534f;
+    color: white;
+}
+
+.close_button:hover, .delete_button_description:hover, .is_active_button:hover, .cancel_button:hover {
+    font-weight: bolder;
+    background-color: #e3302a;
+    border: solid 1px #e3302a;
+}
+
+.edit_individual_description {
+    row-gap: 15px;
+}
+
+.confirm_is_active_service {
+    width: 380px;
+}
+
+.is_active_question {
+    padding: 20px 10px;
+}
+
+.is_active_button, .is_active_button_confirm {
+    width: auto;
+}
+
+.is_active_button span, .is_active_button_confirm span {
+    padding: 0 15px;
 }

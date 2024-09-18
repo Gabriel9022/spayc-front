@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { ServicesType } from '../../../utils/Interface';
+import { useServicesContext } from '../../../hooks/useServicesContext';
 
 interface ServiceCreateFormProps {
   onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean; descriptionArray: string[]; file: FileList | null }>;
   isLoading: boolean;
+  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
   service: ServicesType;
   setService: React.Dispatch<React.SetStateAction<ServicesType>>;
   handleCreateModal: () => void;
@@ -20,7 +22,8 @@ interface descriptionObject {
 
 const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2MB
 
-const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoading, service, handleCreateModal, panelSource, descriptionArray, setDescriptionArray }) => {
+const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoading, setIsLoading, service, handleCreateModal, panelSource, descriptionArray, setDescriptionArray }) => {
+  const { refreshServices } = useServicesContext();
   const [newDescription, setNewDescription] = useState<string>('');
   const [errorDescription, setErrorDescription] = useState<string>('');
   const [editIndividualDescription, setEditIndividualDescription] = useState<boolean>(false);
@@ -28,6 +31,7 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
     description: '',
     index: 0
   });
+  const [confirmIsActiveService, setConfirmIsActiveService] = useState<boolean>(false);
 
   const {
     register,
@@ -108,9 +112,36 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
     setErrorDescription('');
   };
 
+  const handleIsActiveService = async () => {
+    setIsLoading(true);
+    try {
+      const formData = new FormData();
+      formData.append('id', service.id.toString());
+      formData.append('isActive', (!service.isActive).toString());
+
+      const response = await fetch('http://localhost:3001/admin/isActiveService', {
+        method: 'PUT',
+        body: formData,
+      });
+
+      if (response.ok) {
+        await refreshServices();
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    } finally {
+      setIsLoading(false);
+      setConfirmIsActiveService(false);
+      handleCreateModal();
+    }
+  };
+
   return (
     <form className='form_modal' onSubmit={handleSubmit(onSubmit)}>
       <div className='form_content'>
+        <div className='form_close'>
+          <button className='close_button' type="button" onClick={handleCreateModal}>X</button>
+        </div>
         <div className='title'>
           <div className='input_container'>
             <label>Título</label>
@@ -140,7 +171,7 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
               }}
             />
           </div>
-          <button type='button' disabled={!!errorDescription} onClick={handleAddDescription}>+ Agregar descripción</button>
+          <button className='description_add_button' type='button' disabled={!!errorDescription} onClick={handleAddDescription}>+ Agregar descripción</button>
           {!editIndividualDescription && errorDescription && <p className='create_errors'>{errorDescription}</p>}
           {descriptionArray.length > 0 && (
             <div className='description_array_container'>
@@ -148,18 +179,20 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
                 {descriptionArray.map((description, index) => (
                   <li key={index} className="services_description">
                     {description}
-                    <button className='edit_button_description' type='button' onClick={() => handleEditButton(index)}>±</button>
-                    <button className='delete_button_description' type='button' onClick={() => handleDeleteButton(index)}>x</button>
+                    <div className='description_buttons'>
+                      <button className='edit_button_description' type='button' onClick={() => handleEditButton(index)}>±</button>
+                      <button className='delete_button_description' type='button' onClick={() => handleDeleteButton(index)}>x</button>
+                    </div>
                   </li>
                 ))}
               </ul>
             </div>
           )}
         </div>
-        <div className='Image_file'>
+        <div className='image_file'>
           {panelSource ? (<>
             <label>Adjuntar imagen</label>
-            <input className='Image_file_input'
+            <input className='image_file_input'
               type="file"
               {...register('file', {
                 required: 'La imagen es requerido.'
@@ -172,7 +205,7 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
           </>) :
             <>
               <label>Editar imagen</label>
-              <input className='Image_file_input'
+              <input className='image_file_input'
                 type="file"
                 {...register('file')}
                 onChange={(e) => {
@@ -185,7 +218,10 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
           {errors.file && <p className='Contact_errors'>{errors.file.message}</p>}
         </div>
         <div className='form_buttons'>
-          <button className='cancel_button' type="button" onClick={handleCreateModal}>Close</button>
+          {panelSource ? null :
+            <button className='is_active_button' type="button" onClick={() => setConfirmIsActiveService(true)}>
+              {isLoading ? <div className='spinner'></div> :
+                service.isActive ? <span>Desactivar</span> : <span>Activar</span>} </button>}
           <button className='service_submit' type="submit" disabled={!descriptionArray.length || isLoading}>
             {panelSource ?
               isLoading ? <div className='spinner'></div> : 'Crear' :
@@ -205,10 +241,28 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
                 validateDescription(e.target.value);
               }} />
             {editIndividualDescription && errorDescription && <p className='create_errors'>{errorDescription}</p>}
-            <button className='' type='button' onClick={handleSaveEditDescripcion}>Guardar</button>
-            <button className='' type='button' onClick={handleCancelEditDescription}>Cancelar</button>
+            <div className='form_buttons'>
+            <button className='service_submit' type='button' onClick={handleSaveEditDescripcion}>Guardar</button>
+            <button className='cancel_button' type='button' onClick={handleCancelEditDescription}>Cancelar</button>
+            </div>
           </div>
         )}
+        {confirmIsActiveService ?
+          <div className='confirm_is_active_service'>
+            <div className='is_active_question'>
+              {service.isActive ?
+                <span>¿Estás seguro que deseas desactivar este servicio?</span> :
+                <span>¿Estás seguro que deseas activar este servicio?</span>}
+            </div>
+            <div className='form_buttons'>
+              <button className='is_active_button_confirm' type='button' onClick={handleIsActiveService}>
+                {service.isActive ?
+                  <span>Desactivar</span> : <span>Activar</span>}
+              </button>
+              <button className='cancel_button' type='button' onClick={() => setConfirmIsActiveService(false)}>Cancelar</button>
+            </div>
+          </div> :
+          null}
       </div>
     </form>
   );

@@ -38,9 +38,7 @@ const MappingServices: React.FC<MappingServicesProps> = () => {
                       />
                     </div>
                   </div>
-                ) : (
-                  <div style={{ display: "none" }}></div>
-                )}
+                ) : null}
               </div>
             );
           } else {
