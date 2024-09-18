@@ -75,10 +75,9 @@ const Profesionals: React.FC = () => {
                 </p>
               </div>
               <div className="professional_profile_skills_skill">
-                <span>Formación en Cuidados Gerontológicos</span>
+                <span>Formación en Gerontología</span>
                 <p>
-                  Los profesionales tienen formación específica en cuidados
-                  gerontológicos.
+                  Los profesionales tienen formación específica en Gerontología.
                 </p>
               </div>
               <div className="professional_profile_skills_skill">

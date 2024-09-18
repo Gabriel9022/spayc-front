@@ -83,7 +83,7 @@ const WorkWithUs: React.FC = () => {
             <div className='WorkWithUs_info'>
               <p className='WorkWithUs_info_description'>En SPAYC, Servicios Profesionales de Apoyo y Cuidado para Personas Mayores, contamos con una sólida trayectoria en el cuidado y acompañamiento de personas mayores. Nos dedicamos a ofrecer servicios de la más alta calidad, enfocados en mejorar la calidad de vida de las personas mayores y sus familias.</p>
               <p className='WorkWithUs_info_description'>Buscamos profesionales comprometidos y altamente capacitados que compartan nuestra pasión por el cuidado y el bienestar.</p>
-              <p className='WorkWithUs_info_description'>Si tiene conocimientos, experiencia en el rubro y un fuerte deseo de hacer una diferencia positiva en la vida de las personas mayores y sus familias, CONTACTESE con nosotros y forme parte de nuestro equipo!</p>
+              <p className='WorkWithUs_info_description'>Si contas con conocimientos, experiencia en el rubro y un fuerte deseo de hacer una diferencia positiva en la vida de las personas mayores y sus familias, CONTACTATE con nosotros y formá parte de nuestro equipo!</p>
             </div>
             <div className='WorkWithUs_image_container'>
               <img className='WorkWithUs_image' src={WorkWithUsImage} alt="imagen trabaja con nosotros" />
@@ -91,7 +91,7 @@ const WorkWithUs: React.FC = () => {
           </div>
           <div className='WorkWithUs_perfil_container'>
             <div className='WorkWithUs_perfil'>
-              <p className='WorkWithUs_perfil_description'>Conozca el <Link to="/profesionales">PERFIL DE NUESTROS PROFESIONALES</Link></p>
+              <p className='WorkWithUs_perfil_description'>Conocé el <Link to="/profesionales">PERFIL DE NUESTROS PROFESIONALES</Link></p>
             </div>
           </div>
         </div>

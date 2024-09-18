@@ -11,7 +11,7 @@ const AboutUs: React.FC = () => {
             </div>
         </div>
         <div className='AboutUs_intro_section'>
-          <p>Somos una empresa dedicada al cuidado integral y personalizado de personas mayores, comprometida en ofrecer servicios de alta calidad que mejoren su vida y promuevan su bienestar y autonomía. Con un equipo especializado en gerontología y una profunda vocación de servicio, nos dedicamos a proporcionar soluciones adaptadas a las necesidades únicas de cada individuo y su familia, diseñando planes de cuidados personalizados que abarcan desde la asistencia en actividades básicas de la vida diaria hasta el apoyo y estimulación biopsicosocial.</p>
+          <p>Somos un equipo de profesionales dedicado al cuidado integral y personalizado de personas mayores, comprometida en ofrecer servicios de alta calidad que mejoren su vida y promuevan su bienestar y autonomía. Con un equipo especializado en gerontología y una profunda vocación de servicio, nos dedicamos a proporcionar soluciones adaptadas a las necesidades únicas de cada individuo y su familia, diseñando planes de cuidados personalizados que abarcan desde la asistencia en actividades básicas de la vida diaria hasta el apoyo y estimulación biopsicosocial.</p>
         </div>
         <div className='AboutUs_description_section'>
           <div className='AboutUs_description_container'>
@@ -45,15 +45,15 @@ const AboutUs: React.FC = () => {
             <div className='AboutUs_mision_vision_container'>
               <div className='AboutUs_mision'>
                 <h2>Nuestra misión</h2>
-                <p>es proporcionar un entorno seguro, respetuoso y enriquecedor para las personas mayores, ofreciendo servicios de apoyos y cuidados que promuevan su bienestar físico, emocional y social.</p>
+                <p>Proporcionar un entorno seguro, respetuoso y enriquecedor para las personas mayores, ofreciendo servicios de apoyos y cuidados que promuevan su bienestar físico, emocional y social.</p>
               </div>
               <div className='AboutUs_vision'>
                 <h2>Nuestra visión</h2>
-                <p>es ser líderes en el sector del cuidado gerontológico, conocidos por nuestra excelencia en la prestación de servicios y nuestra dedicación al bienestar de las personas mayores, promoviendo la dignidad y el respeto en cada etapa del proceso de envejecimiento.</p>
+                <p>Ser líderes en el campo gerontológico, conocidos por nuestra excelencia en la prestación de servicios y nuestra dedicación al bienestar de las personas mayores, promoviendo la dignidad y el respeto en cada etapa del proceso de envejecimiento.</p>
               </div>
             </div>
             <div className='AboutUs_mv_description_container'>
-              <p>Para conocer más sobre cómo podemos ayudarle, no dude en contactarnos, estamos aquí para usted y su familia.</p>
+              <p>Para conocer más sobre cómo podemos ayudarte, no dude en contactarnos.</p>
             </div>
           </div>
         </div>
