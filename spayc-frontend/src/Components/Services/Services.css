@@ -106,8 +106,12 @@
     justify-content: center;
 }
 
+.Services_careOptionInfo_container {
+    max-width: 500px;
+}
+
 .Services_careOptionInfo_list {
-    width: 800px;
+    width: fit-content;
 }
 
 .Services_careOptionInfo_container h3 {
@@ -128,4 +132,14 @@
 .Services_careOptionInfo_list li {
     padding: 10px 0;
     font-size: 18px;
+}
+
+.Services_careOptionImg_container {
+    display: flex;
+}
+.Services_careOptionImg_img {
+    width: 320px;
+    height: fit-content;
+    align-self: center;
+    border-radius: 20px;
 }

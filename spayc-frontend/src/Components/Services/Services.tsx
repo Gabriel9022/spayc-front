@@ -1,6 +1,7 @@
 import React from "react";
 import MappingServices from './MapServices/MappingServices';
 import { useServicesContext } from "../../hooks/useServicesContext";
+import attendingPerson from "../../assets/images/Home/old-patient-suffering-from-parkinson.jpg";
 import "./Services.css";
 
 const Services: React.FC = () => {
@@ -34,12 +35,15 @@ const Services: React.FC = () => {
               <li>Servicio por 24 horas.</li>
               <li>
                 Servicios especializados en patologías: Alzheimer, demencia,
-                Parkinson, ELA.
+                Parkinson, ELA, ICTUS.
               </li>
               <li>
                 Servicio en hospitales, clínicas, Residencias, entre otros.
               </li>
             </ul>
+          </div>
+          <div className="Services_careOptionImg_container">
+            <img className="Services_careOptionImg_img" src={attendingPerson} alt="Imagen de Opciones de Cuidados" />
           </div>
         </div>
       </div>

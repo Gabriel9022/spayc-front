@@ -8,14 +8,14 @@ const Home: React.FC = () => {
   return (
     <div className="home_component">
       <div className="home_sections">
-      <div className="home_banner">
-            <div className="home_banner_title">
-              <h1>Bienvenidos a SPAYC</h1>
-              <span>
-                Servicios Profesionales de Apoyo y Cuidado para Personas
-                Mayores
-              </span>
-            </div>
+        <div className="home_banner">
+          <div className="home_banner_title">
+            <h1>Bienvenidos a SPAYC</h1>
+            <span>
+              Servicios Profesionales de Apoyo y Cuidado para Personas
+              Mayores
+            </span>
+          </div>
         </div>
         <div className="home_introduction">
           <div className="home_introduction_container">
@@ -24,10 +24,10 @@ const Home: React.FC = () => {
             </div>
             <div className="home_introduction_us">
               <p>
-                Somos una empresa dedicada al cuidado integral y personalizado
+                Somos un equipo de profesionales al cuidado integral y personalizado
                 de personas mayores. Ofrecemos una amplia variedad de servicios
                 de la más alta calidad profesional y humana, diseñados para
-                brindar apoyos y cuidados a las personas mayores en el
+                brindar apoyo y cuidado a las personas mayores en el
                 desarrollo de sus actividades básicas/ instrumentales de la vida
                 diaria.
               </p>
@@ -78,7 +78,7 @@ const Home: React.FC = () => {
                 </p>
               </div>
               <div className="home_compromise_description_card">
-                <h4>Fomentar la independencia</h4>
+                <h4>Promover la autonomía</h4>
                 <p>
                   Ayudar a las personas mayores a mantener su autonomía y
                   dignidad, proporcionando la asistencia necesaria para que
@@ -87,9 +87,8 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="home_compromise_service">
-              <p className="home_compromise_service_link">
-                Para ello ofrecemos <Link to="/servicios">SERVICIOS PARA PERSONAS MAYORES</Link>
-              </p>
+              <p>Para ello ofrecemos</p>
+              <p><Link to="/servicios">SERVICIOS PARA PERSONAS MAYORES</Link></p>
             </div>
           </div>
         </div>
@@ -102,19 +101,23 @@ const Home: React.FC = () => {
               <h4>Nuestros servicios incluyen</h4>
               <div className="home_services_items">
                 <div className="home_services_items_item">
-                  <p>Asesoramiento y orientación para la contratación de personal altamente calificado (para Residencias de larga estadía, Geriátricos, Centros de día), garantizando profesionalización y calidad humana.</p>
+                  <p className="home_services_items_item_title">Búsqueda de personal:</p>
+                  <p> Asesoramiento y orientación para la contratación de personal altamente calificado (para Residencias de larga estadía, Geriátricos, Centros de día), garantizando profesionalización y calidad humana.</p>
                 </div>
                 <div className="home_services_items_item">
-                  <p><span>Capacitación y Formación:</span> Talleres y programas de formación para profesionales del sector.</p>
+                  <p className="home_services_items_item_title">Capacitación y Formación:</p>
+                  <p> Talleres y programas de formación para profesionales del sector.</p>
                 </div>
                 <div className="home_services_items_item">
-                  <p><span>Desarrollo de Políticas Públicas:</span> Asesoría en la creación e implementación de políticas que promuevan el bienestar y la calidad de vida de las personas mayores.</p>
+                  <p className="home_services_items_item_title">Desarrollo de Políticas Públicas:</p>
+                  <p> Asesoría en la creación e implementación de políticas que promuevan el bienestar y la calidad de vida de las personas mayores.</p>
                 </div>
               </div>
             </div>
           </div>
           <div className="home_services_link">
-            <p>Conoce nuestros <Link to={"/instituciones"}>SERVICIOS PARA INSTITUCIONES</Link></p>
+            <p>Conoce nuestros</p>
+            <p><Link to={"/instituciones"}>SERVICIOS PARA INSTITUCIONES</Link></p>
           </div>
         </div>
         <div className="home_professionals">
@@ -126,7 +129,8 @@ const Home: React.FC = () => {
               <p>Estos servicios son brindados por profesionales  altamente capacitados, con formación y experiencia en el sector.</p>
               <p>Nos caracterizamos por trabajar desde un enfoque de derechos, con perspectiva de género y mirada gerontológica.</p>
               <div className="home_professionals_link">
-                <p>Conoce el <Link to={"/profesionales"}>PERFIL DE NUESTROS PROFESIONALES</Link></p>
+                <p>Conoce el perfil </p>
+                <p><Link to={"/profesionales"}>NUESTROS PROFESIONALES</Link></p>
               </div>
             </div>
           </div>
@@ -137,7 +141,8 @@ const Home: React.FC = () => {
             <div className="home_contact_introduction">
               <p>Más  que un proveedor de servicios de cuidados, somos un socio de confianza en el bienestar y calidad de vida de las personas mayores. Estamos comprometidos con hacer una diferencia tangible en cada vida que acompañamos y nos enorgullece servir con pasión y excelencia en el campo gerontológico.</p>
               <div className="home_contact_link">
-                <p><Link to={"/contacto"}>PARA CONOCER MAS SOBRE COMO PODEMOS AYUDARLE, NO DUDE EN CONTACTARNOS</Link></p>
+                <p>PARA CONOCER MAS SOBRE COMO PODEMOS AYUDARLE, NO DUDE EN </p>
+                <p><Link to={"/contacto"}>CONTACTARNOS</Link></p>
               </div>
             </div>
             <div className="home_contact_image">
