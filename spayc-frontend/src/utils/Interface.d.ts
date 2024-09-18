@@ -9,3 +9,8 @@ export interface ServicesType {
 export interface MappingServicesProps {
     services: ServicesType[];
   }
+
+export type Inputs = {
+  userName: string;
+  password: string;
+};
