@@ -53,8 +53,8 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
       setErrorDescription("La cantidad mínima de caracteres es 20.");
       return false;
     }
-    if (description.length > 300) {
-      setErrorDescription("La cantidad máxima de caracteres es 300.");
+    if (description.length > 400) {
+      setErrorDescription("La cantidad máxima de caracteres es 400.");
       return false;
     }
     setErrorDescription('');
@@ -139,9 +139,6 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
   return (
     <form className='form_modal' onSubmit={handleSubmit(onSubmit)}>
       <div className='form_content'>
-        <div className='form_close'>
-          <button className='close_button' type="button" onClick={handleCreateModal}>X</button>
-        </div>
         <div className='title'>
           <div className='input_container'>
             <label>Título</label>

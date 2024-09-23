@@ -161,7 +161,10 @@ const EditPanel: React.FC = () => {
         {createModal && (
           <div className='create_modal' ref={modalRef}>
             <div className='modal_content'>
+              <div className='title_and_close_container'>
               <h2>Crear nuevo servicio</h2>
+              <button className='close_button' type="button" onClick={handleCreateModal}>X</button>
+              </div>
               <ServiceCreateForm
                 onSubmit={onSubmit}
                 isLoading={isLoading}
@@ -179,7 +182,10 @@ const EditPanel: React.FC = () => {
         {editModal && (
           <div className='edit_modal' ref={modalRef}>
             <div className='modal_content'>
+            <div className='title_and_close_container'>
               <h2>Editar servicio</h2>
+              <button className='close_button' type="button" onClick={handleEditModal}>X</button>
+              </div>
               <ServiceCreateForm
                 onSubmit={onSubmit}
                 isLoading={isLoading}
