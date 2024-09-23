@@ -105,6 +105,14 @@ const WorkWithUs: React.FC = () => {
                   <input className='WorkWithUs_input' placeholder='Nombre'
                     {...register('name', {
                       required: 'Campo requerido',
+                      minLength: {
+                        value: 3,
+                        message: 'Debe contener al menos 3 letras.'
+                      },
+                      maxLength: {
+                        value: 30,
+                        message: "La cantidad máxima de letras es 30."
+                      },
                       pattern: {
                         value: /^[A-Za-z\s]+$/,
                         message: 'Solo letras y espacios están permitidos'
