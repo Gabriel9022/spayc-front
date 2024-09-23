@@ -1,15 +1,15 @@
-.Loggin_component {
+.Login_component {
     display: flex;
     justify-content: center;
     padding: 5vh 0;
 }
 
-.Loggin_component button {
+.Login_component button {
     cursor: pointer;
     width: 100%;
 }
 
-.Loggin_container {
+.Login_container {
     width: 300px;
     min-height: 200px;
     border: solid 1px grey;
@@ -17,7 +17,7 @@
     padding: 20px;
 }
 
-.Loggin_form {
+.Login_form {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
@@ -40,7 +40,7 @@
     border-color: red;
 }
 
-.Loggin_errors {
+.Login_errors {
     color: red;
     font-size: 14px;
 }

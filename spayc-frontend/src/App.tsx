@@ -9,7 +9,7 @@ import InstitutionalServices from './Components/InstitutionalServices/Institutio
 import WorkWithUs from './Components/WorkWithUs/WorkWithUs';
 import Contact from './Components/Contact/Contact';
 import AboutUs from './Components/AboutUs/AboutUs';
-import Loggin from './Components/Loggin/Loggin';
+import Login from './Components/Login/Login';
 import EditPanel from './Components/EditPanel/EditPanel';
 import ScrollToTop from './hooks/scrollToTop';
 import { ServicesProvider } from './utils/getAllServices';
@@ -30,7 +30,7 @@ const App: React.FC = () => {
           <Route path="/nosotros" element={<AboutUs />} />
           <Route path="/trabaja-con-nosotros" element={<WorkWithUs />} />
           <Route path="/contacto" element={<Contact />} />
-          <Route path="/loggin" element={<Loggin />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/panel" element={<EditPanel />} />
         </Routes>
       </ServicesProvider>
