@@ -77,6 +77,10 @@
     flex-direction: column;
 }
 
+.edit_individual_description, .confirm_is_active_service {
+    padding: 30px;
+}
+
 .create_errors {
     color: red;
 }
