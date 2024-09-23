@@ -20,7 +20,7 @@ const Loggin: React.FC = () => {
     },
   });
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
     setIsLoading(true);
     try {
       if (forgotPass) {
@@ -29,7 +29,23 @@ const Loggin: React.FC = () => {
       } else {
         console.log('Datos de inicio de sesión:', data);
         // Lógica de inicio de sesión
+        const response: Response = await fetch('http://localhost:3001/users/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ user: parseInt(data.userName), password: data.password}),
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          localStorage.setItem('token', data.token); // Guarda el token en localStorage
+          alert('Login exitoso!');
+          window.location.href = '/panel'; // Redireccionar a otra página
+        }
       }
+    } catch (error: unknown) {
+      console.error('Error:', error);
     } finally {
       setIsLoading(false);
     }

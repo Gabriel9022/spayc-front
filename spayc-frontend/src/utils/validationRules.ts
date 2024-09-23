@@ -1,9 +1,10 @@
 export const validationRules = {
     userName: {
       required: 'Este campo es obligatorio',
-      minLength: { value: 15, message: 'Debe contener al menos 15 caracteres' },
-      maxLength: { value: 38, message: 'La cantidad máxima de caracteres es 38' },
-      pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'El formato del email es incorrecto' },
+      minLength: { value: 6, message: 'Debe contener al menos 6 caracteres' },
+      maxLength: { value: 11, message: 'La cantidad máxima de caracteres es 11' },
+      pattern: { value: /^\d+$/, message: 'Sólo puede contener números' },
+
     },
     password: {
       required: 'Este campo es obligatorio',
