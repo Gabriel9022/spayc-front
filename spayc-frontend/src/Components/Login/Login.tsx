@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { validationRules } from '../../utils/validationRules';
 import { Inputs } from '../../utils/Interface';
-import './Loggin.css';
+import './Login.css';
 
 
-const Loggin: React.FC = () => {
+const Login: React.FC = () => {
   const [forgotPass, setForgotPass] = useState(false);
   const [isLoading, setIsLoading] = useState(false)
 
@@ -26,6 +26,18 @@ const Loggin: React.FC = () => {
       if (forgotPass) {
         console.log('El usuario olvidó su contraseña', data.userName);
         // Lógica para restablecer contraseña
+        const response: Response = await fetch('http://localhost:3001/users/forgotPassword', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({user: parseInt(data.userName)}),
+        });
+        if (response.ok) {
+          alert('Revisa tu mail');
+          window.location.href = '/login'; // Redireccionar a otra página
+        }
+
       } else {
         console.log('Datos de inicio de sesión:', data);
         // Lógica de inicio de sesión
@@ -66,15 +78,15 @@ const Loggin: React.FC = () => {
         placeholder="Contraseña"
         {...register('password', validationRules.password)}
       />
-      {errors.password && <p className="Loggin_errors">{errors.password.message}</p>}
+      {errors.password && <p className="Login_errors">{errors.password.message}</p>}
     </div>
   );
 
   return (
-    <div className="Loggin_component">
-      <div className="Loggin_container">
-        <div className="Loggin_form_container">
-          <form className="Loggin_form" onSubmit={handleSubmit(onSubmit)}>
+    <div className="Login_component">
+      <div className="Login_container">
+        <div className="Login_form_container">
+          <form className="Login_form" onSubmit={handleSubmit(onSubmit)}>
             <div className="userName_container">
               <label>Usuario</label>
               <input
@@ -83,7 +95,7 @@ const Loggin: React.FC = () => {
                 placeholder="Usuario"
                 {...register('userName', validationRules.userName)}
               />
-              {errors.userName && <p className="Loggin_errors">{errors.userName.message}</p>}
+              {errors.userName && <p className="Login_errors">{errors.userName.message}</p>}
             </div>
             {!forgotPass && renderPasswordField()}
             {!forgotPass ? (
@@ -105,4 +117,4 @@ const Loggin: React.FC = () => {
   );
 };
 
-export default Loggin;
+export default Login;
