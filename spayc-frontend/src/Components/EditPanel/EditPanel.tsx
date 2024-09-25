@@ -5,6 +5,7 @@ import ServiceCreateForm from './Forms/ServiceCreateForm';
 import { SubmitHandler } from 'react-hook-form';
 import { ServicesType } from '../../utils/Interface';
 import './EditPanel.css';
+import LogoutButton from '../Login/LogoutButton';
 
 const EditPanel: React.FC = () => {
 
@@ -152,6 +153,7 @@ const EditPanel: React.FC = () => {
               </div>
             )}
           </div>
+          <LogoutButton/>
         </div>
         <div className='Edit_panel_visualizer'>
           <div className='Visualizer_container'>
