@@ -11,6 +11,7 @@ import Contact from './Components/Contact/Contact';
 import AboutUs from './Components/AboutUs/AboutUs';
 import Login from './Components/Login/Login';
 import EditPanel from './Components/EditPanel/EditPanel';
+import ProtectedRoute from './Components/ProtectedRoutes/ProtectedRoute';
 import ScrollToTop from './hooks/scrollToTop';
 import { ServicesProvider } from './utils/getAllServices';
 import './App.css'
@@ -23,7 +24,7 @@ const App: React.FC = () => {
       <Header />
       <ServicesProvider>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/inicio" element={<Home />} />
           <Route path="/servicios" element={<Services />} />
           <Route path="/instituciones" element={<InstitutionalServices />} />
           <Route path="/profesionales" element={<Profesionals />} />
@@ -31,7 +32,7 @@ const App: React.FC = () => {
           <Route path="/trabaja-con-nosotros" element={<WorkWithUs />} />
           <Route path="/contacto" element={<Contact />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/panel" element={<EditPanel />} />
+          <Route path="/panel" element={<ProtectedRoute element={<EditPanel />} />} />
         </Routes>
       </ServicesProvider>
       <Footer />

@@ -7,7 +7,7 @@ const NavDesktop: React.FC = () => {
         <nav className='Header_nav'>
             <ul className='Header_nav_menu'>
                 <li className='Header_nav_menu_item'>
-                    <NavLink to="/">INICIO</NavLink>
+                    <NavLink to="/inicio">INICIO</NavLink>
                 </li>
                 <li className='Header_nav_menu_item'>
                     <NavLink to="/servicios">SERVICIOS</NavLink>
