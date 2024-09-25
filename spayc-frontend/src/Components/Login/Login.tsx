@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { validationRules } from '../../utils/validationRules';
 import { Inputs } from '../../utils/Interface';
+import { API_URL } from '../../utils/config';
 import './Login.css';
-
 
 const Login: React.FC = () => {
   const [forgotPass, setForgotPass] = useState(false);
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   const {
     register,
@@ -22,11 +22,13 @@ const Login: React.FC = () => {
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     setIsLoading(true);
+
     try {
+
       if (forgotPass) {
         console.log('El usuario olvidó su contraseña', data.userName);
         // Lógica para restablecer contraseña
-        const response: Response = await fetch('http://localhost:3001/users/forgotPassword', {
+        const response: Response = await fetch(`${API_URL}/users/forgotPassword`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -39,21 +41,24 @@ const Login: React.FC = () => {
         }
 
       } else {
-        console.log('Datos de inicio de sesión:', data);
         // Lógica de inicio de sesión
-        const response: Response = await fetch('http://localhost:3001/users/login', {
+        const response: Response = await fetch(`${API_URL}/users/login`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
+          credentials: 'include',
           body: JSON.stringify({ user: parseInt(data.userName), password: data.password}),
         });
 
         if (response.ok) {
           const data = await response.json();
-          localStorage.setItem('token', data.token); // Guarda el token en localStorage
-          alert('Login exitoso!');
-          window.location.href = '/panel'; // Redireccionar a otra página
+          // alert('Login exitoso!'); //Hacer un modal
+          if (data.validation.isAdmin) {
+            window.location.href = '/panel';
+          }
+        } else {
+           alert('Login fallido.')
         }
       }
     } catch (error: unknown) {
