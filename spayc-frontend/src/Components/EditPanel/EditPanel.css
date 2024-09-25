@@ -5,6 +5,9 @@
 .Edit_panel_menu {
     width: 15vw;
     border: solid 1px grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .Edit_panel_item {
@@ -13,11 +16,13 @@
 
 .Edit_panel_title {
     padding: 10px;
+    cursor: pointer;
 }
 
 .Edit_element {
     padding: 8px;
     border: solid 1px grey;
+    cursor: pointer;
 }
 
 .Edit_panel_subtitle {
@@ -35,6 +40,7 @@
 .Edit_menu_option {
     border: solid 1px grey;
     padding: 6px 4px;
+    cursor: pointer;
 }
 
 .Edit_panel_visualizer {

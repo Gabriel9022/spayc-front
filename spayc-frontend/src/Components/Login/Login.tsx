@@ -26,7 +26,6 @@ const Login: React.FC = () => {
     try {
 
       if (forgotPass) {
-        console.log('El usuario olvidó su contraseña', data.userName);
         // Lógica para restablecer contraseña
         const response: Response = await fetch(`${API_URL}/users/forgotPassword`, {
           method: 'POST',
@@ -53,9 +52,11 @@ const Login: React.FC = () => {
 
         if (response.ok) {
           const data = await response.json();
-          // alert('Login exitoso!'); //Hacer un modal
           if (data.validation.isAdmin) {
+            //hacer un modal
             window.location.href = '/panel';
+          } else {
+            window.location.href = '/inicio';
           }
         } else {
            alert('Login fallido.')
