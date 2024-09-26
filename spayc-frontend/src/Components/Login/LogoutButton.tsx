@@ -1,8 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { API_URL } from '../../utils/config';
 import './LogoutButton.css';
 
 const LogoutButton: React.FC = () => {
+  const navigate = useNavigate();
+
   const handleLogout = async () => {
     try {
       const response = await fetch(`${API_URL}/users/logout`, {
@@ -12,7 +15,7 @@ const LogoutButton: React.FC = () => {
 
       if (response.ok) {
         alert('Sesión cerrada correctamente');
-        window.location.href = '/login';
+        navigate('/login');
       } else {
         alert('Error al cerrar sesión');
       }
