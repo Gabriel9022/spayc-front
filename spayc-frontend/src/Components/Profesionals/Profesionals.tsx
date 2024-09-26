@@ -1,5 +1,6 @@
 import React from "react";
 import professionalsImage from "../../assets/images/Professionals/professionalsImage.jpg";
+import white_arrow from "../../assets/images/Professionals/white_arrow.png"
 import "./Profesionals.css";
 
 const Profesionals: React.FC = () => {
@@ -17,8 +18,9 @@ const Profesionals: React.FC = () => {
               El perfil de los profesionales en cuidados es fundamental para
               garantizar una atención de calidad y adaptada a las necesidades
               específicas. Los profesionales que conforman nuestro staff se
-              caracterizan por
+              caracterizan por 
             </p>
+            <img className="white_arrow" src={white_arrow} alt="white arrow" />
           </div>
           <div className="professional_profile_skills">
             <div className="professional_profile_skills_description">

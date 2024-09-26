@@ -141,8 +141,9 @@ const Home: React.FC = () => {
             <div className="home_contact_introduction">
               <p>Más  que un proveedor de servicios de cuidados, somos un socio de confianza en el bienestar y calidad de vida de las personas mayores. Estamos comprometidos con hacer una diferencia tangible en cada vida que acompañamos y nos enorgullece servir con pasión y excelencia en el campo gerontológico.</p>
               <div className="home_contact_link">
-                <p>PARA CONOCER MAS SOBRE COMO PODEMOS AYUDARLE, NO DUDE EN </p>
-                <p><Link to={"/contacto"}>CONTACTARNOS</Link></p>
+                <p>PARA CONOCER MAS SOBRE COMO PODEMOS AYUDARLE, NO DUDE EN 
+                  <span><Link to={"/contacto"}>CONTACTARNOS</Link></span> 
+                </p>
               </div>
             </div>
             <div className="home_contact_image">

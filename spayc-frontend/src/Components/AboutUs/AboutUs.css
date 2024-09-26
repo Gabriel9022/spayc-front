@@ -44,7 +44,7 @@
 
 .AboutUs_intro_section p {
     max-width: 1200px;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 2;
     text-align: center;
 }
@@ -67,6 +67,7 @@
     padding: 20px;
     border: solid 1px lightgray;
     border-radius: 20px;
+    font-size: 20px;
 }
 
 .description_container {
@@ -91,6 +92,7 @@
 
 .description_container p:nth-child(1) {
     color: #17406d;
+    font-size: 18px;
     font-weight: bold;
     width: 40%;
     text-align: center;

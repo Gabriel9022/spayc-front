@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
             </div>
         </div>
         <div className='Contact_intro_section'>
-          <p className='Contact_intro_description'>En SPAYC valoramos la comunicación directa y efectiva, si tiene alguna consulta o necesita más información sobre nuestros servicios, no dude en contactarnos y un asesor se comunicará con Ud.</p>
+          <p className='Contact_intro_description'>En SPAYC valoramos la comunicación directa y efectiva, si tiene alguna consulta o necesita más información sobre nuestros servicios, no dude en contactarnos y un asesor se comunicará con usted.</p>
         </div>
         <div className='Contact_info_form_sections'>
           <div className='Contact_section_info'>
