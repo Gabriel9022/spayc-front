@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { validationRules } from '../../utils/validationRules';
 import { Inputs } from '../../utils/Interface';
 import { API_URL } from '../../utils/config';
@@ -8,6 +9,7 @@ import './Login.css';
 const Login: React.FC = () => {
   const [forgotPass, setForgotPass] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const {
     register,
@@ -54,12 +56,12 @@ const Login: React.FC = () => {
           const data = await response.json();
           if (data.validation.isAdmin) {
             //hacer un modal
-            window.location.href = '/panel';
+            navigate('/panel');
           } else {
-            window.location.href = '/inicio';
+            navigate('/inicio');
           }
         } else {
-           alert('Login fallido.')
+           alert('Usuario o contraseña incorrecta.');
         }
       }
     } catch (error: unknown) {
