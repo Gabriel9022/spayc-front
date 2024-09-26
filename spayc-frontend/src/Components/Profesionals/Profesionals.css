@@ -61,6 +61,13 @@
     width: 800px;
 }
 
+.white_arrow {
+    position: relative;
+    width: 40px;
+    height: auto;
+    transform: rotate(90deg);
+}
+
 .professional_profile_skills {
     display: flex;
     margin-top: 50px;
@@ -145,10 +152,8 @@
     text-align: center;
     border-radius: 20px;
     background-color: #b6ffff;
-    box-shadow: 4px 4px #7cdaf9;
-    border: #0cb7f2;
-    border-width: 1px;
-    border-style: ridge;
+    box-shadow: 4px 4px 4px #e9e9e9;
+    border: ridge 1px #0cb7f2;
     margin: 0 50px;
     padding: 20px;
 }
@@ -179,7 +184,7 @@
 
 .professional_profile_conclusion p {
     width: 1000px;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 2;
     font-weight: bold;
     align-self: center;

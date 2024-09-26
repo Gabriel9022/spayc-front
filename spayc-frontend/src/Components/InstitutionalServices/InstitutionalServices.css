@@ -40,7 +40,7 @@
     flex-direction: column;
     align-items: center;
     background: linear-gradient(90deg, rgba(0,65,115,0.5) 0%, rgba(182,255,255,0.5) 100%);
-    padding-bottom: 40px;
+    padding: 30px 0;
     position: relative;
 }
 
@@ -50,10 +50,10 @@
 
 
 .InstitutionalServices_introduction p {
-    width: 50%;
+    width: 65%;
     text-align: center;
     padding: 20px 0;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 2;
 }
 
@@ -118,8 +118,7 @@
 
 .InstitutionalServices_why_section {
     width: 600px;
-    text-align: center;
-    padding: 10px 0;
+    padding: 10px 0 10px 20px;
 }
 
 .InstitutionalServices_why_section li {
@@ -128,6 +127,9 @@
     line-height: 2;
 }
 
+.InstitutionalServices_why_final {
+    padding: 30px 0;
+}
 .InstitutionalServices_why_final h3 {
     font-size: 22px;
 }

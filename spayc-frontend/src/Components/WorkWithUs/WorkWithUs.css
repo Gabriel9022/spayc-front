@@ -76,14 +76,22 @@
 
 .WorkWithUs_perfil_description a {
     padding: 3px;
+    color: #0979b0;
+    border: solid;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 10px;
 }
 
+.WorkWithUs_perfil_description a:visited {
+    color: #0979b0;
+}
+
 .WorkWithUs_perfil_description a:hover {
     background-color: #0979b0;
+    border-color: #0979b0;
+    color: #fff
 }
 
 .WorkWithUs_section_form {

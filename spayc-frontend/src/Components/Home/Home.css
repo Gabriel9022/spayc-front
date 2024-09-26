@@ -148,15 +148,28 @@
 .home_professionals_link a, .home_contact_link a {
     border: solid;
     padding: 3px;
+    color: #0979b0;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 10px;
 }
 
+.home_contact_link a {
+    margin-left: 10px;
+}
+
+.home_compromise_service a:visited, .home_services_link a:visited, 
+.home_professionals_link a:visited, .home_contact_link a:visited {
+    color: #0979b0;
+    text-decoration: none;
+}
+
 .home_compromise_service a:hover, .home_services_link a:hover, 
 .home_professionals_link a:hover, .home_contact_link a:hover {
-    background-color: #0cb7f2;
+    background-color: #0979b0;
+    border-color: #0979b0;
+    color: #fff;
 }
 
 .home_services {
