@@ -14,7 +14,6 @@ import EditPanel from './Components/EditPanel/EditPanel';
 import ProtectedRoute from './Components/ProtectedRoutes/ProtectedRoute';
 import ScrollToTop from './hooks/scrollToTop';
 import { ServicesProvider } from './utils/getAllServices';
-// import './App.css'
 
 const App: React.FC = () => {
 
