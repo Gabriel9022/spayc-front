@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
                 <div className='logo_container'>
                     <Link to='/'>
                         <img src={logo}  alt="Logo SPAYC" className='logo' />
-                        <h3>Servicios Profesionales de Apoyo y Cuidado para Personas Mayores</h3>
+                        <p>Servicios Profesionales de Apoyo y Cuidado para Personas Mayores</p>
                     </Link>
                 </div>
                 <div className='socialMedia_container'>
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
             </div>
             <div className='Footer_secondSection_container'>
                 <ul className='Footer_secondSection_ul'>
-                    <li><h4>Contactanos</h4></li>
+                    <li><p>Contactanos</p></li>
                     <li><a href='tel:3515459115' target="_blank" rel="noopener noreferrer">351 545 9115</a></li>
                     <li><a href='mailto:spaycserviciosprofesionales@gmail.com' target="_blank" rel="noopener noreferrer">spaycserviciosprofesionales@gmail.com</a></li>
                     <li>dirección</li>

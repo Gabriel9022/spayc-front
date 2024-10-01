@@ -86,7 +86,7 @@ const Login: React.FC = () => {
         placeholder="Contraseña"
         {...register('password', validationRules.password)}
       />
-      {errors.password && <p className="Login_errors">{errors.password.message}</p>}
+      {errors.password && <p className="error_message">{errors.password.message}</p>}
     </div>
   );
 
@@ -103,18 +103,18 @@ const Login: React.FC = () => {
                 placeholder="Usuario"
                 {...register('userName', validationRules.userName)}
               />
-              {errors.userName && <p className="Login_errors">{errors.userName.message}</p>}
+              {errors.userName && <p className="error_message">{errors.userName.message}</p>}
             </div>
             {!forgotPass && renderPasswordField()}
             {!forgotPass ? (
               <>
                 {renderForgotPassword()}
-                <button type="submit" disabled={isLoading}>
+                <button className='btn_submit' type="submit" disabled={isLoading}>
                   {isLoading ? 'Verificando...' : 'Ingresar'}
                 </button>
               </>
             ) : (
-              <button type="submit" disabled={isLoading}>
+              <button className='btn_submit' type="submit" disabled={isLoading}>
                 {isLoading ? 'Enviando...' : 'Enviar'}
               </button>
             )}

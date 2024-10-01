@@ -18,32 +18,22 @@
 }
 
 .AboutUs_banner_title {
-    background: linear-gradient(90deg, rgba(0,65,115,1) 10%, rgba(255,255,255,0) 70%);
+    background: linear-gradient(90deg, var(--primary-color) 10%, rgba(255, 255, 255, 0) 70%);
     height: 100%;
     align-content: center;
     padding-left: 90px;
 }
 
-.AboutUs_banner_title h1 {
-    font-size: 42px;
-    letter-spacing: 1.5px;
-    color: #fff;
-    position: relative;
-    width: min-content;
-    transform: translateY(-35px);
-    padding-bottom: 15px;
-    border-bottom: solid 1px #fff;
-}
-
 .AboutUs_intro_section {
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,125,173,1) 100%);
+    background: radial-gradient(circle, var(--secondary-color) 0%, var(--tertiary-color) 100%);
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 30px 0;
 }
 
 .AboutUs_intro_section p {
-    max-width: 1200px;
+    max-width: 900px;
+    padding: 20px 0;
     font-size: 24px;
     line-height: 2;
     text-align: center;
@@ -65,7 +55,7 @@
 
 .AboutUs_description_container >p {
     padding: 20px;
-    border: solid 1px lightgray;
+    border: solid 1px var(--border-color-primary);
     border-radius: 20px;
     font-size: 20px;
 }
@@ -76,9 +66,9 @@
     column-gap: 20px;
     align-self: flex-end;
     padding: 20px;
-    border: solid 1px #d3d3d3;
+    border: solid 1px var(--border-color-primary);
     border-radius: 20px;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 40%, rgba(192,192,192,1) 100%);
+    background: linear-gradient(90deg, var(--secondary-color) 40%, var(--background-color-primary) 100%);
     line-height: 1.5;
 }
 
@@ -86,12 +76,12 @@
 .AboutUs_description_container .description_container:nth-child(5) {
   flex-direction: row-reverse;
   align-self: flex-start;
-  background: linear-gradient(270deg, rgba(255,255,255,1) 40%, rgba(192,192,192,1) 100%);
+  background: linear-gradient(270deg, var(--secondary-color) 40%, var(--background-color-primary) 100%);
 
 }
 
 .description_container p:nth-child(1) {
-    color: #17406d;
+    color: var(--primary-color);
     font-size: 18px;
     font-weight: bold;
     width: 40%;
@@ -118,24 +108,24 @@
 .AboutUs_mision, 
 .AboutUs_vision {
     width: 50%;
-    padding: 30px;
+    padding: 40px 30px 30px;
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 30px;
     text-align: center;
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 125, 173, 1) 100%);
+    background: radial-gradient(circle, var(--secondary-color) 0%, var(--tertiary-color) 100%);
 }
 
 .AboutUs_mv_description_container {
-    padding: 20px;
+    padding: 30px 0 50px;
     text-align: center;
     display: flex;
     justify-content: center;
-    background-color: #007dad;
-    color: #fff;
+    color: var(--primary-color);
 }
 
 .AboutUs_mv_description_container p {
-    max-width: 800px;
+    max-width: 900px;
     font-size: 24px;
+    font-weight: bold;
 }

@@ -119,27 +119,27 @@ const WorkWithUs: React.FC = () => {
                       }
                     })}
                   />
-                  {errors.name && <p>{errors.name.message}</p>}
+                  {errors.name && <p className='error_message'>{errors.name.message}</p>}
                 </div>
                 <div className='WorkWithUs_container_email'>
                   <label>Email</label>
                   <input className='WorkWithUs_input'
                     type="email" placeholder='Email'
                     {...register('email', {
-                      required: 'Campo requerido.',
+                      required: 'Este campo es obligatorio.',
                       pattern: {
                         value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                         message: 'El formato del correo es inválido'
                       }
                     })}
                   />
-                  {errors.email && <p className='Contact_errors'>{errors.email.message}</p>}
+                  {errors.email && <p className='error_message'>{errors.email.message}</p>}
                 </div>
                 <div className='WorkWithUs_container_tel'>
                   <label>Teléfono</label>
                   <input className='WorkWithUs_input' type="tel" placeholder='Teléfono' {...register("tel",
                     {
-                      required: "Este campo es obligatorio",
+                      required: "Este campo es obligatorio.",
                       minLength: {
                         value: 6,
                         message: "Cantidad de dígitos inválida"
@@ -155,7 +155,7 @@ const WorkWithUs: React.FC = () => {
 
                     }
                   )} />
-                  {errors.tel && <p className='Contact_errors'>{errors.tel?.message}</p>}
+                  {errors.tel && <p className='error_message'>{errors.tel?.message}</p>}
                 </div>
                 <div className='WorkWithUs_container_message'>
                   <label>Mensaje</label>
@@ -164,7 +164,7 @@ const WorkWithUs: React.FC = () => {
                       required: 'Campo requerido.'
                     })}
                   />
-                  {errors.message && <p className='Contact_errors'>{errors.message.message}</p>}
+                  {errors.message && <p className='error_message'>{errors.message.message}</p>}
                 </div>
                 <div className='WorkWithUs_container_file'>
                   <label>Adjuntar (CV)</label>
@@ -178,9 +178,9 @@ const WorkWithUs: React.FC = () => {
                       validateFileSize(e?.target.files);
                     }}
                   />
-                  {errors.file && <p className='Contact_errors'>{errors.file.message}</p>}
+                  {errors.file && <p className='error_message'>{errors.file.message}</p>}
                 </div>
-                <button className='WorkWithUs_submit' type="submit" disabled={isLoading}>
+                <button className='btn_submit' type="submit" disabled={isLoading}>
                   {isLoading ? (
                     <div className="spinner"></div>
                     ) : (

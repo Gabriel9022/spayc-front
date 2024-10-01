@@ -27,7 +27,6 @@
     align-items: center;
     width: 100%;
     padding: 0 0 0 20px;
-    color: #fff;
 }
 
 .Header_info_block {
@@ -44,7 +43,7 @@
 }
 
 .Header_info_block:nth-child(3){
-    border: solid 1px #fff;
+    border: solid 1px var(--secondary-color);
     padding: 10px 15px;
     border-radius: 25px;
     max-width: max-content;
@@ -53,13 +52,14 @@
 .Header_info_block p {
     font-size: 22px;
     font-weight: bold;
+    color: var(--secondary-color);
 }
 
 
 .Header_info_block a {
     align-items: center;
     font-size: 18px;
-    color: #fff;
+    color: var(--secondary-color);
     letter-spacing: 0.3px;
     text-decoration: none;
 }
@@ -79,7 +79,7 @@
 
 .Header_divisor {
     height: 2px;
-    background-color: #fff;
+    background-color: var(--secondary-color);
     width: 100%;
     align-self: center;
 }
@@ -133,7 +133,7 @@
         padding: 0 20px;
         font-size: 14px;
         letter-spacing: 0.3px;
-        color: #fff;
+        color: var(--secondary-color);
         font-weight: bold;
         margin-right: 1px;
     }

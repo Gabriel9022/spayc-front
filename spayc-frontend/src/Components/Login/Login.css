@@ -4,11 +4,6 @@
     padding: 5vh 0;
 }
 
-.Login_component button {
-    cursor: pointer;
-    width: 100%;
-}
-
 .Login_container {
     width: 300px;
     min-height: 200px;
@@ -26,6 +21,7 @@
 .userName_container, .password_container {
     display: flex;
     flex-direction: column;
+    row-gap: 3px;
 }
 
 .forgotPassword_label {
@@ -37,12 +33,11 @@
 }
 
 .input_error {
-    border-color: red;
+    border-color: var(--error-color);
 }
 
-.Login_errors {
-    color: red;
-    font-size: 14px;
+.Login_component .error_message {
+    font-weight: 500;
 }
 
 button[disabled] {

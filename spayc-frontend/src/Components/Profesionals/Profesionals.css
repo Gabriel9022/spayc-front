@@ -17,21 +17,10 @@
 }
 
 .professional_banner_title {
-    background: linear-gradient(90deg, rgba(0,65,115,1) 10%, rgba(255,255,255,0) 70%);
+    background: linear-gradient(90deg, var(--primary-color) 10%, rgba(255,255,255,0) 70%);
     height: 100%;
     align-content: center;
     padding-left: 90px;
-}
-
-.professional_banner_title h1 {
-    font-size: 42px;
-    letter-spacing: 1.5px;
-    color: #fff;
-    position: relative;
-    width: min-content;
-    transform: translateY(-35px);
-    padding-bottom: 15px;
-    border-bottom: solid 1px #fff;
 }
 
 .professional_profile {
@@ -48,16 +37,17 @@
     align-self: center;
     padding: 30px 0;
     width: 100%;
-    background-color: #004173;
+    background-color: var(--primary-color);
     text-align: center;
-    box-shadow: 0 5px #e9e9e9;
-    color: #fff;
+    box-shadow: 0 5px var(--shadow-primary-color);
+    color: var(--secondary-color);
 }
 
 .professional_profile_intro p {
+    color: var(--secondary-color);
     font-size: 24px;
     line-height: 2;
-    padding: 20px;
+    padding: 20px 0;
     width: 800px;
 }
 
@@ -72,9 +62,9 @@
     display: flex;
     margin-top: 50px;
     width: 100%;
-    background: linear-gradient(90deg, #b6ffff, #eaffff);
+    background: linear-gradient(90deg, var(--senary-color), #eaffff);
     justify-content: center;
-    box-shadow: 0 5px #e9e9e9;
+    box-shadow: 0 5px var(--shadow-primary-color);
 }
 
 .professional_profile_skills_description{
@@ -89,8 +79,8 @@
     padding: 10px;
     text-align: center;
     border-radius: 20px;
-    box-shadow: 4px 4px #7cdaf9;
-    border: #0cb7f2;
+    box-shadow: 4px 4px var(--quinary-color);
+    border: var(--quaternary-color);
     border-width: 1px;
     border-style: ridge;
 }
@@ -126,14 +116,15 @@
     align-self: center;
     padding: 30px 0;
     width: 100%;
-    background-color: #004173;
+    background-color: var(--primary-color);
     margin-top: 50px;
     text-align: center;
-    box-shadow: 0 5px #e9e9e9;
+    box-shadow: 0 5px var(--shadow-primary-color);
 }
 
 .professional_profile_functions h2 {
-    color: #fff;
+    color: var(--secondary-color);
+    padding: 30px 0 40px;
 }
 
 .professional_profile_functions_container {
@@ -144,16 +135,16 @@
     display: flex;
     justify-content: space-between;
     width: 800px;
-    padding: 20px 0;
+    padding: 20px 0 30px;
 }
 
 .professional_profile_functions_item {
     padding: 10px;
     text-align: center;
     border-radius: 20px;
-    background-color: #b6ffff;
-    box-shadow: 4px 4px 4px #e9e9e9;
-    border: ridge 1px #0cb7f2;
+    background-color: var(--senary-color);
+    box-shadow: 4px 4px 4px var(--shadow-primary-color);
+    border: ridge 1px var(--quaternary-color);
     margin: 0 50px;
     padding: 20px;
 }
@@ -176,10 +167,10 @@
     align-self: center;
     padding: 30px 0;
     width: 100%;
-    background: linear-gradient(90deg, #b6ffff, #eaffff);
+    background: linear-gradient(90deg, var(--senary-color), #eaffff);
     margin: 50px 0;
     text-align: center;
-    box-shadow: 0 5px #e9e9e9;
+    box-shadow: 0 5px var(--shadow-primary-color);
 }
 
 .professional_profile_conclusion p {
