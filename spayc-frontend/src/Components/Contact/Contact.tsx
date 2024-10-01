@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
                         }
                       }
                     )} />
-                    {errors.firstName && <p className='Contact_errors'>{errors.firstName?.message}</p>}
+                    {errors.firstName && <p className='error_message'>{errors.firstName?.message}</p>}
                   </div>
                   <div className='Contact_container_lastName'>
                     <label>Apellido</label>
@@ -120,7 +120,7 @@ const Contact: React.FC = () => {
                         }
                       }
                     )} />
-                    {errors.lastName && <p className='Contact_errors'>{errors.lastName?.message}</p>}
+                    {errors.lastName && <p className='error_message'>{errors.lastName?.message}</p>}
                   </div>
                 </div>
                 <div className='Contact_container_email'>
@@ -134,7 +134,7 @@ const Contact: React.FC = () => {
                       }
                     }
                   )} />
-                  {errors.email && <p className='Contact_errors'>{errors.email?.message}</p>}
+                  {errors.email && <p className='error_message'>{errors.email?.message}</p>}
                 </div>
                 <div className='Contact_container_tel'>
                   <label>Teléfono</label>
@@ -156,7 +156,7 @@ const Contact: React.FC = () => {
 
                     }
                   )} />
-                  {errors.tel && <p className='Contact_errors'>{errors.tel?.message}</p>}
+                  {errors.tel && <p className='error_message'>{errors.tel?.message}</p>}
                 </div>
                 <div className='Contact_container_message'>
                   <label>Mensaje</label>
@@ -169,9 +169,9 @@ const Contact: React.FC = () => {
                       }
                     }
                   )} />
-                  {errors.message && <p className='Contact_errors'>{errors.message?.message}</p>}
+                  {errors.message && <p className='error_message'>{errors.message?.message}</p>}
                 </div>
-                <button className='Contact_submit' type="submit" disabled={isLoading}>
+                <button className='btn_submit' type="submit" disabled={isLoading}>
                   {isLoading ? (
                     <div className="spinner"></div>
                     ) : (

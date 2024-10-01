@@ -168,7 +168,7 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
               }}
             />
           </div>
-          <button className='description_add_button' type='button' disabled={!!errorDescription} onClick={handleAddDescription}>+ Agregar descripción</button>
+          <button className='btn_submit' type='button' disabled={!!errorDescription} onClick={handleAddDescription}>+ Agregar descripción</button>
           {!editIndividualDescription && errorDescription && <p className='create_errors'>{errorDescription}</p>}
           {descriptionArray.length > 0 && (
             <div className='description_array_container'>
@@ -219,7 +219,7 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
             <button className='is_active_button' type="button" onClick={() => setConfirmIsActiveService(true)}>
               {isLoading ? <div className='spinner'></div> :
                 service.isActive ? <span>Desactivar</span> : <span>Activar</span>} </button>}
-          <button className='service_submit' type="submit" disabled={!descriptionArray.length || isLoading}>
+          <button className='btn_submit' type="submit" disabled={!descriptionArray.length || isLoading}>
             {panelSource ?
               isLoading ? <div className='spinner'></div> : 'Crear' :
               isLoading ? <div className='spinner'></div> : 'Guardar'}
@@ -239,7 +239,7 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
               }} />
             {editIndividualDescription && errorDescription && <p className='create_errors'>{errorDescription}</p>}
             <div className='form_buttons'>
-            <button className='service_submit' type='button' onClick={handleSaveEditDescripcion}>Guardar</button>
+            <button className='btn_submit' type='button' onClick={handleSaveEditDescripcion}>Guardar</button>
             <button className='cancel_button' type='button' onClick={handleCancelEditDescription}>Cancelar</button>
             </div>
           </div>
@@ -252,7 +252,7 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
                 <span>¿Estás seguro que deseas activar este servicio?</span>}
             </div>
             <div className='form_buttons'>
-              <button className='is_active_button_confirm' type='button' onClick={handleIsActiveService}>
+              <button className='btn_submit' type='button' onClick={handleIsActiveService}>
                 {service.isActive ?
                   <span>Desactivar</span> : <span>Activar</span>}
               </button>

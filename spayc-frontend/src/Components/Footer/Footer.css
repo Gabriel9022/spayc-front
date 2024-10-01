@@ -19,14 +19,15 @@
     flex-direction: column;
     align-items: center;
     row-gap: 10px;
+    text-decoration: none;
 }
 
 .logo_container img {
     width: 150px;
 }
 
-.logo_container h3 {
-    color: #fff;
+.logo_container p {
+    color: var(--secondary-color);
     font-size: 22px;
     text-align: center;
     margin-bottom: 30px;
@@ -63,16 +64,20 @@
     align-items: center;
     margin-bottom: 20px;
     font-size: 18px;
-    color: #fff;
+    color: var(--secondary-color);
     letter-spacing: 0.3px;
 }
 
+.Footer_secondSection_ul li p {
+    color: var(--secondary-color);
+    font-size: 22px;
+}
+
 .Footer_secondSection_ul li a {
-    color: #fff;
+    color: var(--secondary-color);
 }
 
 .Footer_secondSection_ul li:nth-child(1) {
-    font-size: 22px;
     font-weight: 700;
     margin-bottom: 30px;
 }

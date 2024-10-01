@@ -1,10 +1,13 @@
 .Logout_Button {
-    padding: 10px;
     font-size: 16px;
     font-weight: 300;
-    cursor: pointer;
+    border-radius: unset;
+    background-color: #dcd9d9;
+    border: solid 1px grey;
+    color: var(--text-color);
 }
 
 .Logout_Button:hover {
-    background-color: rgb(220, 217, 217);
+    background-color: var(--background-color-primary);
+    border: solid 1px grey;
 }

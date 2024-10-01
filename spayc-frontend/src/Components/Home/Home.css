@@ -21,17 +21,6 @@
     padding-left: 90px;
 }
 
-.home_banner_title h1 {
-    font-size: 42px;
-    letter-spacing: 1.5px;
-    color: #fff;
-    position: relative;
-    width: min-content;
-    transform: translateY(-35px);
-    padding-bottom: 15px;
-    border-bottom: solid 1px #fff;
-}
-
 .home_banner_title span {
     font-size: 24px;
     line-height: 30px;
@@ -91,9 +80,7 @@
     text-align: center;
 }
 
-.home_compromise_title h3 {
-    color: #004173;
-    font-size: 48px;
+.home_compromise_title h2 {
     padding: 20px;
     margin-bottom: 40px;
 }
@@ -119,13 +106,11 @@
     box-shadow: 10px 10px 10px #00417330;
 }
 
-.home_compromise_description_card h4 {
+.home_compromise_description_card h3 {
     min-height: 50px;
     box-sizing: content-box;
     padding: 10px;
-    font-size: 24px;
     background-color: #004173;
-    color: #fff;
     align-content: center;
 }
 
@@ -144,11 +129,15 @@
     font-size: 20px;
 }
 
+.home_compromise_service p, .home_services_link p {
+    font-size: 20px;
+}
+
 .home_compromise_service a, .home_services_link a, 
 .home_professionals_link a, .home_contact_link a {
     border: solid;
     padding: 3px;
-    color: #0979b0;
+    color: var(--tertiary-color);
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -161,15 +150,15 @@
 
 .home_compromise_service a:visited, .home_services_link a:visited, 
 .home_professionals_link a:visited, .home_contact_link a:visited {
-    color: #0979b0;
+    color: var(--tertiary-color);
     text-decoration: none;
 }
 
 .home_compromise_service a:hover, .home_services_link a:hover, 
 .home_professionals_link a:hover, .home_contact_link a:hover {
-    background-color: #0979b0;
-    border-color: #0979b0;
-    color: #fff;
+    background-color: var(--tertiary-color);
+    border-color: var(--tertiary-color);
+    color: var(--secondary-color);
 }
 
 .home_services {
@@ -191,8 +180,11 @@
     display: flex;
     line-height: 40px;
     letter-spacing: 1px;
-    font-size: 20px;
     align-items: center;
+}
+
+.home_services_introduction p {
+    font-size: 20px;
 }
 
 .home_services_description {
@@ -200,7 +192,7 @@
     padding: 20px;
 }
 
-.home_services_description h4 {
+.home_services_description h2 {
     font-size: 24px;
     text-align: center;
     padding-top: 10px;
@@ -224,6 +216,10 @@
 
 .home_services_items_item p {
     padding: 10px 20px;
+    color: var(--secondary-color);
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.7px;
 }
 
 .home_services_items_item .home_services_items_item_title {
@@ -237,7 +233,6 @@
     flex-direction: column;
     row-gap: 20px;
     text-align: center;
-    font-size: 20px;
     padding: 20px;
     margin-bottom: 50px;
 }
@@ -250,7 +245,7 @@
 .home_division {
     width: 100%;
     height: 100px;
-    background-color: #ffffff;
+    background-color: var(--secondary-color);
 }
 
 .home_professionals_container, .home_contact_container {
@@ -273,9 +268,12 @@
 
 .home_professionals_introduction, .home_contact_introduction {
     width: 400px;
+}
+
+.home_professionals_introduction p, .home_contact_introduction p {
     font-size: 18px;
     letter-spacing: 1px;
-    line-height: 40px;
+    line-height: 38px;
 }
 
 .home_professionals_link, .home_contact_link {
