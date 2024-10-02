@@ -4,12 +4,22 @@ import { useNavigate } from 'react-router-dom';
 import { validationRules } from '../../utils/validationRules';
 import { Inputs } from '../../utils/Interface';
 import { API_URL } from '../../utils/config';
+import WindowSize from '../../hooks/windowsSize';
+import MobileWarningModal from './Modal/MobileWarningModal';
 import './Login.css';
 
 const Login: React.FC = () => {
   const [forgotPass, setForgotPass] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [showMobileWarning, setShowMobileWarning] = useState(false)
   const navigate = useNavigate();
+  const windowWidth = WindowSize();
+  const isMobile = windowWidth <= 768;
+
+  const handleLogin = () => {
+    setShowMobileWarning(false)
+    navigate('/inicio')
+  }
 
   const {
     register,
@@ -34,7 +44,7 @@ const Login: React.FC = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({user: parseInt(data.userName)}),
+          body: JSON.stringify({ user: parseInt(data.userName) }),
         });
         if (response.ok) {
           alert('Revisa tu mail');
@@ -49,19 +59,23 @@ const Login: React.FC = () => {
             'Content-Type': 'application/json',
           },
           credentials: 'include',
-          body: JSON.stringify({ user: parseInt(data.userName), password: data.password}),
+          body: JSON.stringify({ user: parseInt(data.userName), password: data.password }),
         });
 
         if (response.ok) {
           const data = await response.json();
           if (data.validation.isAdmin) {
             //hacer un modal
-            navigate('/panel');
+            if (isMobile) {
+              setShowMobileWarning(true);
+            } else {
+              navigate('/panel');
+            }
           } else {
             navigate('/inicio');
           }
         } else {
-           alert('Usuario o contraseña incorrecta.');
+          alert('Usuario o contraseña incorrecta.');
         }
       }
     } catch (error: unknown) {
@@ -91,37 +105,43 @@ const Login: React.FC = () => {
   );
 
   return (
-    <div className="Login_component">
-      <div className="Login_container">
-        <div className="Login_form_container">
-          <form className="Login_form" onSubmit={handleSubmit(onSubmit)}>
-            <div className="userName_container">
-              <label>Usuario</label>
-              <input
-                className={`userName_input ${errors.userName ? 'input_error' : ''}`}
-                type="text"
-                placeholder="Usuario"
-                {...register('userName', validationRules.userName)}
-              />
-              {errors.userName && <p className="error_message">{errors.userName.message}</p>}
+    <>
+      {
+        showMobileWarning ?
+          <MobileWarningModal onConfirm={handleLogin} /> :
+          <div className="Login_component">
+            <div className="Login_container">
+              <div className="Login_form_container">
+                <form className="Login_form" onSubmit={handleSubmit(onSubmit)}>
+                  <div className="userName_container">
+                    <label>Usuario</label>
+                    <input
+                      className={`userName_input ${errors.userName ? 'input_error' : ''}`}
+                      type="text"
+                      placeholder="Usuario"
+                      {...register('userName', validationRules.userName)}
+                    />
+                    {errors.userName && <p className="error_message">{errors.userName.message}</p>}
+                  </div>
+                  {!forgotPass && renderPasswordField()}
+                  {!forgotPass ? (
+                    <>
+                      {renderForgotPassword()}
+                      <button className='btn_submit' type="submit" disabled={isLoading}>
+                        {isLoading ? 'Verificando...' : 'Ingresar'}
+                      </button>
+                    </>
+                  ) : (
+                    <button className='btn_submit' type="submit" disabled={isLoading}>
+                      {isLoading ? 'Enviando...' : 'Enviar'}
+                    </button>
+                  )}
+                </form>
+              </div>
             </div>
-            {!forgotPass && renderPasswordField()}
-            {!forgotPass ? (
-              <>
-                {renderForgotPassword()}
-                <button className='btn_submit' type="submit" disabled={isLoading}>
-                  {isLoading ? 'Verificando...' : 'Ingresar'}
-                </button>
-              </>
-            ) : (
-              <button className='btn_submit' type="submit" disabled={isLoading}>
-                {isLoading ? 'Enviando...' : 'Enviar'}
-              </button>
-            )}
-          </form>
-        </div>
-      </div>
-    </div>
+          </div>
+      }
+    </>
   );
 };
 
