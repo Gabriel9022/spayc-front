@@ -38,9 +38,12 @@ const Header: React.FC = () => {
       <header className='Header' id='Header'>
         <div className='Header_content_container'>
           <div className='Header_logo_container'>
-            <Link to="/">
-              <img src={isMobile ? logo_f : logo_h} alt="Logo SPAYC" className='logo' />
-            </Link>
+            {url ?
+              (<Link to="/inicio">
+                <img src={isMobile ? logo_f : logo_h} alt="Logo SPAYC" className='logo' />
+              </Link>) :
+              (<img src={isMobile ? logo_f : logo_h} alt="Logo SPAYC" className='logo' />)
+            }
           </div>
           {url ?
             <div className='Header_right_container'>
