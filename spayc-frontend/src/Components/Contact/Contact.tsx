@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './Contact.css'
 import { useForm, SubmitHandler } from 'react-hook-form';
 
@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
     register,
     handleSubmit,
     reset,
-    formState: {errors},
+    formState: { errors },
   } = useForm<Inputs>({
     defaultValues: {
       firstName: '',
@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body:  JSON.stringify(data),
+        body: JSON.stringify(data),
       });
 
       if (!response.ok) {
@@ -51,28 +51,28 @@ const Contact: React.FC = () => {
       setIsLoading(false);
     }
   };
-  
+
 
   return (
     <div className='Contact_component'>
       <div className='Contact_sections'>
-      <div className="Contact_banner">
-            <div className="Contact_banner_title">
-              <h1>¿Cómo Contactar con nosotros?</h1>
-            </div>
-        </div>
-        <div className='Contact_intro_section'>
+        <section className="Contact_banner">
+          <div className="Contact_banner_title">
+            <h1>¿Cómo Contactar con nosotros?</h1>
+          </div>
+        </section>
+        <section className='Contact_intro_section'>
           <p className='Contact_intro_description'>En SPAYC valoramos la comunicación directa y efectiva, si tiene alguna consulta o necesita más información sobre nuestros servicios, no dude en contactarnos y un asesor se comunicará con usted.</p>
-        </div>
-        <div className='Contact_info_form_sections'>
+        </section>
+        <section className='Contact_info_form_sections'>
           <div className='Contact_section_info'>
             <h2 className='Contact_info_title'>Contactanos</h2>
             <div className='Contact_info_container'>
-                <p>Ciudad: <span>Córdoba</span></p>
-                <p>Teléfono: <span>XXX XXXX XXXX</span></p>
-                <p>Mail: <span>spaycserviciosprofesionales@gmail.com</span></p>
-                <p>Instagram: <a href='https://www.instagram.com/spaycserviciospersonasmayores/' target="_blank" rel="noopener noreferrer"><span>@spaycserviciospersonasmayores</span></a></p>
-                <p>Facebook: <span>/spaycok</span></p>
+              <p>Ciudad: <span>Córdoba</span></p>
+              <p>Teléfono: <span>XXX XXXX XXXX</span></p>
+              <p>Mail: <span>spaycserviciosprofesionales@gmail.com</span></p>
+              <p>Instagram: <a href='https://www.instagram.com/spaycserviciospersonasmayores/' target="_blank" rel="noopener noreferrer"><span>@spaycserviciospersonasmayores</span></a></p>
+              <p>Facebook: <span>/spaycok</span></p>
             </div>
           </div>
           <div className='Contact_section_form'>
@@ -174,14 +174,14 @@ const Contact: React.FC = () => {
                 <button className='btn_submit' type="submit" disabled={isLoading}>
                   {isLoading ? (
                     <div className="spinner"></div>
-                    ) : (
-                      'Enviar'
-                    )}
+                  ) : (
+                    'Enviar'
+                  )}
                 </button>
               </form>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   )
