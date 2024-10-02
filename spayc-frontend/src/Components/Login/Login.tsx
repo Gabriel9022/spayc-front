@@ -65,7 +65,6 @@ const Login: React.FC = () => {
         if (response.ok) {
           const data = await response.json();
           if (data.validation.isAdmin) {
-            //hacer un modal
             if (isMobile) {
               setShowMobileWarning(true);
             } else {
