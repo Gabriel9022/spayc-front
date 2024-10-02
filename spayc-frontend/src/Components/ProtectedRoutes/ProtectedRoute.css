@@ -29,6 +29,7 @@
 }
 
 .Login_successful_modal {
+    width: 300px;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -39,6 +40,7 @@
 }
 
 .Login_successful_modal button {
+    margin: 0 auto;
     background-color: var(--accent-color);
     border: solid 1px var(--accent-color);
     color: var(--secondary-color);
