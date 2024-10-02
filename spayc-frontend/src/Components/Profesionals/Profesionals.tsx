@@ -7,18 +7,18 @@ const Profesionals: React.FC = () => {
   return (
     <div className="professional_component">
       <div className="professional_sections">
-      <div className="professional_banner">
-            <div className="professional_banner_title">
-              <h1>Perfil de nuestros profesionales</h1>
-            </div>
-        </div>
-        <div className="professional_profile">
+        <section className="professional_banner">
+          <div className="professional_banner_title">
+            <h1>Perfil de nuestros profesionales</h1>
+          </div>
+        </section>
+        <section className="professional_profile">
           <div className="professional_profile_intro">
             <p>
               El perfil de los profesionales en cuidados es fundamental para
               garantizar una atención de calidad y adaptada a las necesidades
               específicas. Los profesionales que conforman nuestro staff se
-              caracterizan por 
+              caracterizan por
             </p>
             <img className="white_arrow" src={white_arrow} alt="white arrow" />
           </div>
@@ -101,8 +101,8 @@ const Profesionals: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="professional_profile_functions">
+        </section>
+        <section className="professional_profile_functions">
           <h2>Funciones de los profesionales en cuidados</h2>
           <div className="professional_profile_functions_container">
             <div className="professional_profile_functions_items">
@@ -140,8 +140,8 @@ const Profesionals: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="professional_profile_conclusion">
+        </section>
+        <section className="professional_profile_conclusion">
           <p>
             Los profesionales en cuidados de personas mayores poseen habilidades
             técnicas y personales, experiencia relevante y un compromiso ético
@@ -149,7 +149,7 @@ const Profesionals: React.FC = () => {
             pos de garantizar un entorno de cuidado saludable, seguro,
             respetuoso y efectivo.
           </p>
-        </div>
+        </section>
       </div>
     </div>
   );

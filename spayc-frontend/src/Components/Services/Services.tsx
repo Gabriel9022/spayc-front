@@ -11,15 +11,15 @@ const Services: React.FC = () => {
   return (
     <div className="Services_component">
       <div className="Services_sections">
-      <div className="Services_banner">
-            <div className="Services_banner_title">
-              <h1>Nuestros Servicios</h1>
-            </div>
-        </div>
-        <div className="Services_card_section">
-            <MappingServices services={servicesArray}/>
-        </div>
-        <div className="Services_careOptionInfo_section">
+        <section className="Services_banner">
+          <div className="Services_banner_title">
+            <h1>Nuestros Servicios</h1>
+          </div>
+        </section>
+        <section className="Services_card_section">
+          <MappingServices services={servicesArray} />
+        </section>
+        <section className="Services_careOptionInfo_section">
           <div className="Services_careOptionInfo_container">
             <h3>Opciones de Cuidados</h3>
             <p>
@@ -45,7 +45,7 @@ const Services: React.FC = () => {
           <div className="Services_careOptionImg_container">
             <img className="Services_careOptionImg_img" src={attendingPerson} alt="Imagen de Opciones de Cuidados" />
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );

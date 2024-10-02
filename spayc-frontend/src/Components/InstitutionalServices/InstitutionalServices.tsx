@@ -5,12 +5,12 @@ const InstitutionalServices: React.FC = () => {
   return (
     <div className="InstitutionalServices_component">
       <div className="InstitutionalServices_sections">
-        <div className="InstitutionalServices_banner">
+        <section className="InstitutionalServices_banner">
             <div className="InstitutionalServices_banner_title">
               <h1>Servicios para instituciones</h1>
             </div>
-        </div>
-        <div className="InstitutionalServices_introduction">
+        </section>
+        <section className="InstitutionalServices_introduction">
           <p>
             Si representas una institución, organización o entidad
             pública, privada o del tercer sector, que trabaja con personas
@@ -19,8 +19,8 @@ const InstitutionalServices: React.FC = () => {
             como así también, asesoramiento para la creación, desarrollo y
             evaluación de políticas públicas de vejez.
           </p>
-        </div>
-        <div className="InstitutionalServices_services">
+        </section>
+        <section className="InstitutionalServices_services">
           <div className="InstitutionalServices_services_title">
             <h2>Nuestros servicios incluyen</h2>
           </div>
@@ -58,8 +58,8 @@ const InstitutionalServices: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="InstitucionalServices_why">
+        </section>
+        <section className="InstitucionalServices_why">
           <div className="InstitutionalServices_why_title">
             <h2>¿Por qué SPAYC?</h2>
           </div>
@@ -73,7 +73,7 @@ const InstitutionalServices: React.FC = () => {
           <div className="InstitutionalServices_why_final">
             <h3>¡Transformamos el cuidado de las personas mayores con profesionalidad y dedicación! </h3>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );

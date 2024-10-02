@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import WorkWithUsImage from '../../assets/images/WorkWithUs/WorkWithUs_img.png';
@@ -16,20 +16,20 @@ const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2MB
 
 const WorkWithUs: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false)
-  const { 
+  const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
     setError,
     clearErrors } = useForm<WorkWithUs_Inputs>({
-    defaultValues: {
-      name: '',
-      email: '',
-      tel: '',
-      message: ''
-    }
-  });
+      defaultValues: {
+        name: '',
+        email: '',
+        tel: '',
+        message: ''
+      }
+    });
 
   const validateFileSize = (file: FileList | null): boolean => {
     if (file && file[0] && file[0].size > MAX_FILE_SIZE) {
@@ -73,12 +73,12 @@ const WorkWithUs: React.FC = () => {
   return (
     <div className='WorkWithUs_component'>
       <div className='WorkWithUs_sections'>
-      <div className="WorkWithUs_banner">
-            <div className="WorkWithUs_banner_title">
-              <h1>¡Trabaja con Nosotros!</h1>
-            </div>
-        </div>
-        <div className='WorkWithUs_section_info'>
+        <section className="WorkWithUs_banner">
+          <div className="WorkWithUs_banner_title">
+            <h1>¡Trabaja con Nosotros!</h1>
+          </div>
+        </section>
+        <section className='WorkWithUs_section_info'>
           <div className='WorkWithUs_info_container'>
             <div className='WorkWithUs_info'>
               <p className='WorkWithUs_info_description'>En SPAYC, Servicios Profesionales de Apoyo y Cuidado para Personas Mayores, contamos con una sólida trayectoria en el cuidado y acompañamiento de personas mayores. Nos dedicamos a ofrecer servicios de la más alta calidad, enfocados en mejorar la calidad de vida de las personas mayores y sus familias.</p>
@@ -94,8 +94,8 @@ const WorkWithUs: React.FC = () => {
               <p className='WorkWithUs_perfil_description'>Conocé el <Link to="/profesionales">PERFIL DE NUESTROS PROFESIONALES</Link></p>
             </div>
           </div>
-        </div>
-        <div className='WorkWithUs_section_form'>
+        </section>
+        <section className='WorkWithUs_section_form'>
           <div className='WorkWithUs_section_form_container'>
             <h2 className='WorkWithUs_form_title'>Si querés formar parte de SPAYC completa el siguiente formulario</h2>
             <div className='WorkWithUs_form_container'>
@@ -183,14 +183,14 @@ const WorkWithUs: React.FC = () => {
                 <button className='btn_submit' type="submit" disabled={isLoading}>
                   {isLoading ? (
                     <div className="spinner"></div>
-                    ) : (
-                      'Enviar'
-                    )}
+                  ) : (
+                    'Enviar'
+                  )}
                 </button>
               </form>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );

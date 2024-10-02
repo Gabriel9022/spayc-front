@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   return (
     <div className="home_component">
       <div className="home_sections">
-        <div className="home_banner">
+        <section className="home_banner">
           <div className="home_banner_title">
             <h1>Bienvenidos a SPAYC</h1>
             <span>
@@ -16,8 +16,8 @@ const Home: React.FC = () => {
               Mayores
             </span>
           </div>
-        </div>
-        <div className="home_introduction">
+        </section>
+        <section className="home_introduction">
           <div className="home_introduction_container">
             <div className="home_introduction_image">
               <img src={handsImage} alt="Imagen de manos" />
@@ -39,8 +39,8 @@ const Home: React.FC = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className="home_compromise">
+        </section>
+        <section className="home_compromise">
           <div className="home_compromise_container">
             <div className="home_compromise_title">
               <h2>Nuestro compromiso</h2>
@@ -91,8 +91,8 @@ const Home: React.FC = () => {
               <p><Link to="/servicios">SERVICIOS PARA PERSONAS MAYORES</Link></p>
             </div>
           </div>
-        </div>
-        <div className="home_services">
+        </section>
+        <section className="home_services">
           <div className="home_services_container">
             <div className="home_services_introduction">
               <p>Si representas una institución, organización o entidad pública, privada o del tercer sector,  que trabaja con personas mayores, en SPAYC ofrecemos servicios profesionales de acompañamiento, orientación, capacitación en temáticas de vejez, como así también, asesoramiento para la creación, desarrollo y evaluación de políticas públicas de vejez.</p>
@@ -119,8 +119,8 @@ const Home: React.FC = () => {
             <p>Conoce nuestros</p>
             <p><Link to={"/instituciones"}>SERVICIOS PARA INSTITUCIONES</Link></p>
           </div>
-        </div>
-        <div className="home_professionals">
+        </section>
+        <section className="home_professionals">
           <div className="home_professionals_container">
             <div className="home_proffesionals_image">
               <img src={attendingPerson} alt="Imagen de persona asistiendo a otra" />
@@ -134,9 +134,9 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <div className="home_division" />
-        <div className="home_contact">
+        <section className="home_contact">
           <div className="home_contact_container">
             <div className="home_contact_introduction">
               <p>Más  que un proveedor de servicios de cuidados, somos un socio de confianza en el bienestar y calidad de vida de las personas mayores. Estamos comprometidos con hacer una diferencia tangible en cada vida que acompañamos y nos enorgullece servir con pasión y excelencia en el campo gerontológico.</p>
@@ -150,7 +150,7 @@ const Home: React.FC = () => {
               <img src={attendingPerson} alt="Imagen de persona asistiendo a otra" />
             </div>
           </div>
-        </div>
+        </section>
         <div className="home_division" />
       </div>
     </div>
