@@ -107,7 +107,7 @@ const Login: React.FC = () => {
     <>
       {
         showMobileWarning ?
-          <MobileWarningModal onConfirm={handleLogin} /> :
+          <MobileWarningModal handleLogin={handleLogin} /> :
           <div className="Login_component">
             <div className="Login_container">
               <div className="Login_form_container">
