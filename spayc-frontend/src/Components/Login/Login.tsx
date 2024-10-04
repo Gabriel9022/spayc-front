@@ -6,15 +6,23 @@ import { Inputs } from '../../utils/Interface';
 import { API_URL } from '../../utils/config';
 import WindowSize from '../../hooks/windowsSize';
 import MobileWarningModal from './Modal/MobileWarningModal';
+import { useAuthContext } from '../../hooks/useAuthContext';
+import LoggedUserModal from './Modal/LoggedUserModal';
 import './Login.css';
 
 const Login: React.FC = () => {
   const [forgotPass, setForgotPass] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [showMobileWarning, setShowMobileWarning] = useState(false)
+  const [showMobileWarning, setShowMobileWarning] = useState(false);
   const navigate = useNavigate();
   const windowWidth = WindowSize();
   const isMobile = windowWidth <= 768;
+
+  const { isAuthenticated, setIsAuthenticated } = useAuthContext();
+
+  const handlePanel = () => {
+    navigate('/panel')
+}
 
   const handleLogin = () => {
     setShowMobileWarning(false)
@@ -64,6 +72,14 @@ const Login: React.FC = () => {
 
         if (response.ok) {
           const data = await response.json();
+
+        // Si la validación es exitosa, se actualiza el estado de autenticación global
+        if (data.validation) {
+          setIsAuthenticated(true);  // Actualizamos el estado global a true
+        } else {
+          setIsAuthenticated(false)
+        }
+
           if (data.validation.isAdmin) {
             if (isMobile) {
               setShowMobileWarning(true);
@@ -102,10 +118,10 @@ const Login: React.FC = () => {
       {errors.password && <p className="error_message">{errors.password.message}</p>}
     </div>
   );
-
+  
   return (
     <>
-      {
+      { isAuthenticated ? <LoggedUserModal handlePanel={handlePanel}/> :
         showMobileWarning ?
           <MobileWarningModal handleLogin={handleLogin} /> :
           <div className="Login_component">

@@ -39,14 +39,34 @@
     box-shadow: 10px 10px 10px var(--shadow-primary-color);
 }
 
+.Login_successful_btn_container {
+  display: flex;
+  column-gap: 10px;
+}
+
 .Login_successful_modal button {
     margin: 0 auto;
     background-color: var(--accent-color);
     border: solid 1px var(--accent-color);
     color: var(--secondary-color);
+    font-size: var(--btn-font-size);
+    font-weight: bold;
     border-radius: 10px;
 }
 
 .Login_successful_modal button:hover {
     background-color: var(--accent-color-hover);
+    border-color: var(--accent-color-hover);
+}
+
+.btn_submit.panel {
+  color: var(--primary-color);
+  background-color: var(--quaternary-color);
+  border: solid 1px var(--quaternary-color);
+}
+
+.btn_submit.panel:hover {
+  background-color: var(--primary-color);
+  border: solid 1px var(--primary-color) ;
+  color: var(--secondary-color);
 }
