@@ -13,7 +13,7 @@ import Login from './Components/Login/Login';
 import EditPanel from './Components/EditPanel/EditPanel';
 import ProtectedRoute from './Components/ProtectedRoutes/ProtectedRoute';
 import ScrollToTop from './hooks/scrollToTop';
-import { ServicesProvider } from './utils/getAllServices';
+import { ServicesProvider } from './context/ServicesProvider';
 import { AuthProvider } from './context/AuthProvider';
 
 const App: React.FC = () => {
