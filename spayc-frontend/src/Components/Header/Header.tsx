@@ -60,8 +60,10 @@ const Header: React.FC = () => {
                     </div>
                     <div className='Header_info_block'></div>
                     <div className='Header_info_block'>
-                      <img className='phone_icon' src={tel} alt="" />
-                      <a href='tel:3515459115' target="_blank" rel="noopener noreferrer">351 545 9115</a>
+                      <a href='https://wa.me/5493547571781?text=SPAYC%20leí%20los%20servicios%20en%20su%20página%20y%20quería%20consultar%20acerda%20de:' target="_blank" rel="noopener noreferrer">
+                        <img className='phone_icon' src={tel} alt="" />
+                        <span>3547 571781</span>
+                      </a>
                     </div>
                     <div className='Header_info_block'>
                       <div className='socialMedia_container_h'>

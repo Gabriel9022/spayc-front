@@ -69,10 +69,10 @@ const Contact: React.FC = () => {
             <h2 className='Contact_info_title'>Contactanos</h2>
             <div className='Contact_info_container'>
               <p>Ciudad: <span>Córdoba</span></p>
-              <p>Teléfono: <span>XXX XXXX XXXX</span></p>
-              <p>Mail: <span>spaycserviciosprofesionales@gmail.com</span></p>
+              <p>Teléfono: <a href='https://wa.me/5493547571781?text=SPAYC%20leí%20los%20servicios%20en%20su%20página%20y%20quería%20consultar%20acerda%20de:' target="_blank" rel="noopener noreferrer"><span>3547 571781</span></a></p>
+              <p>Mail: <a href='mailto:spaycserviciosprofesionales@gmail.com' target="_blank" rel="noopener noreferrer"><span>spaycserviciosprofesionales@gmail.com</span></a></p>
               <p>Instagram: <a href='https://www.instagram.com/spaycserviciospersonasmayores/' target="_blank" rel="noopener noreferrer"><span>@spaycserviciospersonasmayores</span></a></p>
-              <p>Facebook: <span>/spaycok</span></p>
+              <p>Facebook: <span>/spayc</span></p>
             </div>
           </div>
           <div className='Contact_section_form'>

@@ -17,25 +17,25 @@ const AboutUs: React.FC = () => {
           <div className='AboutUs_description_container'>
             <p>En SPAYC nos caracterizamos por:</p>
             <div className='description_container'>
-              <p>Selección y capacitación de profesionales</p>
+              <h3>Selección y capacitación de profesionales</h3>
               <p>Proceso riguroso de selección que incluye entrevistas, verificación de antecedentes, referencias y certificaciones para asegurar la idoneidad y confiabilidad de los profesionales.
                 Capacitación continua en habilidades técnicas, buen trato y derechos de las personas mayores, promoviendo el respeto y la empatía en la atención.</p>
             </div>
             <div className='description_container'>
-              <p>Adaptabilidad y personalización del servicio</p>
+              <h3>Adaptabilidad y personalización del servicio</h3>
               <p>Evaluación detallada de las necesidades específicas de cada persona y adaptación de los cuidados según sus condiciones de salud, preferencias y rutinas diarias.</p>
             </div>
             <div className='description_container'>
-              <p>Supervisión y apoyo continuo</p>
+              <h3>Supervisión y apoyo continuo</h3>
               <p>Apoyo emocional, asesoramiento profesional y monitoreo constante del desempeño de los cuidadores para garantizar la calidad del servicio y la satisfacción con la prestación.</p>
             </div>
             <div className='description_container'>
-              <p>Coordinación con instituciones de salud y familiares</p>
+              <h3>Coordinación con instituciones de salud y familiares</h3>
               <p>Colaboración estrecha con instituciones médicas y sociales para asegurar un cuidado integral y coordinado.
                 Comunicación abierta y regular con los familiares.</p>
             </div>
             <div className='description_container'>
-              <p>Evaluación de satisfacción y mejora continua</p>
+              <h3>Evaluación de satisfacción y mejora continua</h3>
               <p>Retroalimentación constante con las personas mayores y familiares para evaluar la satisfacción con los servicios prestados e implementar mejoras continuas en los procesos.</p>
             </div>
           </div>
@@ -53,7 +53,7 @@ const AboutUs: React.FC = () => {
               </div>
             </div>
             <div className='AboutUs_mv_description_container'>
-              <p>Para conocer más sobre cómo podemos ayudarte, no dude en contactarnos.</p>
+              <p>Para conocer más sobre cómo podemos ayudarte, no dudes en contactarnos.</p>
             </div>
           </div>
         </section>

@@ -1,6 +1,6 @@
 import React from "react";
 import professionalsImage from "../../assets/images/Professionals/professionalsImage.jpg";
-import white_arrow from "../../assets/images/Professionals/white_arrow.png"
+import black_arrow from "../../assets/images/Professionals/black_arrow.png"
 import "./Profesionals.css";
 
 const Profesionals: React.FC = () => {
@@ -20,12 +20,12 @@ const Profesionals: React.FC = () => {
               específicas. Los profesionales que conforman nuestro staff se
               caracterizan por
             </p>
-            <img className="white_arrow" src={white_arrow} alt="white arrow" />
+            <img className="black_arrow" src={black_arrow} alt="black arrow" />
           </div>
           <div className="professional_profile_skills">
             <div className="professional_profile_skills_description">
               <div className="professional_profile_skills_skill">
-                <span>Empatía y Paciencia</span>
+                <h3>Empatía y Paciencia</h3>
                 <p>
                   Los profesionales deben tener la capacidad de comprender las
                   necesidades emocionales y físicas de las personas mayores,
@@ -33,7 +33,7 @@ const Profesionals: React.FC = () => {
                 </p>
               </div>
               <div className="professional_profile_skills_skill">
-                <span>Capacidad de Escucha Activa</span>
+                <h3>Capacidad de Escucha Activa</h3>
                 <p>
                   Es fundamental para los profesionales escuchar activamente a
                   los adultos mayores, comprendiendo sus preferencias,
@@ -41,7 +41,7 @@ const Profesionals: React.FC = () => {
                 </p>
               </div>
               <div className="professional_profile_skills_skill">
-                <span>Comunicación Clara y Eficaz</span>
+                <h3>Comunicación Clara y Eficaz</h3>
                 <p>
                   Los profesionales deben poder comunicarse de manera clara y
                   efectiva, tanto con los adultos mayores como con sus
@@ -49,7 +49,7 @@ const Profesionals: React.FC = () => {
                 </p>
               </div>
               <div className="professional_profile_skills_skill">
-                <span>Capacidades Organizativas</span>
+                <h3>Capacidades Organizativas</h3>
                 <p>
                   En entornos de cuidado, especialmente en instituciones, la
                   capacidad de organizar tareas, administrar el tiempo y
@@ -68,7 +68,7 @@ const Profesionals: React.FC = () => {
             </div>
             <div className="professional_profile_skills_description">
               <div className="professional_profile_skills_skill">
-                <span>Capacidad para Manejar el Estrés</span>
+                <h3>Capacidad para Manejar el Estrés</h3>
                 <p>
                   El cuidado de personas mayores puede ser emocional y
                   físicamente exigente. Los profesionales deben ser capaces de
@@ -77,13 +77,13 @@ const Profesionals: React.FC = () => {
                 </p>
               </div>
               <div className="professional_profile_skills_skill">
-                <span>Formación en Gerontología</span>
+                <h3>Formación en Gerontología</h3>
                 <p>
                   Los profesionales tienen formación específica en Gerontología.
                 </p>
               </div>
               <div className="professional_profile_skills_skill">
-                <span>Experiencia en el Campo</span>
+                <h3>Experiencia en el Campo</h3>
                 <p>
                   La experiencia previa en el cuidado de personas mayores es
                   valorada, ya que proporciona habilidades prácticas y
@@ -92,7 +92,7 @@ const Profesionals: React.FC = () => {
                 </p>
               </div>
               <div className="professional_profile_skills_skill">
-                <span>Certificaciones y Acreditaciones</span>
+                <h3>Certificaciones y Acreditaciones</h3>
                 <p>
                   Los profesionales cuentan con certificaciones o acreditaciones
                   específicas que garantizan estándares de calidad y competencia
@@ -107,14 +107,14 @@ const Profesionals: React.FC = () => {
           <div className="professional_profile_functions_container">
             <div className="professional_profile_functions_items">
               <div className="professional_profile_functions_item">
-                <span>Cuidado Personal</span>
+                <h3>Cuidado Personal</h3>
                 <p>
                   Asistencia con actividades de la vida diaria (AVD) como aseo
                   personal, alimentación, movilidad, entre otras
                 </p>
               </div>
               <div className="professional_profile_functions_item">
-                <span>Apoyo Emocional y Social</span>
+                <h3>Apoyo Emocional y Social</h3>
                 <p>
                   Proporcionar compañía, conversación y actividades recreativas
                   que promuevan la interacción social y el bienestar emocional
@@ -123,7 +123,7 @@ const Profesionals: React.FC = () => {
             </div>
             <div className="professional_profile_functions_items">
               <div className="professional_profile_functions_item">
-                <span>Cuidados de salud</span>
+                <h3>Cuidados de salud</h3>
                 <p>
                   Promoción de la salud en todas sus dimensiones, administración
                   de medicamentos según las indicaciones, y comunicación con
@@ -131,7 +131,7 @@ const Profesionals: React.FC = () => {
                 </p>
               </div>
               <div className="professional_profile_functions_item">
-                <span>Registro y Documentación</span>
+                <h3>Registro y Documentación</h3>
                 <p>
                   Mantener registros precisos de las actividades diarias,
                   cambios en la salud y comunicación relevante con la familia y
