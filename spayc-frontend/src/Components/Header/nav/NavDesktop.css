@@ -8,7 +8,7 @@
     justify-content: flex-end; 
     align-items: center;
     width: 1070px;
-    border: solid 1px #fff;
+    border: solid 1px var(--secondary-color);
     border-radius: 30px;
     background-color: #00000011;
     overflow: hidden;
@@ -19,7 +19,7 @@
 }
 
 .Header_nav_menu_item a {
-    color: #fff;
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: bold;
     letter-spacing: 0.2px;
@@ -27,6 +27,6 @@
 }
 
 .Header_nav_menu_item .active {
-    background-color: #fff;
-    color: #004173;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }

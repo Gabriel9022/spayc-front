@@ -65,7 +65,7 @@
 
 .create_modal, .edit_modal, .edit_individual_description, .confirm_is_active_service {
     position: fixed;
-    background-color: #FFF;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     box-shadow: 0 0 10px 1200px rgba(0, 0, 0, 0.493);
     left: 50%;
@@ -86,7 +86,7 @@
 }
 
 .create_errors {
-    color: red;
+    color: var(--error-color);
 }
 
 .modal_content {
@@ -178,7 +178,7 @@
 .edit_button_description {
     background-color: #6c757d;
     border: solid 1px #6c757d;
-    color: white;
+    color: var(--secondary-color);
 }
 
 .edit_button_description:hover {
@@ -203,7 +203,7 @@
 .is_active_button, .cancel_button, .delete_button_description, .close_button {
     background-color: var(--accent-color);
     border: solid 1px var(--accent-color);
-    color: white;
+    color: var(--secondary-color);
 }
 
 .close_button:hover, .delete_button_description:hover, .is_active_button:hover, .cancel_button:hover {

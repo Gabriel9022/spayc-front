@@ -57,6 +57,7 @@
 
 
 .Header_info_block a {
+    display: flex;
     align-items: center;
     font-size: 18px;
     color: var(--secondary-color);

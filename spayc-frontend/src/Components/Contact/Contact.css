@@ -21,28 +21,31 @@
 }
 
 .Contact_intro_section {
-    max-width: 900px;
-    margin: 0 auto;
+    background: linear-gradient(90deg, rgba(0, 65, 115, 0.5) 0%, rgba(182, 255, 255, 0.5) 100%);
+
     display: flex;
-    flex-direction: column;
-    padding: 30px;
+    justify-content: center;
+    padding: 30px 0;
 }
 
 .Contact_intro_description {
+    width: 900px;
+    padding: 20px 0;
     text-align: center;
     font-size: 24px;
     line-height: 1.5;
 }
 
 .Contact_info_form_sections {
-    background: linear-gradient(180deg, rgb(245, 245, 245) 30%, var(--quaternary-color) 100%);    
+    background: linear-gradient(90deg, rgba(0, 65, 115, 0.5) 0%, #b6ffff80 100%);
     display: flex;
     justify-content: space-evenly;
     padding: 30px 0;
+    margin: 30px 0;
 }
 
 .Contact_info_container {
-    background-color: var(--tertiary-color);
+    background-color: var(--primary-color);
     font-weight: bold;
     letter-spacing: 0.3px;
     padding: 20px 50px;
@@ -68,7 +71,7 @@
 }
 
 .Contact_info_title, .Contact_form_title {
-    font-size: 24px;
+    font-size: 28px;
     margin: 20px 0;
 }
 
@@ -82,7 +85,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-    background-color: var(--tertiary-color);
+    background-color: var(--primary-color);
     box-shadow: 10px 10px 10px var(--shadow-primary-color);
     padding: 20px;
     border-radius: 20px;
@@ -116,4 +119,9 @@
 textarea.Contact_input {
     height: 80px;
     resize: none;
+}
+
+.Contact_form_container .btn_submit:hover {
+    background-color: var(--tertiary-color);
+    border: solid 1px var(--tertiary-color);
 }
