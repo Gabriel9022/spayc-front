@@ -96,8 +96,8 @@ button {
 .error_message {
   font-weight: bold;
   color: var(--error-color);
-  text-shadow:  -1px -1px 0 var(--secondary-color), /* Contorno superior izquierdo granate */
-                1px -1px 0 var(--secondary-color), /* Contorno superior derecho granate */
-                -1px  1px 0 var(--secondary-color), /* Contorno inferior izquierdo granate */
-                1px  1px 0 var(--secondary-color); /* Contorno inferior derecho granate */;
+}
+
+.input_error {
+  border: solid 2px var(--error-color);
 }

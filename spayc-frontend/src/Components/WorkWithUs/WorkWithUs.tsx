@@ -3,6 +3,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import WorkWithUsImage from '../../assets/images/WorkWithUs/WorkWithUs_img.png';
 import './WorkWithUs.css'
+import { validationRules } from '../../utils/validationRules';
 
 type WorkWithUs_Inputs = {
   name: string;
@@ -102,68 +103,23 @@ const WorkWithUs: React.FC = () => {
               <form className='WorkWithUs_form' onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
                 <div className='WorkWithUs_container_name'>
                   <label>Nombre</label>
-                  <input className='WorkWithUs_input' placeholder='Nombre'
-                    {...register('name', {
-                      required: 'Campo requerido',
-                      minLength: {
-                        value: 3,
-                        message: 'Debe contener al menos 3 letras.'
-                      },
-                      maxLength: {
-                        value: 30,
-                        message: "La cantidad máxima de letras es 30."
-                      },
-                      pattern: {
-                        value: /^[A-Za-z\s]+$/,
-                        message: 'Solo letras y espacios están permitidos'
-                      }
-                    })}
-                  />
+                  <input className={`WorkWithUs_input ${errors.name ? 'input_error' : ''}`} placeholder='Nombre' {...register('name', validationRules.name)} />
                   {errors.name && <p className='error_message'>{errors.name.message}</p>}
                 </div>
                 <div className='WorkWithUs_container_email'>
                   <label>Email</label>
-                  <input className='WorkWithUs_input'
-                    type="email" placeholder='Email'
-                    {...register('email', {
-                      required: 'Este campo es obligatorio.',
-                      pattern: {
-                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: 'El formato del correo es inválido'
-                      }
-                    })}
-                  />
+                  <input className={`WorkWithUs_input ${errors.email ? 'input_error' : ''}`} type="email" placeholder='Email' {...register('email', validationRules.email)} />
                   {errors.email && <p className='error_message'>{errors.email.message}</p>}
                 </div>
                 <div className='WorkWithUs_container_tel'>
                   <label>Teléfono</label>
-                  <input className='WorkWithUs_input' type="tel" placeholder='Teléfono' {...register("tel",
-                    {
-                      required: "Este campo es obligatorio.",
-                      minLength: {
-                        value: 6,
-                        message: "Cantidad de dígitos inválida"
-                      },
-                      maxLength: {
-                        value: 15,
-                        message: "Cantidad de dígitos inválida"
-                      },
-                      pattern: {
-                        value: /^[0-9()+-]+$/,
-                        message: 'Número de teléfono inválido.'
-                      }
-
-                    }
-                  )} />
+                  <input className={`WorkWithUs_input ${errors.tel ? 'input_error' : ''}`} type="tel" placeholder='Teléfono' {...register("tel", validationRules.tel )} />
                   {errors.tel && <p className='error_message'>{errors.tel?.message}</p>}
                 </div>
                 <div className='WorkWithUs_container_message'>
                   <label>Mensaje</label>
-                  <textarea className='WorkWithUs_input' placeholder='Escriba aquí un mensaje'
-                    {...register('message', {
-                      required: 'Campo requerido.'
-                    })}
-                  />
+                  <textarea className={`WorkWithUs_input ${errors.message ? 'input_error' : ''}`} placeholder='Escriba aquí un mensaje'
+                    {...register('message', validationRules.message)} />
                   {errors.message && <p className='error_message'>{errors.message.message}</p>}
                 </div>
                 <div className='WorkWithUs_container_file'>

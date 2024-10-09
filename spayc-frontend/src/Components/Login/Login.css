@@ -32,10 +32,6 @@
     text-decoration: underline;
 }
 
-.input_error {
-    border-color: var(--error-color);
-}
-
 .Login_component .error_message {
     font-weight: 500;
 }
