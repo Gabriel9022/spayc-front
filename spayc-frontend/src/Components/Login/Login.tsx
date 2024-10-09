@@ -74,11 +74,7 @@ const Login: React.FC = () => {
           const data = await response.json();
 
         // Si la validación es exitosa, se actualiza el estado de autenticación global
-        if (data.validation) {
-          setIsAuthenticated(true);  // Actualizamos el estado global a true
-        } else {
-          setIsAuthenticated(false)
-        }
+          setIsAuthenticated(data.validation);
 
           if (data.validation.isAdmin) {
             if (isMobile) {
@@ -109,10 +105,8 @@ const Login: React.FC = () => {
   const renderPasswordField = () => (
     <div className="password_container">
       <label>Contraseña</label>
-      <input
-        className={`password_input ${errors.password ? 'input_error' : ''}`}
-        type="password"
-        placeholder="Contraseña"
+      <input className={`password_input ${errors.password ? 'input_error' : ''}`}
+        type="password" placeholder="Contraseña"
         {...register('password', validationRules.password)}
       />
       {errors.password && <p className="error_message">{errors.password.message}</p>}
