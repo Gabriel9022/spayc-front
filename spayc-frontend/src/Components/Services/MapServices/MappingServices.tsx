@@ -1,6 +1,6 @@
 import React from "react";
 import { MappingServicesProps } from "../../../utils/Interface";
-import { useServicesContext } from "../../../hooks/useServicesContext";
+import { useServicesContext } from "../../../context/useServicesContext";
 
 
 const MappingServices: React.FC<MappingServicesProps> = () => {

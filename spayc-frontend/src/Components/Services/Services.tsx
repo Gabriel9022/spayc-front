@@ -1,6 +1,6 @@
 import React from "react";
 import MappingServices from './MapServices/MappingServices';
-import { useServicesContext } from "../../hooks/useServicesContext";
+import { useServicesContext } from "../../context/useServicesContext";
 import attendingPerson from "../../assets/images/Home/old-patient-suffering-from-parkinson.jpg";
 import "./Services.css";
 

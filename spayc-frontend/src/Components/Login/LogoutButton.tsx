@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { API_URL } from '../../utils/config';
-import { useAuthContext } from '../../hooks/useAuthContext';
+import { useAuthContext } from '../../context/useAuthContext';
 import './LogoutButton.css';
 
 const LogoutButton: React.FC = () => {
