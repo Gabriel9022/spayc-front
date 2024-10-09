@@ -72,9 +72,9 @@ const Login: React.FC = () => {
 
         if (response.ok) {
           const data = await response.json();
-
+          console.log(data)
         // Si la validación es exitosa, se actualiza el estado de autenticación global
-          setIsAuthenticated(data.validation);
+          setIsAuthenticated(Object.keys(data.validation).length !== 0);
 
           if (data.validation.isAdmin) {
             if (isMobile) {
