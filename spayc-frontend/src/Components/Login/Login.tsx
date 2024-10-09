@@ -6,7 +6,7 @@ import { Inputs } from '../../utils/Interface';
 import { API_URL } from '../../utils/config';
 import WindowSize from '../../hooks/windowsSize';
 import MobileWarningModal from './Modal/MobileWarningModal';
-import { useAuthContext } from '../../hooks/useAuthContext';
+import { useAuthContext } from '../../context/useAuthContext';
 import LoggedUserModal from './Modal/LoggedUserModal';
 import './Login.css';
 
