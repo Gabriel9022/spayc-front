@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css'
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { validationRules } from '../../utils/validationRules';
 
 type Inputs = {
   firstName: string,
@@ -82,93 +83,28 @@ const Contact: React.FC = () => {
                 <div className='Contact_container_name_lastName'>
                   <div className='Contact_container_name'>
                     <label>Nombre</label>
-                    <input className='Contact_input' type="text" placeholder='Nombre' {...register("firstName",
-                      {
-                        required: "Este campo es obligatorio",
-                        minLength: {
-                          value: 3,
-                          message: 'Debe contener al menos 4 letras.'
-                        },
-                        maxLength: {
-                          value: 15,
-                          message: "La cantidad máxima de letras es 10."
-                        },
-                        pattern: {
-                          value: /^[A-Za-z]+$/,
-                          message: 'Solo puede contener letras y sin espacios.'
-                        }
-                      }
-                    )} />
+                    <input className={`Contact_input ${errors.firstName ? 'input_error' : ''}`} type="text" placeholder='Nombre' {...register("firstName", validationRules.firstName)} />
                     {errors.firstName && <p className='error_message'>{errors.firstName?.message}</p>}
                   </div>
                   <div className='Contact_container_lastName'>
                     <label>Apellido</label>
-                    <input className='Contact_input' type="text" placeholder='Apellido' {...register("lastName",
-                      {
-                        required: "Este campo es obligatorio",
-                        minLength: {
-                          value: 3,
-                          message: 'Debe contener al menos 3 letras.'
-                        },
-                        maxLength: {
-                          value: 15,
-                          message: "La cantidad máxima de letras es 15."
-                        },
-                        pattern: {
-                          value: /^[A-Za-z]+$/,
-                          message: 'Solo puede contener letras y sin espacios.'
-                        }
-                      }
-                    )} />
+                    <input className={`Contact_input ${errors.lastName ? 'input_error' : ''}`} type="text" placeholder='Apellido' {...register("lastName", validationRules.lastName)} />
                     {errors.lastName && <p className='error_message'>{errors.lastName?.message}</p>}
                   </div>
                 </div>
                 <div className='Contact_container_email'>
                   <label>Email</label>
-                  <input className='Contact_input' type="email" placeholder='Email' {...register("email",
-                    {
-                      required: "Este campo es obligatorio",
-                      pattern: {
-                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: 'El formato del email es incorrecto.'
-                      }
-                    }
-                  )} />
+                  <input className={`Contact_input ${errors.email ? 'input_error' : ''}`} type="email" placeholder='Email' {...register("email", validationRules.email)} />
                   {errors.email && <p className='error_message'>{errors.email?.message}</p>}
                 </div>
                 <div className='Contact_container_tel'>
                   <label>Teléfono</label>
-                  <input className='Contact_input' type="tel" placeholder='Teléfono' {...register("tel",
-                    {
-                      required: "Este campo es obligatorio",
-                      minLength: {
-                        value: 6,
-                        message: "Cantidad de dígitos inválida"
-                      },
-                      maxLength: {
-                        value: 15,
-                        message: "Cantidad de dígitos inválida"
-                      },
-                      pattern: {
-                        value: /^[0-9()+-]+$/,
-                        message: 'Número de teléfono inválido.'
-                      }
-
-                    }
-                  )} />
+                  <input className={`Contact_input ${errors.tel ? 'input_error' : ''}`} type="tel" placeholder='Teléfono' {...register("tel", validationRules.tel)} />
                   {errors.tel && <p className='error_message'>{errors.tel?.message}</p>}
                 </div>
                 <div className='Contact_container_message'>
                   <label>Mensaje</label>
-                  <textarea className='Contact_input' placeholder='Mensaje' {...register("message",
-                    {
-                      required: "Este campo es obligatorio",
-                      maxLength: {
-                        value: 600,
-                        message: "Se permiten hasta 600 caracteres"
-                      }
-                    }
-                  )} />
+                  <textarea className={`Contact_input ${errors.message ? 'input_error' : ''}`} placeholder='Mensaje' {...register("message", validationRules.message)} />
                   {errors.message && <p className='error_message'>{errors.message?.message}</p>}
                 </div>
                 <button className='btn_submit' type="submit" disabled={isLoading}>
