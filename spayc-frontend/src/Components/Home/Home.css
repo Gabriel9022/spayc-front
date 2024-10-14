@@ -325,6 +325,7 @@
 
 @media screen and (max-width: 768px) {
     .home_banner {
+        margin-top: 122px;
         height: 380px;
     }
 
@@ -402,6 +403,10 @@
 }
 
 @media screen and (max-width: 450px) {
+    .home_banner {
+        margin-top: 118px;
+    }
+
     .home_introduction_us p {
         text-align: left;
         text-wrap: balance;
@@ -419,6 +424,12 @@
     .home_compromise_service p, 
     .home_services_link p {
         font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .home_banner {
+        margin-top: 100px;
     }
 }
 
@@ -440,6 +451,12 @@
     .home_professionals_introduction p, 
     .home_contact_introduction p {
         font-size: 16px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .home_banner {
+        margin-top: 82px;
     }
 }
 
