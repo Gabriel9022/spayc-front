@@ -76,6 +76,8 @@
     padding: 10px 20px;
 }
 
+/* Responsive section */
+
 @media screen and (max-width: 450px) {
     .Header_nav_menu_mobile {
         top: 116px;
