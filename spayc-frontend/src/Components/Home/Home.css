@@ -319,3 +319,167 @@
 .home_professionals_introduction .home_professionals_link p:nth-child(1) {
     padding-top: 20px;
 }
+
+
+/* Responsive section */
+
+@media screen and (max-width: 768px) {
+    .home_banner {
+        height: 380px;
+    }
+
+    .home_banner_title {
+        padding-left: 20px;
+    }
+
+    .home_introduction_container {
+        flex-direction: column;
+    }
+
+    .home_introduction_us p {
+        width: 100%;
+        text-align: justify;
+    }
+
+    .home_services_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home_services_introduction {
+        max-width: 550px;
+        padding: 20px 0;
+        margin: 0 auto;
+    }
+
+    .home_professionals_container, 
+    .home_contact_container {
+        flex-direction: column;
+        padding: 40px 30px;
+    }
+
+    .home_proffesionals_image, 
+    .home_contact_image {
+        margin: 0px auto 40px;
+        height: auto;
+        width: 100%;
+    }
+
+    .home_contact_image {
+        margin: 40px auto 0;
+    }
+
+    .home_proffesionals_image img, 
+    .home_contact_image img {
+        margin: 0;
+    }
+
+    .home_professionals_introduction,
+    .home_contact_introduction {
+        right: unset;
+        width: 100%;
+    }
+
+    .home_professionals_introduction p, 
+    .home_contact_introduction p {
+        padding: 20px 0;
+    }
+
+    .home_professionals_introduction .home_professionals_link p, 
+    .home_contact_introduction .home_contact_link p {
+        padding: 0;
+        text-wrap: pretty;
+    }
+
+    .home_division {
+        height: 50px;
+    }
+
+    .home_division:nth-of-type(2) {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .home_introduction_us p {
+        text-align: left;
+        text-wrap: balance;
+    }
+
+    .home_compromise,
+    .home_services {
+        padding: 0 20px;
+    }
+
+    .home_services_introduction {
+        max-width: 350px;
+    }
+
+    .home_compromise_service p, 
+    .home_services_link p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .home_introduction_us p {
+        font-size: 18px;
+    }
+
+    .home_services_items_item p {
+        font-size: 16px;
+        text-wrap: balance;
+    }
+
+    .home_compromise_service p a, 
+    .home_services_link p a {
+        font-size: 16px;
+    }
+
+    .home_professionals_introduction p, 
+    .home_contact_introduction p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .home_banner_title h1 {
+        font-size: 32px;
+    }
+
+    .home_banner_title span {
+        font-size: 20px;
+        width: 80%;
+    }
+
+    .home_introduction_us p {
+        text-wrap: pretty;
+    }
+
+    .home_compromise_title h2 {
+        font-size: 36px;
+    }
+
+    .home_compromise_description_card p {
+        text-wrap: balance;
+    }
+
+    .home_compromise_service p a, 
+    .home_services_link p a {
+        font-size: 14px;
+    }
+
+    .home_services_introduction p {
+        font-size: 16px;
+    }
+
+    .home_services_items {
+        padding: 20px 0;
+    }
+
+    .home_professionals_introduction p a, 
+    .home_contact_introduction p a {
+        font-size: 14px;
+    }
+}
