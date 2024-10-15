@@ -115,6 +115,151 @@
 .InstitutionalServices_why_final {
     padding: 30px 0;
 }
+
 .InstitutionalServices_why_final h3 {
     color: var(--primary-color);
+}
+
+
+/* Responsive section */
+
+@media screen and (max-width: 1280px) {
+    .InstitutionalServices_services {
+        padding: 0 20px;
+    }
+
+    .InstitucionalServices_services_up, 
+    .InstitucionalServices_services_down {
+        flex-wrap: wrap;
+        row-gap: 60px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .InstitutionalServices_introduction p {
+        width: 100%;
+        padding: 20px 50px;
+    }
+
+    .InstitutionalServices_why_final {
+        padding: 30px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .InstitutionalServices_banner {
+        margin-top: 122px;
+        height: 380px;
+    }
+
+    .InstitutionalServices_banner_title {
+        padding-left: 20px;
+    }
+
+    .InstitutionalServices_introduction p {
+        font-size: 20px;
+    }
+
+    .InstitutionalServices_why_final {
+        padding: 30px 45px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .InstitutionalServices_banner {
+        margin-top: 118px;
+    }
+
+    .InstitutionalServices_introduction p {
+        padding: 20px 30px;
+        font-size: 18px;
+    }
+
+    .InstitutionalServices_services_title h2 {
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .InstitucionalServices_why h2 {
+        font-size: 2rem;
+    }
+
+    .InstitutionalServices_why_section {
+        width: 100%;
+        padding: 10px 20px 10px 50px;
+    }
+
+    .InstitutionalServices_why_final {
+        padding: 30px 20px;
+    }
+
+    .InstitutionalServices_why_final h3 {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .InstitutionalServices_banner {
+        margin-top: 100px;
+    }
+
+    .InstitutionalServices_introduction p {
+        padding: 20px 25px;
+        font-size: 16px;
+    }
+
+    .InstitutionalServices_services_title h2 {
+        font-size: 2rem;
+    }
+
+    .InstitutionalServices_why_section li {
+        padding: 10px 10px 10px 0;
+        font-size: 16px;
+        text-wrap: pretty;
+    }
+
+    .InstitutionalServices_why_final h3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .InstitutionalServices_banner {
+        margin-top: 82px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .InstitutionalServices_banner_title h1 {
+        font-size: 2rem;
+    }
+
+    .InstitutionalServices_services_title h2 {
+        font-size: 30px;
+    }
+
+    .InstitutionalServices_card {
+        width: 100%;
+    }
+
+    .InstitutionalServices_card h3 {
+        font-size: 20px;
+    }
+
+    .InstitutionalServices_card p {
+        font-size: 16px;
+    }
+
+    .InstitucionalServices_why h2 {
+        font-size: 30px;
+    }
+
+    .InstitutionalServices_why_section li {
+        padding: 10px 0;
+    }
+
+    .InstitutionalServices_why_final h3 {
+        font-size: 18px;
+    }
 }

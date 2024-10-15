@@ -251,7 +251,7 @@
 
 @media screen and (max-width: 320px) {
     .Services_banner_title h1 {
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .Services_card_info h2 {
