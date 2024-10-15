@@ -462,7 +462,7 @@
 
 @media screen and (max-width: 320px) {
     .home_banner_title h1 {
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .home_banner_title span {
