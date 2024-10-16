@@ -194,3 +194,182 @@
     font-weight: bold;
     align-self: center;
 }
+
+
+/* Responsive section */
+
+@media screen and (max-width: 1280px) {
+    .professional_profile_skills_description {
+        row-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .professional_profile_intro p {
+        width: 100%;
+        padding: 20px 40px;
+    }
+
+    .professional_profile_skills_description {
+        width: 60%;
+        padding: 40px 20px;
+    }
+
+    .professional_profile_skills_skill {
+        width: 100%;
+    }
+
+    .professional_profile_skills_skill h3 {
+        font-size: 1rem;
+    }
+
+    .professional_profile_skills_skill p {
+        font-size: 14px;
+    }
+
+    .professional_profile_skills_image {
+        width: 40%;
+        padding: 0 20px;        
+    }
+
+    .professional_profile_functions h2 {
+        font-size: 32px;
+    }
+
+    .professional_profile_functions_items {
+        width: 100%;
+    }
+
+    .professional_profile_conclusion p {
+        width: 100%;
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .professional_banner {
+        margin-top: 122px;
+        height: 380px;
+    }
+
+    .professional_banner_title {
+        padding-left: 20px;
+    }
+
+    .professional_profile_skills {
+        flex-direction: column;
+        align-items: center;       
+    }
+
+    .professional_profile_skills_description {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 40px;
+    }
+
+    .professional_profile_skills_skill {
+        width: 250px;
+        flex-direction: column;
+    }
+
+    .professional_profile_skills_skill h3 {
+        width: 100%;
+        min-height: 94px;
+        height: min-content;
+    }
+
+    .professional_profile_skills_skill p {
+        width: 100%;
+        align-items: center;
+    }
+
+    .professional_profile_skills_image {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .professional_banner {
+        margin-top: 118px;
+    }
+
+    .professional_profile_intro p {
+        padding: 20px 30px;
+        font-size: 20px;
+    }
+
+    .professional_profile_skills_skill h3 {
+        text-wrap: balance;
+    }
+
+    .professional_profile_skills_image {
+        width: 70%;
+    }
+
+    .professional_profile_functions h2 {
+        padding: 30px 20px 40px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .professional_profile_functions_items {
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 45px;
+    }
+
+    .professional_profile_functions_item h3 {
+        text-wrap: balance;
+    }
+
+    .professional_profile_conclusion p {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .professional_banner {
+        margin-top: 100px;
+    }
+
+    .professional_profile_intro p {
+        font-size: 18px;
+    }
+
+    .professional_profile_conclusion p {
+        font-size: 18px;
+        text-wrap: pretty;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .professional_banner {
+        margin-top: 82px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .professional_banner_title h1 {
+        font-size: 2rem;
+    }
+
+    .professional_profile_skills_description {
+        padding: 20px;
+    }
+
+    .professional_profile_skills_image {
+        width: 90%;
+    }
+
+    .professional_profile_functions h2 {
+        font-size: 20px;
+        padding: 30px 20px 0px;
+    }
+
+    .professional_profile_conclusion p {
+        font-size: var(--font-size-p);
+        padding: 0 20px;
+    }
+}

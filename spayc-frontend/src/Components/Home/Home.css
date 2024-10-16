@@ -488,7 +488,7 @@
     }
 
     .home_services_introduction p {
-        font-size: 16px;
+        font-size: var(--font-size-p);
     }
 
     .home_services_items {
