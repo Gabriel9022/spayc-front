@@ -182,3 +182,141 @@ textarea.WorkWithUs_input {
     font-weight: normal;
     text-shadow: none;
 }
+
+
+/* Responsive section */
+
+@media screen and (max-width: 900px) {
+    .WorkWithUs_section_info {
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    .WorkWithUs_info {
+        width: 100%;
+    }
+
+    .WorkWithUs_info_description {
+        font-size: 18px;
+    }
+
+    .WorkWithUs_image_container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .WorkWithUs_image {
+        width: 100%;
+        height: auto;
+    }
+
+    .WorkWithUs_form_title {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .WorkWithUs_banner {
+        margin-top: 122px;
+        height: 380px;
+    }
+
+    .WorkWithUs_banner_title {
+        padding-left: 20px;
+    }
+
+    .WorkWithUs_info {
+        padding: 20px;
+    }
+
+    .WorkWithUs_form_title {
+        padding: 0 40px;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .WorkWithUs_banner {
+        margin-top: 118px;
+    }
+
+    .WorkWithUs_info_container {
+        flex-wrap: wrap;
+        column-gap: 0;
+        row-gap: 20px;
+    }
+
+    .WorkWithUs_info_description {
+        text-wrap: pretty;
+    }
+
+    .WorkWithUs_perfil_description {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .WorkWithUs_perfil_description a {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .WorkWithUs_form_container {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .WorkWithUs_banner {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .WorkWithUs_perfil_description {
+        font-size: var(--font-size-p);
+    }
+
+    .WorkWithUs_form_title {
+        padding: 0 30px;
+        font-size: 18px;
+    }
+
+    .WorkWithUs_form_container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .WorkWithUs_form {
+        width: 280px;    
+    }
+
+    .WorkWithUs_form label {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .WorkWithUs_banner {
+        margin-top: 82px;
+    }
+
+    .WorkWithUs_info_description {
+        font-size: var(--font-size-p);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .WorkWithUs_banner_title h1 {
+        font-size: 2rem;
+    }
+
+    .WorkWithUs_perfil_description a {
+        font-size: 14px;
+    }
+
+    .WorkWithUs_form_title {
+        font-size: var(--font-size-p);
+    }
+}
