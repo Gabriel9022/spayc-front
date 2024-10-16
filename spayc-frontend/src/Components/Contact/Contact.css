@@ -134,3 +134,113 @@ textarea.Contact_input {
     background-color: var(--tertiary-color);
     border: solid 1px var(--tertiary-color);
 }
+
+
+/* Responsive section */
+
+@media screen and (max-width: 900px) {
+    .Contact_intro_section p {
+        width: 100%;
+        padding: 20px 34px;
+    }
+
+    .Contact_info_form_sections {
+        flex-wrap: wrap;
+        row-gap: 40px;
+    }
+
+    .Contact_info_container {
+        padding: 20px 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Contact_banner {
+        margin-top: 122px;
+        height: 380px;
+    }
+
+    .Contact_banner_title {
+        padding-left: 20px;
+    }
+
+    .Contact_intro_description {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .Contact_banner {
+        margin-top: 118px;
+    }
+
+    .Contact_intro_section p {
+        font-size: 20px;
+        text-wrap: balance;
+        padding: 20px 40px;
+    }
+
+    .Contact_info_form_sections {
+        padding: 30px;
+    }
+
+    .Contact_info_title, 
+    .Contact_form_title {
+        text-align: center;
+    }
+
+    .Contact_info_container {
+        padding: 20px;
+    }
+
+    .Contact_info_container p {
+        font-size: 14px;
+    }
+
+    .Contact_container_name_lastName {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .Contact_container_name, 
+    .Contact_container_lastName, 
+    .Contact_container_email, 
+    .Contact_container_tel, 
+    .Contact_container_message {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .Contact_banner {
+        margin-top: 100px;
+    }
+
+    .Contact_intro_section p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .Contact_banner {
+        margin-top: 82px;
+    }
+
+    .Contact_intro_section p {
+        text-wrap: pretty;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .Contact_banner_title h1 {
+        font-size: 2rem;
+    }
+
+    .Contact_info_form_sections {
+        padding: 30px 20px;
+    }
+
+    .Contact_info_container {
+        padding: 20px 10px;
+    }
+}
