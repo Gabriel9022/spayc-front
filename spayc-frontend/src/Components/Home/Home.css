@@ -323,6 +323,59 @@
 
 /* Responsive section */
 
+@media screen and (max-width: 900px) {
+    .home_introduction_container {
+        flex-wrap: wrap;
+    }
+
+    .home_professionals_container, 
+    .home_contact_container {
+        flex-wrap: wrap;
+        padding: 40px 60px;
+    }
+
+    .home_proffesionals_image, 
+    .home_contact_image {
+        margin: 0px auto 40px;
+        height: auto;
+        width: 80%;
+    }
+
+    .home_contact_image {
+        margin: 40px auto 0;
+    }
+
+    .home_proffesionals_image img, 
+    .home_contact_image img {
+        margin: 0;
+    }
+
+    .home_professionals_introduction,
+    .home_contact_introduction {
+        right: unset;
+        width: 80%;
+    }
+
+    .home_professionals_introduction p, 
+    .home_contact_introduction p {
+        padding: 20px 0;
+    }
+
+    .home_professionals_introduction .home_professionals_link p, 
+    .home_contact_introduction .home_contact_link p {
+        padding: 0;
+        text-wrap: pretty;
+    }
+
+    .home_division {
+        height: 50px;
+    }
+
+    .home_division:nth-of-type(2) {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .home_banner {
         margin-top: 122px;
@@ -353,53 +406,14 @@
         margin: 0 auto;
     }
 
-    .home_professionals_container, 
-    .home_contact_container {
-        flex-direction: column;
-        padding: 40px 30px;
-    }
-
-    .home_proffesionals_image, 
-    .home_contact_image {
-        margin: 0px auto 40px;
-        height: auto;
-        width: 100%;
-    }
-
-    .home_contact_image {
-        margin: 40px auto 0;
-    }
-
-    .home_proffesionals_image img, 
-    .home_contact_image img {
-        margin: 0;
+    .home_services_introduction p {
+        text-align: center;
     }
 
     .home_professionals_introduction,
     .home_contact_introduction {
-        right: unset;
         width: 100%;
     }
-
-    .home_professionals_introduction p, 
-    .home_contact_introduction p {
-        padding: 20px 0;
-    }
-
-    .home_professionals_introduction .home_professionals_link p, 
-    .home_contact_introduction .home_contact_link p {
-        padding: 0;
-        text-wrap: pretty;
-    }
-
-    .home_division {
-        height: 50px;
-    }
-
-    .home_division:nth-of-type(2) {
-        display: none;
-    }
-
 }
 
 @media screen and (max-width: 450px) {
@@ -408,7 +422,6 @@
     }
 
     .home_introduction_us p {
-        text-align: left;
         text-wrap: balance;
     }
 
@@ -425,11 +438,30 @@
     .home_services_link p {
         font-size: 18px;
     }
+
+    .home_professionals_container, 
+    .home_contact_container {
+        padding: 40px;
+    }
+
+    .home_professionals_introduction p, 
+    .home_contact_introduction p {
+        line-height: 32px;
+    }
+
+    .home_proffesionals_image, 
+    .home_contact_image {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 390px) {
     .home_banner {
         margin-top: 100px;
+    }
+
+    .home_introduction_us p {
+        text-align: left;
     }
 }
 
@@ -497,6 +529,6 @@
 
     .home_professionals_introduction p a, 
     .home_contact_introduction p a {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
