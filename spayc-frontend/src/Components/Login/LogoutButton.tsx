@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { API_URL } from '../../utils/config';
 import { useAuthContext } from '../../context/useAuthContext';
-import './LogoutButton.css';
 
 const LogoutButton: React.FC = () => {
   const navigate = useNavigate();
   const { setIsAuthenticated } = useAuthContext();
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleLogout = async () => {
+    setIsLoading(true)
     try {
       const response = await fetch(`${API_URL}/users/logout`, {
         method: 'POST',
@@ -25,12 +26,22 @@ const LogoutButton: React.FC = () => {
       }
     } catch (error) {
       console.error('Error al cerrar sesión:', error);
+    } finally {
+      setIsLoading(false)
     }
   };
 
   return (
-    <button className='Logout_Button' onClick={handleLogout}>
-      Cerrar sesión
+    <button
+      className='Auth_Button'
+      onClick={handleLogout}
+      disabled={isLoading}
+    >
+      {isLoading ? (
+        <div className="spinner"></div>
+      ) : (
+        'Cerrar sesión'
+      )}
     </button>
   );
 };
