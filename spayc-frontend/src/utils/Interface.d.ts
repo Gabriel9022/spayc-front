@@ -15,10 +15,10 @@ export interface AuthContextType {
   setIsAuthenticated: (authState: boolean) => void;
 }
 
-export interface Inputs{
+export interface Inputs {
   userName: string;
   password: string;
-};
+}
 
 export interface PasswordInputs {
   currentPassword: string;
