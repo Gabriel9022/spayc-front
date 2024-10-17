@@ -2,14 +2,8 @@ import React, { useState } from 'react';
 import './Contact.css'
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { validationRules } from '../../utils/validationRules';
+import { ContactFormInputs } from '../../utils/Interface';
 
-type Inputs = {
-  firstName: string,
-  lastName: string,
-  email: string,
-  tel: string,
-  message: string
-};
 
 const Contact: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false)
@@ -18,7 +12,7 @@ const Contact: React.FC = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<Inputs>({
+  } = useForm<ContactFormInputs>({
     defaultValues: {
       firstName: '',
       lastName: '',
@@ -28,7 +22,7 @@ const Contact: React.FC = () => {
     }
   });
 
-  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+  const onSubmit: SubmitHandler<ContactFormInputs> = async (data) => {
     setIsLoading(true);
     try {
       const response = await fetch('http://localhost:3001/contact/contact-email', {

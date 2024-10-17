@@ -18,9 +18,25 @@ export interface AuthContextType {
 export interface Inputs{
   userName: string;
   password: string;
-}
+};
 
 export interface PasswordInputs {
   currentPassword: string;
   newPassword: string;
+}
+
+export interface ContactFormInputs {
+  firstName: string,
+  lastName: string,
+  email: string,
+  tel: string,
+  message: string
+}
+
+export interface WorkWithUsFormInputs {
+  name: string;
+  email: string;
+  message: string;
+  tel: string;
+  file: FileList;
 }
