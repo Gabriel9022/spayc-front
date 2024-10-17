@@ -4,14 +4,8 @@ import { Link } from 'react-router-dom';
 import WorkWithUsImage from '../../assets/images/WorkWithUs/WorkWithUs_img.png';
 import './WorkWithUs.css'
 import { validationRules } from '../../utils/validationRules';
+import { WorkWithUsFormInputs } from '../../utils/Interface';
 
-type WorkWithUs_Inputs = {
-  name: string;
-  email: string;
-  message: string;
-  tel: string;
-  file: FileList;
-};
 
 const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2MB
 
@@ -23,7 +17,7 @@ const WorkWithUs: React.FC = () => {
     reset,
     formState: { errors },
     setError,
-    clearErrors } = useForm<WorkWithUs_Inputs>({
+    clearErrors } = useForm<WorkWithUsFormInputs>({
       defaultValues: {
         name: '',
         email: '',
@@ -43,7 +37,7 @@ const WorkWithUs: React.FC = () => {
     return true;
   };
 
-  const onSubmit: SubmitHandler<WorkWithUs_Inputs> = async (data) => {
+  const onSubmit: SubmitHandler<WorkWithUsFormInputs> = async (data) => {
     setIsLoading(true);
     if (!validateFileSize(data.file)) {
       return;
