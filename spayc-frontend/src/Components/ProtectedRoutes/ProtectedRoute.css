@@ -32,19 +32,35 @@
     width: 300px;
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 15px;
     padding: 30px;
+    background-color: var(--secondary-color);
     border: solid 1px grey;
     border-radius: 15px;
     box-shadow: 10px 10px 10px var(--shadow-primary-color);
 }
 
 .Login_successful_btn_container {
-  display: flex;
-  column-gap: 10px;
+    display: flex;
+    column-gap: 10px;
+    border-top: solid 1px;
+    padding-top: 10px;
 }
 
-.Login_successful_modal button {
+.Logged_options_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.Logged_options_second_container {
+    display: flex;
+    column-gap: 10px;
+}
+
+.Login_successful_modal button,
+.Login_successful_modal .Logged_options_container .Logged_options_second_container .Auth_Button {
     margin: 0 auto;
     background-color: var(--accent-color);
     border: solid 1px var(--accent-color);
@@ -54,12 +70,17 @@
     border-radius: 10px;
 }
 
-.Login_successful_modal button:hover {
+.Login_successful_modal button:hover,
+.Login_successful_modal .Logged_options_container .Logged_options_second_container .Auth_Button:hover {
     background-color: var(--accent-color-hover);
     border-color: var(--accent-color-hover);
 }
 
-.btn_submit.panel {
+.Login_successful_modal .close_button {
+  width: auto
+}
+
+.btn_submit.panel  {
   color: var(--primary-color);
   background-color: var(--quaternary-color);
   border: solid 1px var(--quaternary-color);
