@@ -28,8 +28,8 @@ export const validationRules = {
   lastName: {
     required: "Este campo es obligatorio.",
     minLength: { value: 3, message: 'Debe contener al menos 3 letras.' },
-    maxLength: { value: 15, message: "La cantidad máxima de letras es 15." },
-    pattern: { value: /^[A-Za-z]+$/, message: 'Solo puede contener letras, sin espacios.' },
+    maxLength: { value: 30, message: "La cantidad máxima de letras es 30." },
+    pattern: { value: /^[A-Za-z]+(?: [A-Za-z]+)*$/, message: 'Solo puede contener letras, sin espacios al inicio o final.' },
   },
   userName: {
     required: 'Este campo es obligatorio.',

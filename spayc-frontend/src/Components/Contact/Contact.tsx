@@ -33,8 +33,10 @@ const Contact: React.FC = () => {
         body: JSON.stringify(data),
       });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
+      if(response.ok) { 
+          alert('Formulario enviado con éxito')
+        } else {
+          throw new Error(`HTTP error! Status: ${response.status}`);
       }
 
       const result = await response.json();

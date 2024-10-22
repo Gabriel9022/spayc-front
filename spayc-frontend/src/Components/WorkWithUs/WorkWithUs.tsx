@@ -57,6 +57,7 @@ const WorkWithUs: React.FC = () => {
       });
       const result = await response.json();
       console.log('Success:', result);
+      if(response.ok) alert('Formulario enviado con éxito')
       reset();
     } catch (error) {
       console.error('Error:', error);
