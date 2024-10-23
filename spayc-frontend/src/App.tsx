@@ -25,7 +25,7 @@ const App: React.FC = () => {
       <AuthProvider>
         <ServicesProvider>
           <Routes>
-          <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/inicio" element={<Home />} />
             <Route path="/servicios" element={
               <ServicesProvider>

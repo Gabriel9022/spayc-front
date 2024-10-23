@@ -85,30 +85,38 @@
     align-self: center;
 }
 
-.Header_nav_container {
-    padding-right: 20px;
-    position: absolute;
-    top: 110px;
-    right: 0;
-}
+/* Responsive section */
 
-.sticky {
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: end;
-    width: 100%;
-    z-index: 1000;
-    background-color: rgba(0, 65, 115, 0.9);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
-    padding: 10px 20px;
-}
+@media screen and (max-width: 1280px) {
+    .Header_right_container {
+        width: 80%;
+        justify-content: center;
+    }
 
-/* Responsive */
+    .Header_info_block:nth-child(2), 
+    .Header_info_block:nth-child(4) {
+        flex: 0.3;
+    }
+
+    .Header_info_block p {
+        font-size: 20px;
+    }
+}
 
 @media screen and (max-width: 1279px) {
     .Header_content_container {
         height: 150px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .Header_info_block:nth-child(2), 
+    .Header_info_block:nth-child(4) {
+        flex: 0.4;
+    }
+    
+    .Header_info_block p{
+        font-size: 16px;
     }
 }
 
@@ -117,6 +125,10 @@
         height: unset;
         background: rgba(0, 65, 115,1);
         padding: 10px 20px 10px 10px;
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        box-shadow:  0px 6px 10px rgba(0, 0, 0, 0.3);
     }
 
     .Header_logo_container {
@@ -130,12 +142,48 @@
     }
 
     .Header_right_container p {
-        text-align: center;
         padding: 0 20px;
-        font-size: 14px;
+        text-align: center;
+        font-size: 22px;
         letter-spacing: 0.3px;
-        color: var(--secondary-color);
         font-weight: bold;
+        color: var(--secondary-color);
         margin-right: 1px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .Header_right_container p {
+        padding: 0 20px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .Header_logo_container {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .Header_right_container p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .Header_logo_container {
+        width: 60px;
+    }
+
+    .Header_right_container p {
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .Header_right_container p {
+        font-size: 12px;
+        padding: 0 10px;
     }
 }
