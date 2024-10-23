@@ -25,3 +25,12 @@
 .confirm_alert_button_container .btn_submit {
     margin: unset;
 }
+
+
+/* Responsive section */
+
+@media screen and (max-width: 450px) {
+    .confirm_alert {
+        max-width: 300px;
+    }
+}

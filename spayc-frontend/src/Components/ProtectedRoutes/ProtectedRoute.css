@@ -92,3 +92,19 @@
   border: solid 1px var(--primary-color) ;
   color: var(--secondary-color);
 }
+
+
+/* Responsive section */
+
+@media screen and (max-width: 1280px) {
+  .Login_successful_modal {
+    position: relative;
+    top: 20vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Login_successful_modal {
+    top: 30vh;
+  }
+}

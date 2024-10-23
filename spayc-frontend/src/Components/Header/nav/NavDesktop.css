@@ -1,5 +1,28 @@
+.Header_nav_container {
+    padding-right: 20px;
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 65, 115, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    padding: 10px 20px;
+}
+
 .Header_nav {
     height: 30px;
+}
+
+.Header_nav_container.sticky .Header_nav {
+    height: unset;
 }
 
 .Header_nav_menu {
@@ -35,17 +58,13 @@
 /* Responsive section */
 
 @media screen and (max-width: 1280px) {
-    .Header_right_container {
-        width: 80%;
+    .Header_nav_container {
+        top: 116px;
     }
 
-    .Header_info_block:nth-child(2), 
-    .Header_info_block:nth-child(4) {
-        flex: 0.3;
-    }
-
-    .Header_info_block p {
-        font-size: 20px;
+    .Header_nav_container.sticky {
+        position: fixed;
+        top: 0;
     }
 
     .Header_nav_menu {
@@ -58,65 +77,8 @@
 }
 
 @media screen and (max-width: 900px) {
-    .Header_info_block:nth-child(2), 
-    .Header_info_block:nth-child(4) {
-        flex: 0.4;
-    }
-    
-    .Header_info_block p{
-        font-size: 16px;
-    }
-
     .Header_nav_menu_item a {
         font-size: 10px;
         padding: 4px 6px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .Header_content_container {
-        z-index: 1000;
-        position: fixed;
-        top: 0;
-        box-shadow:  0px 6px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .Header_right_container p {
-        font-size: 22px;
-    }
-}
-
-@media  screen and (max-width: 450px) {
-    .Header_right_container p {
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 390px) {
-    .Header_logo_container {
-        width: 80px;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .Header_right_container p {
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .Header_logo_container {
-        width: 60px;
-    }
-
-    .Header_right_container p {
-        padding: 0 15px;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .Header_right_container p {
-        font-size: 12px;
-        padding: 0 10px;
     }
 }

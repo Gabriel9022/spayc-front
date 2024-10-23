@@ -44,3 +44,13 @@ button[disabled] {
 button:hover {
     background-color: #f0f0f0;
 }
+
+
+/*Responsive section */
+
+@media screen and (max-width: 768px) {
+    .Login_component {
+        position: relative;
+        top: 30vh;
+    }
+}
