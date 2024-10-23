@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { ServicesType } from '../utils/Interface';
+import { API_URL } from '../utils/config';
 
 export const ServicesContext = createContext<{
   servicesArray: ServicesType[];
@@ -16,7 +17,7 @@ export const ServicesProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const fetchData = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:3001/services', {
+      const response = await fetch(`${API_URL}/services`, {
         method: 'GET',
       });
       if (!response.ok) {

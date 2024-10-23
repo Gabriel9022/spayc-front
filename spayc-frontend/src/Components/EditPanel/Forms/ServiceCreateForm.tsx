@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { ServicesType } from '../../../utils/Interface';
 import { useServicesContext } from '../../../context/useServicesContext';
+import { API_URL } from '../../../utils/config';
 
 interface ServiceCreateFormProps {
   onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean; descriptionArray: string[]; file: FileList | null }>;
@@ -119,7 +120,7 @@ const ServiceCreateForm: React.FC<ServiceCreateFormProps> = ({ onSubmit, isLoadi
       formData.append('id', service.id.toString());
       formData.append('isActive', (!service.isActive).toString());
 
-      const response = await fetch('http://localhost:3001/admin/isActiveService', {
+      const response = await fetch(`${API_URL}/admin/isActiveService`, {
         method: 'PUT',
         body: formData,
       });

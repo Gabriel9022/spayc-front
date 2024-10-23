@@ -4,6 +4,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { validationRules } from '../../utils/validationRules';
 import { ContactFormInputs } from '../../utils/Interface';
 import { useConfirmationModal } from '../../hooks/useConfirmationModal';
+import { API_URL } from '../../utils/config';
 
 const Contact: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -26,7 +27,7 @@ const Contact: React.FC = () => {
   const onSubmit: SubmitHandler<ContactFormInputs> = async (data) => {
     setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:3001/contact/contact-email', {
+      const response = await fetch(`${API_URL}/contact/contact-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
