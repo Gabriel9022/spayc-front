@@ -6,6 +6,7 @@ import './WorkWithUs.css'
 import { validationRules } from '../../utils/validationRules';
 import { WorkWithUsFormInputs } from '../../utils/Interface';
 import { useConfirmationModal } from '../../hooks/useConfirmationModal';
+import { API_URL } from '../../utils/config';
 
 const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2MB
 
@@ -52,7 +53,7 @@ const WorkWithUs: React.FC = () => {
     formData.append('file', data.file[0]);
 
     try {
-      const response = await fetch('http://localhost:3001/workWithUs/workWithUs-contact-email', {
+      const response = await fetch(`${API_URL}/workWithUs/workWithUs-contact-email`, {
         method: 'POST',
         body: formData,
       });
