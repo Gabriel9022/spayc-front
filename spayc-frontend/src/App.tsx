@@ -9,11 +9,12 @@ import InstitutionalServices from './Components/InstitutionalServices/Institutio
 import WorkWithUs from './Components/WorkWithUs/WorkWithUs';
 import Contact from './Components/Contact/Contact';
 import AboutUs from './Components/AboutUs/AboutUs';
-import Loggin from './Components/Loggin/Loggin';
+import Login from './Components/Login/Login';
 import EditPanel from './Components/EditPanel/EditPanel';
+import ProtectedRoute from './Components/ProtectedRoutes/ProtectedRoute';
 import ScrollToTop from './hooks/scrollToTop';
-import { ServicesProvider } from './utils/getAllServices';
-import './App.css'
+import { ServicesProvider } from './context/ServicesProvider';
+import { AuthProvider } from './context/AuthProvider';
 
 const App: React.FC = () => {
 
@@ -21,19 +22,36 @@ const App: React.FC = () => {
     <Router>
       <ScrollToTop />
       <Header />
-      <ServicesProvider>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/servicios" element={<Services />} />
-          <Route path="/instituciones" element={<InstitutionalServices />} />
-          <Route path="/profesionales" element={<Profesionals />} />
-          <Route path="/nosotros" element={<AboutUs />} />
-          <Route path="/trabaja-con-nosotros" element={<WorkWithUs />} />
-          <Route path="/contacto" element={<Contact />} />
-          <Route path="/loggin" element={<Loggin />} />
-          <Route path="/panel" element={<EditPanel />} />
-        </Routes>
-      </ServicesProvider>
+      <AuthProvider>
+        <ServicesProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/inicio" element={<Home />} />
+            <Route path="/servicios" element={
+              <ServicesProvider>
+                <Services />
+              </ServicesProvider>
+            } />
+            <Route path="/instituciones" element={<InstitutionalServices />} />
+            <Route path="/profesionales" element={<Profesionals />} />
+            <Route path="/nosotros" element={<AboutUs />} />
+            <Route path="/trabaja-con-nosotros" element={<WorkWithUs />} />
+            <Route path="/contacto" element={<Contact />} />
+            <Route path="/login" element={
+              <AuthProvider>
+                <Login />
+              </AuthProvider>
+            } />
+            <Route path="/panel" element={
+              <AuthProvider>
+                <ServicesProvider>
+                  <ProtectedRoute element={<EditPanel />} />
+                </ServicesProvider>
+              </AuthProvider>
+            } />
+          </Routes>
+        </ServicesProvider>
+      </AuthProvider>
       <Footer />
     </Router>
   )

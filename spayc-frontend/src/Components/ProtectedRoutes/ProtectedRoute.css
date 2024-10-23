@@ -1,0 +1,110 @@
+.loading_logo_container {
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.loading_logo {
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.Login_successful_container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.Login_successful_modal {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    border: solid 1px grey;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px var(--shadow-primary-color);
+}
+
+.Login_successful_btn_container {
+    display: flex;
+    column-gap: 10px;
+    border-top: solid 1px;
+    padding-top: 10px;
+}
+
+.Logged_options_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.Logged_options_second_container {
+    display: flex;
+    column-gap: 10px;
+    width: 100%;
+  }
+
+.Login_successful_modal button,
+.Login_successful_modal .Logged_options_container .Logged_options_second_container .Auth_Button {
+    margin: 0 auto;
+    background-color: var(--accent-color);
+    border: solid 1px var(--accent-color);
+    color: var(--secondary-color);
+    font-size: var(--btn-font-size);
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.Login_successful_modal button:hover,
+.Login_successful_modal .Logged_options_container .Logged_options_second_container .Auth_Button:hover {
+    background-color: var(--accent-color-hover);
+    border-color: var(--accent-color-hover);
+}
+
+.Login_successful_modal .close_button {
+  width: auto
+}
+
+.btn_submit.panel  {
+  color: var(--primary-color);
+  background-color: var(--quaternary-color);
+  border: solid 1px var(--quaternary-color);
+}
+
+.btn_submit.panel:hover {
+  background-color: var(--primary-color);
+  border: solid 1px var(--primary-color) ;
+  color: var(--secondary-color);
+}
+
+
+/* Responsive section */
+
+@media screen and (max-width: 1280px) {
+  .Login_successful_modal {
+    position: relative;
+    top: 20vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Login_successful_modal {
+    top: 30vh;
+  }
+}

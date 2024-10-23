@@ -1,0 +1,56 @@
+.Login_component {
+    display: flex;
+    justify-content: center;
+    padding: 5vh 0;
+}
+
+.Login_container {
+    width: 300px;
+    min-height: 200px;
+    border: solid 1px grey;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.Login_form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.userName_container, .password_container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+}
+
+.forgotPassword_label {
+    cursor: pointer;
+}
+
+.forgotPassword_label:hover {
+    text-decoration: underline;
+}
+
+.Login_component .error_message {
+    font-weight: 500;
+}
+
+button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+
+/*Responsive section */
+
+@media screen and (max-width: 768px) {
+    .Login_component {
+        position: relative;
+        top: 30vh;
+    }
+}

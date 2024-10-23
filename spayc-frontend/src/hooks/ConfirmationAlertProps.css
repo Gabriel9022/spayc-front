@@ -1,0 +1,36 @@
+.confirm_alert {
+    position: fixed;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1200px rgba(0, 0, 0, 0.493);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+    max-width: 540px;
+    width: 100%;
+    overflow: hidden;
+    padding: 30px;
+    z-index: 1000;
+}
+
+.confirm_alert_message {
+    padding: 25px 10px;
+}
+
+.confirm_alert_button_container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.confirm_alert_button_container .btn_submit {
+    margin: unset;
+}
+
+
+/* Responsive section */
+
+@media screen and (max-width: 450px) {
+    .confirm_alert {
+        max-width: 300px;
+    }
+}

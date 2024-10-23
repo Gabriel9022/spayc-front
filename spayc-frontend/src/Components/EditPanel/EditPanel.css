@@ -5,11 +5,43 @@
 .Edit_panel_menu {
     width: 15vw;
     border: solid 1px grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.Edit_panel_item, .Create_element, .Edit_elements {
-    padding: 10px;
+.Edit_panel_item {
     border: solid 1px grey;
+}
+
+.Edit_panel_title {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.Edit_element {
+    padding: 8px;
+    border: solid 1px grey;
+    cursor: pointer;
+}
+
+.Edit_panel_subtitle {
+    font-weight: bold;
+    padding: 5px 20px;
+}
+
+.Edit_menu {
+    margin: 0 10px;
+    border-left: solid 1px grey;
+    border-right: solid 1px grey;
+    display: flex;
+    flex-direction: column;
+}
+
+.Edit_menu_option {
+    border: solid 1px grey;
+    padding: 6px 4px;
+    cursor: pointer;
 }
 
 .Edit_panel_visualizer {
@@ -23,24 +55,179 @@
     padding: 20px;
 }
 
-.create_modal, .edit_modal {
+.close_button {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.create_modal, .edit_modal, .edit_individual_description, .confirm_is_active_service {
     position: fixed;
-    background-color: #FFF;
+    background-color: var(--secondary-color);
     border-radius: 10px;
-    padding: 20px;
     box-shadow: 0 0 10px 1200px rgba(0, 0, 0, 0.493);
     left: 50%;
     transform: translateX(-50%);
     top: 200px;
-    max-width: 440px;
+    max-width: 540px;
     width: 100%;
+    overflow: hidden;
 }
 
-.input_container {
+.input_container, .edit_individual_description {
     display: flex;
     flex-direction: column;
 }
 
+.edit_individual_description, .confirm_is_active_service {
+    padding: 30px;
+}
+
 .create_errors {
-    color: red;
+    color: var(--error-color);
+}
+
+.modal_content {
+    display: grid;
+    padding: 30px;
+    height: 468px;
+    overflow-y: scroll;
+}
+
+.title_and_close_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal_content h2 {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.form_content {
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
+}
+
+.description {
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
+}
+
+.form_content label {
+    padding: 5px 10px;
+}
+
+.title_content, .description_content {
+    padding: 2px 10px;
+    border: solid 1px var(--border-color-primary);
+    border-radius: 10px;
+    height: 30px;
+}
+
+.description_content {
+    line-height: 20px;
+    height: 80px;
+}
+
+.form_modal .description .btn_submit {
+    width: unset;
+}
+
+.form_modal .form_buttons .btn_submit {
+    width: unset;
+    margin: unset;
+}
+
+.description_array_container {
+    margin: 0 20px;
+    padding-bottom: 10px;
+}
+
+.services_description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    border-bottom: solid 1px var(--border-color-primary);
+    padding: 5px 0;
+    column-gap: 10px;
+}
+
+.description_buttons {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.edit_button_description, .delete_button_description {
+    height: 25px;
+    width: 25px;
+    margin: 5px auto;
+    border-radius: 5px;
+    position: relative;
+}
+
+.edit_button_description {
+    background-color: #6c757d;
+    border: solid 1px #6c757d;
+    color: var(--secondary-color);
+}
+
+.edit_button_description:hover {
+    background-color: #3b3f43;
+    border: solid 1px #3b3f43;
+    font-weight: bolder;
+}
+
+.image_file {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.form_buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.is_active_button, .cancel_button, .delete_button_description, .close_button {
+    background-color: var(--accent-color);
+    border: solid 1px var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.close_button:hover, .delete_button_description:hover, .is_active_button:hover, .cancel_button:hover {
+    font-weight: bolder;
+    background-color: var(--accent-color-hover);
+    border: solid 1px var(--accent-color-hover);
+}
+
+.edit_individual_description {
+    row-gap: 15px;
+}
+
+.confirm_is_active_service {
+    width: 380px;
+}
+
+.is_active_question {
+    padding: 20px 10px;
+}
+
+.is_active_button, .is_active_button_confirm {
+    width: auto;
+}
+
+.is_active_button span, .is_active_button_confirm span {
+    padding: 0 15px;
 }

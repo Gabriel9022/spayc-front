@@ -17,21 +17,10 @@
 }
 
 .professional_banner_title {
-    background: linear-gradient(90deg, rgba(0,65,115,1) 10%, rgba(255,255,255,0) 70%);
+    background: linear-gradient(90deg, var(--primary-color) 10%, rgba(255,255,255,0) 70%);
     height: 100%;
     align-content: center;
     padding-left: 90px;
-}
-
-.professional_banner_title h1 {
-    font-size: 42px;
-    letter-spacing: 1.5px;
-    color: #fff;
-    position: relative;
-    width: min-content;
-    transform: translateY(-35px);
-    padding-bottom: 15px;
-    border-bottom: solid 1px #fff;
 }
 
 .professional_profile {
@@ -48,25 +37,30 @@
     align-self: center;
     padding: 30px 0;
     width: 100%;
-    background: linear-gradient(90deg, #b6ffff, #eaffff);
+    background: linear-gradient(90deg, rgba(0, 65, 115, 0.5) 0%, rgba(182, 255, 255, 0.5) 100%);
     text-align: center;
-    box-shadow: 0 5px #e9e9e9;
 }
 
 .professional_profile_intro p {
-    font-size: 18px;
+    color: var(--text-color);
+    font-size: 24px;
     line-height: 2;
-    padding: 20px;
-    width: 720px;
+    padding: 20px 0;
+    width: 800px;
+}
+
+.black_arrow {
+    position: relative;
+    width: 40px;
+    height: auto;
+    transform: rotate(90deg);
 }
 
 .professional_profile_skills {
     display: flex;
     margin-top: 50px;
     width: 100%;
-    background: linear-gradient(90deg, #b6ffff, #eaffff);
     justify-content: center;
-    box-shadow: 0 5px #e9e9e9;
 }
 
 .professional_profile_skills_description{
@@ -77,28 +71,39 @@
 }
 
 .professional_profile_skills_skill {
+    width: 540px;
     display: flex;
-    padding: 10px;
     text-align: center;
     border-radius: 20px;
-    box-shadow: 4px 4px #7cdaf9;
-    border: #0cb7f2;
+    box-shadow: 6px 6px 8px var(--tertiary-color);
+    border: var(--tertiary-color);
     border-width: 1px;
     border-style: ridge;
+    overflow: hidden;
 }
 
-.professional_profile_skills_skill span {
-    width: 150px;
-    padding: 5px;
+.professional_profile_skills_skill h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    color: var(--secondary-color);
+    padding: 15px;
     align-self: center;
     font-size: 18px;
     line-height: 2;
     font-weight: bold;
+    background-color: var(--primary-color);
 }
 
 .professional_profile_skills_skill p {
-    width: 250px;
-    align-self: center;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--secondary-color);
 }
 
 .professional_profile_skills_image {
@@ -109,19 +114,23 @@
 .professional_profile_skills_image img {
     width: 100%;
     height: 100%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px #00417330;
 }
 
 .professional_profile_functions {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-self: center;
-    padding: 30px 0;
     width: 100%;
-    background: linear-gradient(90deg, #b6ffff, #eaffff);
+    background-color: var(--primary-color);
     margin-top: 50px;
-    text-align: center;
-    box-shadow: 0 5px #e9e9e9;
+    padding: 30px 0;
+}
+
+.professional_profile_functions h2 {
+    color: var(--secondary-color);
+    padding: 30px 0 40px;
 }
 
 .professional_profile_functions_container {
@@ -132,30 +141,38 @@
     display: flex;
     justify-content: space-between;
     width: 800px;
-    padding: 20px 0;
+    padding: 20px 0 30px;
 }
 
 .professional_profile_functions_item {
-    padding: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     border-radius: 20px;
-    box-shadow: 4px 4px #7cdaf9;
-    border: #0cb7f2;
-    border-width: 1px;
-    border-style: ridge;
+    box-shadow: 6px 6px 8px var(--shadow-primary-color);
+    border: ridge 1px var(--quaternary-color);
     margin: 0 50px;
-    padding: 20px;
+    overflow: hidden;
 }
 
-.professional_profile_functions_item span {
+.professional_profile_functions_item h3 {
+    min-height: 55px;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 18px;
-    line-height: 2;
-    font-weight: bold;
+    line-height: 1.5;
+    color: var(--primary-color);
+    background-color: var(--quaternary-color);
+    padding: 10px 20px;
 }
 
 .professional_profile_functions_item p {
-    width: 250px;
-    margin-top: 10px;
+    height: 100%;
+    background-color: var(--secondary-color);
+    padding: 10px 20px 10px;
 }
 
 .professional_profile_conclusion {
@@ -165,16 +182,194 @@
     align-self: center;
     padding: 30px 0;
     width: 100%;
-    background: linear-gradient(90deg, #b6ffff, #eaffff);
-    margin: 50px 0;
+    background: linear-gradient(90deg, rgba(0, 65, 115, 0.5) 0%, rgba(182, 255, 255, 0.5) 100%);
+    margin: 50px 0 0;
     text-align: center;
-    box-shadow: 0 5px #e9e9e9;
 }
 
 .professional_profile_conclusion p {
     width: 1000px;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 2;
     font-weight: bold;
     align-self: center;
+}
+
+
+/* Responsive section */
+
+@media screen and (max-width: 1280px) {
+    .professional_profile_skills_description {
+        row-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .professional_profile_intro p {
+        width: 100%;
+        padding: 20px 40px;
+    }
+
+    .professional_profile_skills_description {
+        width: 60%;
+        padding: 40px 20px;
+    }
+
+    .professional_profile_skills_skill {
+        width: 100%;
+    }
+
+    .professional_profile_skills_skill h3 {
+        font-size: 1rem;
+    }
+
+    .professional_profile_skills_skill p {
+        font-size: 14px;
+    }
+
+    .professional_profile_skills_image {
+        width: 40%;
+        padding: 0 20px;        
+    }
+
+    .professional_profile_functions h2 {
+        font-size: 32px;
+    }
+
+    .professional_profile_functions_items {
+        width: 100%;
+    }
+
+    .professional_profile_conclusion p {
+        width: 100%;
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .professional_banner {
+        margin-top: 122px;
+        height: 380px;
+    }
+
+    .professional_banner_title {
+        padding-left: 20px;
+    }
+
+    .professional_profile_skills {
+        flex-direction: column;
+        align-items: center;       
+    }
+
+    .professional_profile_skills_description {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 40px;
+    }
+
+    .professional_profile_skills_skill {
+        width: 250px;
+        flex-direction: column;
+    }
+
+    .professional_profile_skills_skill h3 {
+        width: 100%;
+        min-height: 94px;
+        height: min-content;
+    }
+
+    .professional_profile_skills_skill p {
+        width: 100%;
+        align-items: center;
+    }
+
+    .professional_profile_skills_image {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .professional_banner {
+        margin-top: 118px;
+    }
+
+    .professional_profile_intro p {
+        padding: 20px 30px;
+        font-size: 20px;
+    }
+
+    .professional_profile_skills_skill h3 {
+        text-wrap: balance;
+    }
+
+    .professional_profile_skills_image {
+        width: 70%;
+    }
+
+    .professional_profile_functions h2 {
+        padding: 30px 20px 40px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .professional_profile_functions_items {
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 45px;
+    }
+
+    .professional_profile_functions_item h3 {
+        text-wrap: balance;
+    }
+
+    .professional_profile_conclusion p {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .professional_banner {
+        margin-top: 100px;
+    }
+
+    .professional_profile_intro p {
+        font-size: 18px;
+    }
+
+    .professional_profile_conclusion p {
+        font-size: 18px;
+        text-wrap: pretty;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .professional_banner {
+        margin-top: 82px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .professional_banner_title h1 {
+        font-size: 2rem;
+    }
+
+    .professional_profile_skills_description {
+        padding: 20px;
+    }
+
+    .professional_profile_skills_image {
+        width: 90%;
+    }
+
+    .professional_profile_functions h2 {
+        font-size: 20px;
+        padding: 30px 20px 0px;
+    }
+
+    .professional_profile_conclusion p {
+        font-size: var(--font-size-p);
+        padding: 0 20px;
+    }
 }

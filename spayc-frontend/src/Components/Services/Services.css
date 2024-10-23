@@ -24,17 +24,6 @@
     padding-left: 90px;
 }
 
-.Services_banner_title h1 {
-    font-size: 42px;
-    letter-spacing: 1.5px;
-    color: #fff;
-    position: relative;
-    width: min-content;
-    transform: translateY(-35px);
-    padding-bottom: 15px;
-    border-bottom: solid 1px #fff;
-}
-
 .Services_card_section {
     margin: 0 auto;
 }
@@ -42,7 +31,6 @@
 .Services_card_container {
     display: flex;
     justify-content: center;
-    border-radius: 20px;
     margin-bottom: 50px;
 }
 
@@ -50,24 +38,27 @@
     display: flex;
     flex-direction: row;
     border-radius: 20px;
-    background-color: #ffffff;
-    box-shadow: 10px 10px 10px #e9e9e9;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    box-shadow: 10px 10px 10px var(--shadow-primary-color);
 }
 
 .Services_card_info {
     width: 600px;
-    padding: 20px 10px;
-    margin: 0 50px;
+    min-height: 250px;
 }
 
 .Services_card_info h2 {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .Services_card_info ul {
-    padding: 20px 0;
+    padding: 20px 30px 20px 
+    40px;
     list-style-type: circle;
     display: flex;
     flex-direction: column;
@@ -106,13 +97,18 @@
     justify-content: center;
 }
 
+.Services_careOptionInfo_container {
+    max-width: 500px;
+}
+
 .Services_careOptionInfo_list {
-    width: 800px;
+    width: fit-content;
 }
 
 .Services_careOptionInfo_container h3 {
-    margin: 40px 0 20px 20px;
-    font-size: 24px;
+    margin: 40px 0 20px 0px;
+    color: var(--text-color);
+    font-size: 1.5rem;
 }
 
 .Services_careOptionInfo_container p {
@@ -128,4 +124,145 @@
 .Services_careOptionInfo_list li {
     padding: 10px 0;
     font-size: 18px;
+}
+
+.Services_careOptionImg_container {
+    display: flex;
+}
+.Services_careOptionImg_img {
+    width: 320px;
+    height: fit-content;
+    align-self: center;
+    border-radius: 20px;
+}
+
+
+/* Responsive section */
+
+@media screen and (max-width: 768px) {
+    .Services_banner {
+        margin-top: 122px;
+        height: 380px;
+    }
+
+    .Services_banner_title {
+        padding-left: 20px;
+    }
+
+    .Services_card_section {
+        padding:  0 60px;
+    }
+
+    .Services_card {
+        flex-direction: column;
+    }
+
+    .Services_card_info {
+        width: 100%;
+    }
+
+    .Services_card_img_left, 
+    .Services_card_img_right {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .Services_careOptionInfo_container {
+        width: 50%;
+    }
+
+    .Services_careOptionInfo_container h3 {
+        font-size: 20px;
+    }
+
+    .Services_careOptionInfo_container p {
+        font-size: 18px;
+    }
+
+    .Services_careOptionInfo_list {
+        padding: 20px 20px 20px 40px;
+    }
+
+    .Services_careOptionInfo_list li {
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .Services_banner {
+        margin-top: 118px;
+    }
+
+    .Services_card_section {
+        padding:  0 30px;
+    }
+
+    .Services_careOptionInfo_section {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30px 30px;
+    }
+
+    .Services_careOptionInfo_container {
+        width: 100%;
+    }
+
+    .Services_careOptionImg_img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .Services_banner {
+        margin-top: 100px;
+    }
+
+    .Services_card_info h2 {
+        font-size: 22px;
+    }
+
+    .Services_description {
+        font-size: 16px;
+    }
+
+    .Services_careOptionInfo_list {
+        padding: 20px 10px 20px 40px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .Services_banner {
+        margin-top: 82px;
+    }
+
+    .Services_card_info ul {
+        padding: 20px 15px 20px 30px;
+    }
+
+    .Services_careOptionInfo_container p {
+        font-size: 16px;
+    }
+
+    .Services_careOptionInfo_list li {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .Services_banner_title h1 {
+        font-size: 2rem;
+    }
+
+    .Services_card_info h2 {
+        font-size: 18px;
+    }
+
+    .Services_description {
+        font-size: 14px;
+    }
+
+    .Services_careOptionInfo_section {
+        padding: 0 20px 30px;
+    }
 }

@@ -31,7 +31,7 @@ const NavMobile: React.FC = () => {
             </div>
             <ul ref={menuRef} className={`Header_nav_menu_mobile ${isOpen ? 'open' : ''}`}>
                 <li className='Header_nav_menu_item_m'>
-                    <NavLink to="/" onClick={toggleMenu}>INICIO</NavLink>
+                    <NavLink to="/inicio" onClick={toggleMenu}>INICIO</NavLink>
                 </li>
                 <li className='Header_nav_menu_item_m'>
                     <NavLink to="/servicios" onClick={toggleMenu}>SERVICIOS</NavLink>

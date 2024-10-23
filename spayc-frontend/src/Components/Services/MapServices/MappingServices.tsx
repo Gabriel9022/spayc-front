@@ -1,13 +1,21 @@
 import React from "react";
 import { MappingServicesProps } from "../../../utils/Interface";
-import { useServicesContext } from "../../../hooks/useServicesContext";
+import { useServicesContext } from "../../../context/useServicesContext";
+import logo from "../../../assets/images/Header/spayc_logo.svg";
+import "../../ProtectedRoutes/ProtectedRoute.css";
 
 
 const MappingServices: React.FC<MappingServicesProps> = () => {
 
   const { servicesArray: services, loading, error } = useServicesContext();
 
-  if (loading) return <div>Cargando...</div>;
+
+  if (loading) {
+    return (
+        <div className='loading_logo_container'>
+            <img className='loading_logo' src={logo} alt="SPAYC Logo" />
+        </div>);
+  }
 
   if (error) return <div>Error: {error}</div>;
 
@@ -38,9 +46,7 @@ const MappingServices: React.FC<MappingServicesProps> = () => {
                       />
                     </div>
                   </div>
-                ) : (
-                  <div style={{ display: "none" }}></div>
-                )}
+                ) : null}
               </div>
             );
           } else {

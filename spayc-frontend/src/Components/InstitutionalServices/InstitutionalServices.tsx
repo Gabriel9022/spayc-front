@@ -5,22 +5,22 @@ const InstitutionalServices: React.FC = () => {
   return (
     <div className="InstitutionalServices_component">
       <div className="InstitutionalServices_sections">
-        <div className="InstitutionalServices_banner">
+        <section className="InstitutionalServices_banner">
             <div className="InstitutionalServices_banner_title">
               <h1>Servicios para instituciones</h1>
             </div>
-        </div>
-        <div className="InstitutionalServices_introduction">
+        </section>
+        <section className="InstitutionalServices_introduction">
           <p>
-            Si es representante de una institución, organización o entidad
+            Si representas una institución, organización o entidad
             pública, privada o del tercer sector, que trabaja con personas
             mayores, en SPAYC ofrecemos servicios profesionales de
             acompañamiento, orientación, capacitación en temáticas de vejez,
             como así también, asesoramiento para la creación, desarrollo y
             evaluación de políticas públicas de vejez.
           </p>
-        </div>
-        <div className="InstitutionalServices_services">
+        </section>
+        <section className="InstitutionalServices_services">
           <div className="InstitutionalServices_services_title">
             <h2>Nuestros servicios incluyen</h2>
           </div>
@@ -28,7 +28,7 @@ const InstitutionalServices: React.FC = () => {
             <div className="InstitucionalServices_services_up">
               <div className="InstitutionalServices_card">
                 <h3>Implementación y gestión</h3>
-                <p>Puesta en marcha de programas piloto y evaluación continua de su efectividad para ajustar estrategias según los resultados obtenidos. Coordinación interinstitucional y colaboración con organizaciones no gubernamentales y sector privado para maximizar los recursos y la eficiencia de los servicios.</p>
+                <p>Puesta en marcha de programas piloto y evaluación continua de su efectividad para ajustar estrategias según los resultados obtenidos. Coordinación interinstitucional y colaboración con organizaciones no gubernamentales, sector público y privado para maximizar los recursos y la eficiencia de los servicios.</p>
               </div>
               <div className="InstitutionalServices_card">
                 <h3>Desarrollo de políticas y programas</h3>
@@ -49,7 +49,7 @@ const InstitutionalServices: React.FC = () => {
                 <p>Establecimiento de indicadores de rendimiento y mecanismos de monitoreo para asegurar la calidad y la eficacia de los servicios. Evaluación periódica de impacto social y económico de las políticas implementadas, ajustando estrategias según los resultados obtenidos.</p>
               </div>
               <div className="InstitutionalServices_card">
-                <h3></h3>
+                <h3>Búsqueda de personal</h3>
                 <p>Asesoramiento y orientación para la contratación de personal altamente calificado, (para Residencias de larga estadía, Geriátricos, Centros de día), garantizando profesionalización y calidad humana.</p>
               </div>
               <div className="InstitutionalServices_card">
@@ -58,8 +58,8 @@ const InstitutionalServices: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="InstitucionalServices_why">
+        </section>
+        <section className="InstitucionalServices_why">
           <div className="InstitutionalServices_why_title">
             <h2>¿Por qué SPAYC?</h2>
           </div>
@@ -73,7 +73,7 @@ const InstitutionalServices: React.FC = () => {
           <div className="InstitutionalServices_why_final">
             <h3>¡Transformamos el cuidado de las personas mayores con profesionalidad y dedicación! </h3>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );

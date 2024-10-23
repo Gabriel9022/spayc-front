@@ -15,28 +15,17 @@
 }
 
 .home_banner_title {
-    background: linear-gradient(90deg, rgba(0,65,115,1) 10%, rgba(255,255,255,0) 70%);
+    background: linear-gradient(90deg, var(--primary-color) 10%, rgba(255,255,255,0) 70%);
     height: 100%;
     align-content: center;
     padding-left: 90px;
-}
-
-.home_banner_title h1 {
-    font-size: 42px;
-    letter-spacing: 1.5px;
-    color: #fff;
-    position: relative;
-    width: min-content;
-    transform: translateY(-35px);
-    padding-bottom: 15px;
-    border-bottom: solid 1px #fff;
 }
 
 .home_banner_title span {
     font-size: 24px;
     line-height: 30px;
     letter-spacing: 1.5px;
-    color: #fff;
+    color: var(--secondary-color);
     display: flex;
     width: 300px;
 }
@@ -91,9 +80,7 @@
     text-align: center;
 }
 
-.home_compromise_title h3 {
-    color: #004173;
-    font-size: 48px;
+.home_compromise_title h2 {
     padding: 20px;
     margin-bottom: 40px;
 }
@@ -112,20 +99,18 @@
     display: flex;
     flex-direction: column;
     width: 270px;
-    border: solid 1px #004173;
+    border: solid 1px var(--primary-color);
     border-radius: 20px;
-    background-color: #fff;
+    background-color: var(--secondary-color);
     overflow: hidden;
     box-shadow: 10px 10px 10px #00417330;
 }
 
-.home_compromise_description_card h4 {
+.home_compromise_description_card h3 {
     min-height: 50px;
     box-sizing: content-box;
     padding: 10px;
-    font-size: 24px;
-    background-color: #004173;
-    color: #fff;
+    background-color: var(--primary-color);
     align-content: center;
 }
 
@@ -138,26 +123,48 @@
 
 .home_compromise_service {
     padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-size: 20px;
+}
+
+.home_compromise_service p, .home_services_link p {
     font-size: 20px;
 }
 
 .home_compromise_service a, .home_services_link a, 
 .home_professionals_link a, .home_contact_link a {
+    border: solid;
     padding: 3px;
+    color: var(--tertiary-color);
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 10px;
 }
 
-.home_compromise_service a:hover, .home_services_link a:hover, .home_professionals_link a:hover, .home_contact_link a:hover {
-    background-color: #0cb7f2;
+.home_contact_link a {
+    margin-left: 10px;
+}
+
+.home_compromise_service a:visited, .home_services_link a:visited, 
+.home_professionals_link a:visited, .home_contact_link a:visited {
+    color: var(--tertiary-color);
+    text-decoration: none;
+}
+
+.home_compromise_service a:hover, .home_services_link a:hover, 
+.home_professionals_link a:hover, .home_contact_link a:hover {
+    background-color: var(--tertiary-color);
+    border-color: var(--tertiary-color);
+    color: var(--secondary-color);
 }
 
 .home_services {
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: var(--secondary-color)fff;
 }
 
 .home_services_container {
@@ -170,8 +177,13 @@
 .home_services_introduction {
     max-width: 350px;
     padding: 20px;
+    display: flex;
     line-height: 40px;
     letter-spacing: 1px;
+    align-items: center;
+}
+
+.home_services_introduction p {
     font-size: 20px;
 }
 
@@ -180,7 +192,7 @@
     padding: 20px;
 }
 
-.home_services_description h4 {
+.home_services_description h2 {
     font-size: 24px;
     text-align: center;
     padding-top: 10px;
@@ -195,42 +207,58 @@
 }
 
 .home_services_items_item {
-    background-color: #b6ffff;
+    border: solid 1px var(--primary-color);
     border-radius: 20px;
-    box-shadow: 5px 5px 10px #e9e9e9;
+    box-shadow: 5px 5px 10px var(--shadow-primary-color);
     font-size: 18px;
-}
-
-.home_services_items_item span {
-    font-weight: bold;
+    overflow: hidden;
 }
 
 .home_services_items_item p {
     padding: 10px 20px;
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.7px;
+}
+
+.home_services_items_item .home_services_items_item_title {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+    background-color: var(--primary-color);
 }
 
 .home_services_link {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
     text-align: center;
-    font-size: 20px;
     padding: 20px;
     margin-bottom: 50px;
-}
-
-.home_professionals, .home_contact {
-    display: flex;
-    justify-content: center;
 }
 
 .home_division {
     width: 100%;
     height: 100px;
-    background-color: #ffffff;
+    background-color: var(--secondary-color);
+}
+
+.home_division:nth-of-type(2) {
+    height: 50px;
+    background-color: #f5f5f5;
+}
+
+.home_professionals, .home_contact {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(0, 65, 115, 0.5) 0%, rgba(182, 255, 255, 0.5) 100%);
 }
 
 .home_professionals_container, .home_contact_container {
     display: flex;
-    max-width: 1000px;
-    column-gap: 40px;
+    justify-content: center;
+    max-width: 1400px;
 }
 
 .home_proffesionals_image, .home_contact_image {
@@ -239,20 +267,268 @@
 }
 
 .home_proffesionals_image img, .home_contact_image img {
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: bottom;
+    border-radius: 20px;
+    margin: 40px 20px;
+    box-shadow: 10px 10px 10px #00417330;
 }
 
 .home_professionals_introduction, .home_contact_introduction {
-    width: 400px;
-    font-size: 18px;
-    letter-spacing: 1px;
-    line-height: 40px;
+    width: 50%;
+    align-self: center;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px #00417330;
+}
+
+.home_professionals_introduction {
+    right: -40px; /* o quitar esta linea para que la imagen quede por arriba */
 }
 
 .home_professionals_introduction p, .home_contact_introduction p {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 38px;
+    padding: 20px 40px 0;
+}
+
+.home_contact_introduction p {
     padding: 20px 40px;
 }
 
+.home_professionals_link, .home_contact_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home_professionals_introduction .home_professionals_link p,
+.home_contact_introduction .home_contact_link p {
+    padding: 0 40px 0px;
+}
+
+.home_professionals_introduction .home_professionals_link p:nth-child(1) {
+    padding-top: 20px;
+}
+
+
+/* Responsive section */
+
+@media screen and (max-width: 900px) {
+    .home_introduction_container {
+        flex-wrap: wrap;
+    }
+
+    .home_professionals_container, 
+    .home_contact_container {
+        flex-wrap: wrap;
+        padding: 40px 60px;
+    }
+
+    .home_proffesionals_image, 
+    .home_contact_image {
+        margin: 0px auto 40px;
+        height: auto;
+        width: 80%;
+    }
+
+    .home_contact_image {
+        margin: 40px auto 0;
+    }
+
+    .home_proffesionals_image img, 
+    .home_contact_image img {
+        margin: 0;
+    }
+
+    .home_professionals_introduction,
+    .home_contact_introduction {
+        right: unset;
+        width: 80%;
+    }
+
+    .home_professionals_introduction p, 
+    .home_contact_introduction p {
+        padding: 20px 0;
+    }
+
+    .home_professionals_introduction .home_professionals_link p, 
+    .home_contact_introduction .home_contact_link p {
+        padding: 0;
+        text-wrap: pretty;
+    }
+
+    .home_division {
+        height: 50px;
+    }
+
+    .home_division:nth-of-type(2) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home_banner {
+        margin-top: 122px;
+        height: 380px;
+    }
+
+    .home_banner_title {
+        padding-left: 20px;
+    }
+
+    .home_introduction_container {
+        flex-direction: column;
+    }
+
+    .home_introduction_us p {
+        width: 100%;
+        text-align: justify;
+    }
+
+    .home_services_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home_services_introduction {
+        max-width: 550px;
+        padding: 20px 0;
+        margin: 0 auto;
+    }
+
+    .home_services_introduction p {
+        text-align: center;
+    }
+
+    .home_professionals_introduction,
+    .home_contact_introduction {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .home_banner {
+        margin-top: 118px;
+    }
+
+    .home_introduction_us p {
+        text-wrap: balance;
+    }
+
+    .home_compromise,
+    .home_services {
+        padding: 0 20px;
+    }
+
+    .home_services_introduction {
+        max-width: 350px;
+    }
+
+    .home_compromise_service p, 
+    .home_services_link p {
+        font-size: 18px;
+    }
+
+    .home_professionals_container, 
+    .home_contact_container {
+        padding: 40px;
+    }
+
+    .home_professionals_introduction p, 
+    .home_contact_introduction p {
+        line-height: 32px;
+    }
+
+    .home_proffesionals_image, 
+    .home_contact_image {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .home_banner {
+        margin-top: 100px;
+    }
+
+    .home_introduction_us p {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .home_introduction_us p {
+        font-size: 18px;
+    }
+
+    .home_services_items_item p {
+        font-size: 16px;
+        text-wrap: balance;
+    }
+
+    .home_compromise_service p a, 
+    .home_services_link p a {
+        font-size: 16px;
+    }
+
+    .home_professionals_introduction p, 
+    .home_contact_introduction p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .home_banner {
+        margin-top: 82px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .home_banner_title h1 {
+        font-size: 2rem;
+    }
+
+    .home_banner_title span {
+        font-size: 20px;
+        width: 80%;
+    }
+
+    .home_introduction_us p {
+        text-wrap: pretty;
+    }
+
+    .home_compromise_title h2 {
+        font-size: 36px;
+    }
+
+    .home_compromise_description_card p {
+        text-wrap: balance;
+    }
+
+    .home_compromise_service p a, 
+    .home_services_link p a {
+        font-size: 14px;
+    }
+
+    .home_services_introduction p {
+        font-size: var(--font-size-p);
+    }
+
+    .home_services_items {
+        padding: 20px 0;
+    }
+
+    .home_professionals_introduction p a, 
+    .home_contact_introduction p a {
+        font-size: 12px;
+    }
+}
