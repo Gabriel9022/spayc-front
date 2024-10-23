@@ -7,6 +7,7 @@ import { ServicesType } from '../../utils/Interface';
 import './EditPanel.css';
 import LogoutButton from '../Login/LogoutButton';
 import { useConfirmationModal } from '../../hooks/useConfirmationModal';
+import { API_URL } from '../../utils/config';
 
 const EditPanel: React.FC = () => {
 
@@ -66,7 +67,7 @@ const EditPanel: React.FC = () => {
         formData.append('description', data.descriptionArray.join('-.-'));
         if (data.file && data.file.length > 0) formData.append('file', data.file[0]);
 
-        const response = await fetch('http://localhost:3001/admin/newService', {
+        const response = await fetch(`${API_URL}/admin/newService`, {
           method: 'POST',
           body: formData,
         });
@@ -86,7 +87,7 @@ const EditPanel: React.FC = () => {
           formData.append('file', '');
         }
 
-        const response = await fetch('http://localhost:3001/admin/editService', {
+        const response = await fetch(`${API_URL}/admin/editService`, {
           method: 'PUT',
           body: formData,
         });
