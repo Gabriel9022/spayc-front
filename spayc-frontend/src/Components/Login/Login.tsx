@@ -9,6 +9,7 @@ import MobileWarningModal from './Modal/MobileWarningModal';
 import { useAuthContext } from '../../context/useAuthContext';
 import LoggedUserModal from './Modal/LoggedUserModal';
 import './Login.css';
+import { useConfirmationModal } from '../../hooks/useConfirmationModal';
 
 const Login: React.FC = () => {
   const [forgotPass, setForgotPass] = useState(false);
@@ -19,6 +20,7 @@ const Login: React.FC = () => {
   const isMobile = windowWidth <= 768;
 
   const { isAuthenticated, setIsAuthenticated } = useAuthContext();
+  const { showModal, ModalComponent } = useConfirmationModal();
 
   const handlePanel = () => {
     navigate('/panel')
@@ -55,7 +57,7 @@ const Login: React.FC = () => {
           body: JSON.stringify({ user: parseInt(data.userName) }),
         });
         if (response.ok) {
-          alert('Revisa tu mail');
+          await showModal('Revisa tu mail');
           window.location.href = '/login'; // Redireccionar a otra página
         }
 
@@ -86,7 +88,7 @@ const Login: React.FC = () => {
             navigate('/inicio');
           }
         } else {
-          alert('Usuario o contraseña incorrecta.');
+          await showModal('Usuario o contraseña incorrecta.');
         }
       }
     } catch (error: unknown) {
@@ -150,6 +152,7 @@ const Login: React.FC = () => {
             </div>
           </div>
       }
+      {ModalComponent} 
     </>
   );
 };

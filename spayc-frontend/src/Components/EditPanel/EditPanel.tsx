@@ -6,6 +6,7 @@ import { SubmitHandler } from 'react-hook-form';
 import { ServicesType } from '../../utils/Interface';
 import './EditPanel.css';
 import LogoutButton from '../Login/LogoutButton';
+import { useConfirmationModal } from '../../hooks/useConfirmationModal';
 
 const EditPanel: React.FC = () => {
 
@@ -30,7 +31,8 @@ const EditPanel: React.FC = () => {
   });
   const [descriptionArray, setDescriptionArray] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [panelSource, setPanelSource] = useState<boolean>(true)
+  const [panelSource, setPanelSource] = useState<boolean>(true);
+  const { showModal, ModalComponent } = useConfirmationModal();
 
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -153,7 +155,7 @@ const EditPanel: React.FC = () => {
               </div>
             )}
           </div>
-          <LogoutButton/>
+          <LogoutButton showModal={showModal}/>
         </div>
         <div className='Edit_panel_visualizer'>
           <div className='Visualizer_container'>
@@ -203,6 +205,7 @@ const EditPanel: React.FC = () => {
         </div>
         )}
       </div>
+      {ModalComponent}
     </div>
   );
 };

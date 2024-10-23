@@ -5,12 +5,13 @@ import WorkWithUsImage from '../../assets/images/WorkWithUs/WorkWithUs_img.png';
 import './WorkWithUs.css'
 import { validationRules } from '../../utils/validationRules';
 import { WorkWithUsFormInputs } from '../../utils/Interface';
-
+import { useConfirmationModal } from '../../hooks/useConfirmationModal';
 
 const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2MB
 
 const WorkWithUs: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
+  const { showModal, ModalComponent } = useConfirmationModal();
   const {
     register,
     handleSubmit,
@@ -55,9 +56,8 @@ const WorkWithUs: React.FC = () => {
         method: 'POST',
         body: formData,
       });
-      const result = await response.json();
-      console.log('Success:', result);
-      if(response.ok) alert('Formulario enviado con éxito')
+
+      if(response.ok) await showModal('Formulario enviado con éxito')
       reset();
     } catch (error) {
       console.error('Error:', error);
@@ -143,6 +143,7 @@ const WorkWithUs: React.FC = () => {
           </div>
         </section>
       </div>
+      {ModalComponent}
     </div>
   );
 };

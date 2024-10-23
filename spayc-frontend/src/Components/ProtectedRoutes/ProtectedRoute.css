@@ -57,7 +57,8 @@
 .Logged_options_second_container {
     display: flex;
     column-gap: 10px;
-}
+    width: 100%;
+  }
 
 .Login_successful_modal button,
 .Login_successful_modal .Logged_options_container .Logged_options_second_container .Auth_Button {
