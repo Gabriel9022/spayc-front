@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { API_URL } from '../../utils/config';
 import { useAuthContext } from '../../context/useAuthContext';
 
-const LogoutButton: React.FC = () => {
+const LogoutButton: React.FC<{ showModal: (msg: string) => Promise<void>}> = ({showModal}) => {
   const navigate = useNavigate();
   const { setIsAuthenticated } = useAuthContext();
   const [isLoading, setIsLoading] = useState(false);
@@ -17,12 +17,12 @@ const LogoutButton: React.FC = () => {
       });
 
       if (response.ok) {
-        alert('Sesión cerrada correctamente');
+        await showModal('Sesión cerrada correctamente');
         setIsAuthenticated(false);
         localStorage.setItem('isAuthenticated', 'false');
         navigate('/login');
       } else {
-        alert('Error al cerrar sesión');
+        await showModal('Error al cerrar sesión');
       }
     } catch (error) {
       console.error('Error al cerrar sesión:', error);

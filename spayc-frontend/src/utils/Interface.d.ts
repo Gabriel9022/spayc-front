@@ -40,3 +40,8 @@ export interface WorkWithUsFormInputs {
   tel: string;
   file: FileList;
 }
+
+interface ConfirmationAlertProps {
+  message: string;
+  onConfirm: () => void;
+}

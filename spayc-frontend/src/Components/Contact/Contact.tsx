@@ -3,10 +3,11 @@ import './Contact.css'
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { validationRules } from '../../utils/validationRules';
 import { ContactFormInputs } from '../../utils/Interface';
-
+import { useConfirmationModal } from '../../hooks/useConfirmationModal';
 
 const Contact: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
+  const { showModal, ModalComponent } = useConfirmationModal();
   const {
     register,
     handleSubmit,
@@ -34,13 +35,11 @@ const Contact: React.FC = () => {
       });
 
       if(response.ok) { 
-          alert('Formulario enviado con éxito')
+          await showModal('Formulario enviado con éxito');
         } else {
           throw new Error(`HTTP error! Status: ${response.status}`);
       }
 
-      const result = await response.json();
-      console.log('Success:', result);
       reset();
     } catch (error) {
       console.error('Error:', error);
@@ -115,6 +114,7 @@ const Contact: React.FC = () => {
           </div>
         </section>
       </div>
+      {ModalComponent}
     </div>
   )
 }

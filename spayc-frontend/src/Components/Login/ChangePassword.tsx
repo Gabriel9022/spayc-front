@@ -5,15 +5,15 @@ import { API_URL } from '../../utils/config';
 import { useAuthContext } from '../../context/useAuthContext';
 import { validationRules } from '../../utils/validationRules';
 import { PasswordInputs } from '../../utils/Interface';
-import './ChangePassword.css'
-
+import './ChangePassword.css';
+import { useConfirmationModal } from '../../hooks/useConfirmationModal';
 
 const ChangePassword: React.FC = () => {
     const navigate = useNavigate();
     const { setIsAuthenticated } = useAuthContext();
     const [isLoading, setIsLoading] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
-
+    const { showModal, ModalComponent } = useConfirmationModal();
 
     const {
         register,
@@ -28,7 +28,6 @@ const ChangePassword: React.FC = () => {
     });
 
     const onSubmit: SubmitHandler<PasswordInputs> = async (data) => {
-        console.log('esto se envia como data: ', data)
         setIsLoading(true);
         try {
             const response = await fetch(`${API_URL}/users/changePassword`, {
@@ -40,20 +39,16 @@ const ChangePassword: React.FC = () => {
                 body: JSON.stringify(data),
             });
 
-            console.log('esto es la respuesta: ', response)
-
             if (!response.ok) {
                 if (response.status === 401) {
-                    alert('Error: Contraseña actual incorrecta.');
+                    await showModal('Error: Contraseña actual incorrecta.');
                 } else {
                     throw new Error(`Error HTTP: ${response.status}`);
                 }
                 return;
             }
 
-            const result = await response.json();
-            console.log('Contraseña cambiada con éxito:', result);
-            alert('Contraseña cambiada con éxito.');
+            await showModal('Contraseña cambiada con éxito.');
             reset();
 
             // Después de cambiar la contraseña, cerrar la sesión
@@ -67,12 +62,12 @@ const ChangePassword: React.FC = () => {
                 localStorage.setItem('isAuthenticated', 'false');
                 navigate('/login');
             } else {
-                alert('Error al cerrar la sesión. Inténtalo de nuevo.');
+                await showModal('Error al cerrar la sesión. Inténtalo de nuevo.');
             }
 
         } catch (error) {
             console.error('Error al cambiar la contraseña:', error);
-            alert('Hubo un problema al cambiar la contraseña.');
+            await showModal('Hubo un problema al cambiar la contraseña.');
         } finally {
             setIsLoading(false);
             setIsModalOpen(false);
@@ -141,6 +136,7 @@ const ChangePassword: React.FC = () => {
                     </div>
                 </div>
             )}
+            {ModalComponent}
         </>
     );
 };
