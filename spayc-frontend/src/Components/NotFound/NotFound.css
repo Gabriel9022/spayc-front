@@ -1,0 +1,83 @@
+.NotFound_component {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.NotFound_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;    
+}
+
+.NotFound_info_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.NotFound_info_container a {
+    width: max-content;
+    border: solid;
+    padding: 3px;
+    color: var(--tertiary-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.NotFound_info_container a:hover {
+    background-color: var(--tertiary-color);
+    border-color: var(--tertiary-color);
+    color: var(--secondary-color);
+}
+
+.NotFound_info_container a:visited {
+    text-decoration: none;
+}
+
+.NotFound_img_container {
+    max-width: 300px;
+    height: auto;
+}
+
+.NotFound_img_container img {
+    width: 100%;
+}
+
+
+/* Responsive section */
+
+@media screen and (max-width: 900px) {
+    .NotFound_container {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .NotFound_component {
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .NotFound_info_container h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .NotFound_info_container h2 {
+        font-size: 1.5rem;
+    }
+
+    .NotFound_info_container p {
+        font-size: 12px;
+    }
+
+    .NotFound_info_container a {
+        font-size: 14px;
+    }
+}
