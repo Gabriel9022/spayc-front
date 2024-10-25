@@ -7,8 +7,8 @@ const Profesionals: React.FC = () => {
   return (
     <div className="professional_component">
       <div className="professional_sections">
-        <section className="professional_banner">
-          <div className="professional_banner_title">
+        <section className="main_banner">
+          <div className="main_banner_title">
             <h1>Perfil de nuestros profesionales</h1>
           </div>
         </section>

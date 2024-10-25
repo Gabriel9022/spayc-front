@@ -6,22 +6,8 @@
     flex-direction: column;
 }
 
-.Services_banner {
-    position: relative;
-    width: 100%;
-    height: 475px;
-    background-image: url('../../assets/images/Banners/banner_institutional.webp');
-    object-fit: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 60px;
-}
-
-.Services_banner_title {
-    background: linear-gradient(90deg, rgba(0,65,115,1) 10%, rgba(255,255,255,0) 70%);
-    height: 100%;
-    align-content: center;
-    padding-left: 90px;
+.Services_sections .main_banner {
+    background-image: url('../../assets/images/Banners/img-prueba-banner.jpeg');
 }
 
 .Services_card_section {
@@ -140,15 +126,6 @@
 /* Responsive section */
 
 @media screen and (max-width: 768px) {
-    .Services_banner {
-        margin-top: 122px;
-        height: 380px;
-    }
-
-    .Services_banner_title {
-        padding-left: 20px;
-    }
-
     .Services_card_section {
         padding:  0 60px;
     }
@@ -190,10 +167,6 @@
 
 
 @media screen and (max-width: 450px) {
-    .Services_banner {
-        margin-top: 118px;
-    }
-
     .Services_card_section {
         padding:  0 30px;
     }
@@ -214,10 +187,6 @@
 }
 
 @media screen and (max-width: 390px) {
-    .Services_banner {
-        margin-top: 100px;
-    }
-
     .Services_card_info h2 {
         font-size: 22px;
     }
@@ -232,10 +201,6 @@
 }
 
 @media screen and (max-width:360px) {
-    .Services_banner {
-        margin-top: 82px;
-    }
-
     .Services_card_info ul {
         padding: 20px 15px 20px 30px;
     }
@@ -250,10 +215,6 @@
 }
 
 @media screen and (max-width: 320px) {
-    .Services_banner_title h1 {
-        font-size: 2rem;
-    }
-
     .Services_card_info h2 {
         font-size: 18px;
     }

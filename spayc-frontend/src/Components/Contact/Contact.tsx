@@ -53,8 +53,8 @@ const Contact: React.FC = () => {
   return (
     <div className='Contact_component'>
       <div className='Contact_sections'>
-        <section className="Contact_banner">
-          <div className="Contact_banner_title">
+        <section className="main_banner">
+          <div className="main_banner_title">
             <h1>¿Cómo Contactar con nosotros?</h1>
           </div>
         </section>
