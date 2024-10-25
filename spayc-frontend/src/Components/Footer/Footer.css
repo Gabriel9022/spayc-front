@@ -13,13 +13,12 @@
 
 .logo_container {
     width: 350px;
-}
-
-.logo_container a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 10px;
+}
+
+.logo_container a {
     text-decoration: none;
 }
 
@@ -111,6 +110,13 @@
     filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg) brightness(1) contrast(1);
 }
 
+.Rights_reserved_section {
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+    background-color: var(--quaternary-color);
+}
+
 
 /* Responsive section */
 
@@ -135,6 +141,11 @@
         flex-direction: column;
         align-items: center;
         row-gap: 50px;
+    }
+
+    .Rights_reserved_section p {
+        font-size: 12px;
+        text-wrap: balance;
     }
 }
 

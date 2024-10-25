@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
@@ -26,7 +26,7 @@ const App: React.FC = () => {
       <AuthProvider>
         <ServicesProvider>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Navigate to="/inicio" />} />
             <Route path="/inicio" element={<Home />} />
             <Route path="/servicios" element={
               <ServicesProvider>
