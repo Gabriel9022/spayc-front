@@ -15,9 +15,9 @@ const Footer: React.FC = () => {
             <div className='Footer_firstSection_container'>
                 <div className='logo_container'>
                     <Link to='/inicio'>
-                        <img src={logo}  alt="Logo SPAYC" className='logo' />
-                        <p>Servicios Profesionales de Apoyo y Cuidado para Personas Mayores</p>
+                        <img src={logo}  alt="Logo SPAYC" className='logo' />     
                     </Link>
+                    <p>Servicios Profesionales de Apoyo y Cuidado para Personas Mayores</p>
                 </div>
             </div>
             <div className='Footer_secondSection_container'>
@@ -42,9 +42,12 @@ const Footer: React.FC = () => {
                 </div>
             </div>
         </div>
+        <div className="Rights_reserved_section">
+        <p>{`© ${new Date().getFullYear()} SPAYC. Todos los derechos reservados - Powered by Gabriel Machado & Luis Tourn`}</p>
+      </div>
     </div>
-     :
-     null
+    :
+    null
     )
 }
 
