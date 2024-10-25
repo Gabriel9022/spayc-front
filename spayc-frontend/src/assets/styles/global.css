@@ -184,7 +184,7 @@ button {
 }
 
 @media screen and (max-width:360px) {
-  .home_banner {
+  .main_banner {
       margin-top: 82px;
   }
 }
