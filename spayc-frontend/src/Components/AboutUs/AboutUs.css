@@ -6,22 +6,8 @@
     position: relative;
 }
 
-.AboutUs_banner {
-    position: relative;
-    width: 100%;
-    height: 475px;
-    background-image: url('../../assets/images/Banners/banner_institutional.webp');
-    object-fit: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 60px;
-}
-
-.AboutUs_banner_title {
-    background: linear-gradient(90deg, var(--primary-color) 10%, rgba(255, 255, 255, 0) 70%);
-    height: 100%;
-    align-content: center;
-    padding-left: 90px;
+.AboutUs_sections .main_banner {
+    background-image: url('../../assets/images/Banners/img-prueba-banner.jpeg');
 }
 
 .AboutUs_intro_section {
@@ -172,25 +158,12 @@ padding: 20px 10px 20px 20px;
 }
 
 @media screen and (max-width: 768px) {
-    .AboutUs_banner {
-        margin-top: 122px;
-        height: 380px;
-    }
-
-    .AboutUs_banner_title {
-        padding-left: 20px;
-    }
-
     .AboutUs_mv_description_container p {
         text-wrap: balance;
     }
 }
 
 @media screen and (max-width: 450px) {
-    .AboutUs_banner {
-        margin-top: 118px;
-    }
-
     .AboutUs_intro_section p {
         padding: 20px 29px;
         font-size: 20px;
@@ -236,10 +209,6 @@ padding: 20px 10px 20px 20px;
 }
 
 @media screen and (max-width: 390px) {
-    .AboutUs_banner {
-        margin-top: 100px;
-    }
-
     .AboutUs_intro_section p {
         font-size: 18px;
         padding: 20px 28px;
@@ -265,10 +234,6 @@ padding: 20px 10px 20px 20px;
 }
 
 @media screen and (max-width: 360px) {
-    .AboutUs_banner {
-        margin-top: 82px;
-    }
-
     .AboutUs_intro_section p {
         font-size: 18px;
         padding: 20px 20px;
@@ -285,10 +250,6 @@ padding: 20px 10px 20px 20px;
 }
 
 @media screen and (max-width: 320px) {
-    .AboutUs_banner_title h1 {
-        font-size: 2rem;
-    }
-
     .AboutUs_description_container >p {
         padding: 20px 10px;
     }

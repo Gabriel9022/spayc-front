@@ -2,27 +2,12 @@
     position: relative;
 }
 
-.Contact_banner {
-    position: relative;
-    width: 100%;
-    height: 475px;
-    background-image: url('../../assets/images/Banners/banner_institutional.webp');
-    object-fit: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 60px;
-}
-
-.Contact_banner_title {
-    background: linear-gradient(90deg, var(--primary-color) 10%, rgba(255,255,255,0) 70%);
-    height: 100%;
-    align-content: center;
-    padding-left: 90px;
+.Contact_sections .main_banner {
+    background-image: url('../../assets/images/Banners/img-prueba-banner.jpeg');
 }
 
 .Contact_intro_section {
     background: linear-gradient(90deg, rgba(0, 65, 115, 0.5) 0%, rgba(182, 255, 255, 0.5) 100%);
-
     display: flex;
     justify-content: center;
     padding: 30px 0;
@@ -155,25 +140,12 @@ textarea.Contact_input {
 }
 
 @media screen and (max-width: 768px) {
-    .Contact_banner {
-        margin-top: 122px;
-        height: 380px;
-    }
-
-    .Contact_banner_title {
-        padding-left: 20px;
-    }
-
     .Contact_intro_description {
         font-size: 22px;
     }
 }
 
 @media screen and (max-width: 450px) {
-    .Contact_banner {
-        margin-top: 118px;
-    }
-
     .Contact_intro_section p {
         font-size: 20px;
         text-wrap: balance;
@@ -212,30 +184,18 @@ textarea.Contact_input {
 }
 
 @media screen and (max-width: 390px) {
-    .Contact_banner {
-        margin-top: 100px;
-    }
-
     .Contact_intro_section p {
         font-size: 18px;
     }
 }
 
 @media screen and (max-width: 360px){
-    .Contact_banner {
-        margin-top: 82px;
-    }
-
     .Contact_intro_section p {
         text-wrap: pretty;
     }
 }
 
 @media screen and (max-width: 320px) {
-    .Contact_banner_title h1 {
-        font-size: 2rem;
-    }
-
     .Contact_info_form_sections {
         padding: 30px 20px;
     }

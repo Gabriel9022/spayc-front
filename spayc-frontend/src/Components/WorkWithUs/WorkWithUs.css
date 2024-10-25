@@ -2,22 +2,8 @@
     position: relative;
 }
 
-.WorkWithUs_banner {
-    position: relative;
-    width: 100%;
-    height: 475px;
-    background-image: url('../../assets/images/Banners/banner_institutional.webp');
-    object-fit: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 60px;
-}
-
-.WorkWithUs_banner_title {
-    background: linear-gradient(90deg, var(--primary-color) 10%, rgba(255,255,255,0) 70%);
-    height: 100%;
-    align-content: center;
-    padding-left: 90px;
+.WorkWithUs_sections .main_banner {
+    background-image: url('../../assets/images/Banners/img-prueba-banner.jpeg');
 }
 
 .WorkWithUs_section_info {
@@ -217,15 +203,6 @@ textarea.WorkWithUs_input {
 }
 
 @media screen and (max-width: 768px) {
-    .WorkWithUs_banner {
-        margin-top: 122px;
-        height: 380px;
-    }
-
-    .WorkWithUs_banner_title {
-        padding-left: 20px;
-    }
-
     .WorkWithUs_info {
         padding: 20px;
     }
@@ -238,10 +215,6 @@ textarea.WorkWithUs_input {
 }
 
 @media screen and (max-width: 450px) {
-    .WorkWithUs_banner {
-        margin-top: 118px;
-    }
-
     .WorkWithUs_info_container {
         flex-wrap: wrap;
         column-gap: 0;
@@ -264,12 +237,6 @@ textarea.WorkWithUs_input {
 
     .WorkWithUs_form_container {
         padding: 0 30px;
-    }
-}
-
-@media screen and (max-width: 390px) {
-    .WorkWithUs_banner {
-        margin-top: 100px;
     }
 }
 
@@ -298,20 +265,12 @@ textarea.WorkWithUs_input {
 }
 
 @media screen and (max-width: 360px) {
-    .WorkWithUs_banner {
-        margin-top: 82px;
-    }
-
     .WorkWithUs_info_description {
         font-size: var(--font-size-p);
     }
 }
 
 @media screen and (max-width: 320px) {
-    .WorkWithUs_banner_title h1 {
-        font-size: 2rem;
-    }
-
     .WorkWithUs_perfil_description a {
         font-size: 14px;
     }

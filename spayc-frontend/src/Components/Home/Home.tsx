@@ -8,8 +8,8 @@ const Home: React.FC = () => {
   return (
     <div className="home_component">
       <div className="home_sections">
-        <section className="home_banner">
-          <div className="home_banner_title">
+        <section className="main_banner">
+          <div className="main_banner_title">
             <h1>Bienvenidos a SPAYC</h1>
             <span>
               Servicios Profesionales de Apoyo y Cuidado para Personas

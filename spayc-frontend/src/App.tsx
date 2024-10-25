@@ -13,6 +13,7 @@ import Login from './Components/Login/Login';
 import EditPanel from './Components/EditPanel/EditPanel';
 import ProtectedRoute from './Components/ProtectedRoutes/ProtectedRoute';
 import ScrollToTop from './hooks/scrollToTop';
+import NotFound from './Components/NotFound/NotFound';
 import { ServicesProvider } from './context/ServicesProvider';
 import { AuthProvider } from './context/AuthProvider';
 
@@ -49,6 +50,7 @@ const App: React.FC = () => {
                 </ServicesProvider>
               </AuthProvider>
             } />
+            <Route path='*' element={<NotFound/>} />
           </Routes>
         </ServicesProvider>
       </AuthProvider>
