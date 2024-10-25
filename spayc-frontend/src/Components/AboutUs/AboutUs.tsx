@@ -5,8 +5,8 @@ const AboutUs: React.FC = () => {
   return (
     <div className='AboutUs_component'>
       <div className='AboutUs_sections'>
-        <section className="AboutUs_banner">
-          <div className="AboutUs_banner_title">
+        <section className="main_banner">
+          <div className="main_banner_title">
             <h1>Sobre nosotros</h1>
           </div>
         </section>

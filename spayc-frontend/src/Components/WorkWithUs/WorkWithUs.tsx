@@ -70,8 +70,8 @@ const WorkWithUs: React.FC = () => {
   return (
     <div className='WorkWithUs_component'>
       <div className='WorkWithUs_sections'>
-        <section className="WorkWithUs_banner">
-          <div className="WorkWithUs_banner_title">
+        <section className="main_banner">
+          <div className="main_banner_title">
             <h1>¡Trabaja con Nosotros!</h1>
           </div>
         </section>

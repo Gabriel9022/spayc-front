@@ -11,8 +11,8 @@ const Services: React.FC = () => {
   return (
     <div className="Services_component">
       <div className="Services_sections">
-        <section className="Services_banner">
-          <div className="Services_banner_title">
+        <section className="main_banner">
+          <div className="main_banner_title">
             <h1>Nuestros Servicios</h1>
           </div>
         </section>

@@ -5,22 +5,8 @@
     align-items: center;
 }
 
-.professional_banner {
-    position: relative;
-    width: 100%;
-    height: 475px;
-    background-image: url('../../assets/images/Banners/banner_institutional.webp');
-    object-fit: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 60px;
-}
-
-.professional_banner_title {
-    background: linear-gradient(90deg, var(--primary-color) 10%, rgba(255,255,255,0) 70%);
-    height: 100%;
-    align-content: center;
-    padding-left: 90px;
+.professional_sections .main_banner {
+    background-image: url('../../assets/images/Banners/img-prueba-banner.jpeg');
 }
 
 .professional_profile {
@@ -247,15 +233,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .professional_banner {
-        margin-top: 122px;
-        height: 380px;
-    }
-
-    .professional_banner_title {
-        padding-left: 20px;
-    }
-
     .professional_profile_skills {
         flex-direction: column;
         align-items: center;       
@@ -291,10 +268,6 @@
 }
 
 @media screen and (max-width: 450px) {
-    .professional_banner {
-        margin-top: 118px;
-    }
-
     .professional_profile_intro p {
         padding: 20px 30px;
         font-size: 20px;
@@ -330,10 +303,6 @@
 }
 
 @media screen and (max-width: 390px) {
-    .professional_banner {
-        margin-top: 100px;
-    }
-
     .professional_profile_intro p {
         font-size: 18px;
     }
@@ -344,17 +313,7 @@
     }
 }
 
-@media screen and (max-width: 360px) {
-    .professional_banner {
-        margin-top: 82px;
-    }
-}
-
 @media screen and (max-width: 320px) {
-    .professional_banner_title h1 {
-        font-size: 2rem;
-    }
-
     .professional_profile_skills_description {
         padding: 20px;
     }

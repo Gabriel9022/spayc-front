@@ -5,8 +5,8 @@ const InstitutionalServices: React.FC = () => {
   return (
     <div className="InstitutionalServices_component">
       <div className="InstitutionalServices_sections">
-        <section className="InstitutionalServices_banner">
-            <div className="InstitutionalServices_banner_title">
+        <section className="main_banner">
+            <div className="main_banner_title">
               <h1>Servicios para instituciones</h1>
             </div>
         </section>
