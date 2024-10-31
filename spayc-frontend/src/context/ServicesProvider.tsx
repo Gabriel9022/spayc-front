@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { ServicesType } from '../utils/Interface';
-import { API_URL } from '../utils/config';
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 export const ServicesContext = createContext<{
   servicesArray: ServicesType[];

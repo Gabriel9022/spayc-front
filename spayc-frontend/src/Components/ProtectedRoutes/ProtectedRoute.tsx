@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
-import { API_URL } from '../../utils/config';
 import logo from "../../assets/images/Header/spayc_logo.svg";
 import "./ProtectedRoute.css";
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 const ProtectedRoute: React.FC<{ element: JSX.Element }> = ({ element }) => {
     const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);

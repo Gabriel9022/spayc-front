@@ -6,7 +6,8 @@ import './WorkWithUs.css'
 import { validationRules } from '../../utils/validationRules';
 import { WorkWithUsFormInputs } from '../../utils/Interface';
 import { useConfirmationModal } from '../../hooks/useConfirmationModal';
-import { API_URL } from '../../utils/config';
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2MB
 

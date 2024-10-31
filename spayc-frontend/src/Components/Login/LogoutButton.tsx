@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { API_URL } from '../../utils/config';
 import { useAuthContext } from '../../context/useAuthContext';
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 const LogoutButton: React.FC<{ showModal: (msg: string) => Promise<void>}> = ({showModal}) => {
   const navigate = useNavigate();

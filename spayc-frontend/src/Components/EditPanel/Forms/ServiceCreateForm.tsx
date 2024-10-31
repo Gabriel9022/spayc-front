@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { ServicesType } from '../../../utils/Interface';
 import { useServicesContext } from '../../../context/useServicesContext';
-import { API_URL } from '../../../utils/config';
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 interface ServiceCreateFormProps {
   onSubmit: SubmitHandler<{ service: ServicesType; panelSource: boolean; descriptionArray: string[]; file: FileList | null }>;

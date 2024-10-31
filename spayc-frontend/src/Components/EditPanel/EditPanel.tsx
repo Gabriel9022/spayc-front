@@ -7,7 +7,8 @@ import { ServicesType } from '../../utils/Interface';
 import './EditPanel.css';
 import LogoutButton from '../Login/LogoutButton';
 import { useConfirmationModal } from '../../hooks/useConfirmationModal';
-import { API_URL } from '../../utils/config';
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 const EditPanel: React.FC = () => {
 
