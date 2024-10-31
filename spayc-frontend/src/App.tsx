@@ -19,6 +19,12 @@ import { AuthProvider } from './context/AuthProvider';
 
 const App: React.FC = () => {
 
+  if (window.self !== window.top) {
+    console.log("La aplicación está dentro de un iframe");
+  } else {
+    console.log("La aplicación está en la ventana principal");
+  }
+
   return (
     <Router>
       <ScrollToTop />
@@ -50,7 +56,7 @@ const App: React.FC = () => {
                 </ServicesProvider>
               </AuthProvider>
             } />
-            <Route path='*' element={<NotFound/>} />
+            <Route path='*' element={<NotFound />} />
           </Routes>
         </ServicesProvider>
       </AuthProvider>
