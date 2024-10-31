@@ -55,6 +55,7 @@ const Login: React.FC = () => {
           headers: {
             'Content-Type': 'application/json',
           },
+          credentials: 'include',
           body: JSON.stringify({ user: parseInt(data.userName) }),
         });
         if (response.ok) {
