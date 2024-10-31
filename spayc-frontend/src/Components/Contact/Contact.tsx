@@ -4,7 +4,8 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { validationRules } from '../../utils/validationRules';
 import { ContactFormInputs } from '../../utils/Interface';
 import { useConfirmationModal } from '../../hooks/useConfirmationModal';
-import { API_URL } from '../../utils/config';
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 const Contact: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
