@@ -3,13 +3,14 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { validationRules } from '../../utils/validationRules';
 import { Inputs } from '../../utils/Interface';
-import { API_URL } from '../../utils/config';
 import WindowSize from '../../hooks/windowsSize';
 import MobileWarningModal from './Modal/MobileWarningModal';
 import { useAuthContext } from '../../context/useAuthContext';
 import LoggedUserModal from './Modal/LoggedUserModal';
 import './Login.css';
 import { useConfirmationModal } from '../../hooks/useConfirmationModal';
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 const Login: React.FC = () => {
   const [forgotPass, setForgotPass] = useState(false);
