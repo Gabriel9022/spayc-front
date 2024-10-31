@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { API_URL } from '../../utils/config';
 import { useAuthContext } from '../../context/useAuthContext';
 import { validationRules } from '../../utils/validationRules';
 import { PasswordInputs } from '../../utils/Interface';
 import './ChangePassword.css';
 import { useConfirmationModal } from '../../hooks/useConfirmationModal';
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 const ChangePassword: React.FC = () => {
     const navigate = useNavigate();
