@@ -1,5 +1,5 @@
 import React from "react";
-import professionalsImage from "../../assets/images/Professionals/professionalsImage.jpg";
+import professionalsImage from "../../assets/images/Professionals/professionalsImage.webp";
 import black_arrow from "../../assets/images/Professionals/black_arrow.png"
 import "./Profesionals.css";
 

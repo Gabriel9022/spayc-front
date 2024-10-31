@@ -1,6 +1,6 @@
 import React from "react";
 import handsImage from "../../assets/images/Home/manos.webp";
-import attendingPerson from "../../assets/images/Home/old-patient-suffering-from-parkinson.jpg";
+import attendingPerson from "../../assets/images/Home/old-patient-suffering-from-parkinson.webp";
 import "./Home.css";
 import { Link } from "react-router-dom";
 
