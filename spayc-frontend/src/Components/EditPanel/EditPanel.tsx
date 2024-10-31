@@ -70,6 +70,7 @@ const EditPanel: React.FC = () => {
         const response = await fetch(`${API_URL}/admin/newService`, {
           method: 'POST',
           body: formData,
+          credentials: 'include',
         });
 
         if (response.ok) {
