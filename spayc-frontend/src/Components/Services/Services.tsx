@@ -1,7 +1,7 @@
 import React from "react";
 import MappingServices from './MapServices/MappingServices';
 import { useServicesContext } from "../../context/useServicesContext";
-import attendingPerson from "../../assets/images/Home/old-patient-suffering-from-parkinson.jpg";
+import attendingPerson from "../../assets/images/Home/old-patient-suffering-from-parkinson.webp";
 import "./Services.css";
 
 const Services: React.FC = () => {
