@@ -23,33 +23,25 @@ const App: React.FC = () => {
     <Router>
       <ScrollToTop />
       <Header />
-      <Routes>
-        <Route path="/" element={<Navigate to="/inicio" />} />
-        <Route path="/inicio" element={<Home />} />
-        <Route path="/servicios" element={
-          <ServicesProvider>
-            <Services />
-          </ServicesProvider>
-        } />
-        <Route path="/instituciones" element={<InstitutionalServices />} />
-        <Route path="/profesionales" element={<Profesionals />} />
-        <Route path="/nosotros" element={<AboutUs />} />
-        <Route path="/trabaja-con-nosotros" element={<WorkWithUs />} />
-        <Route path="/contacto" element={<Contact />} />
-        <Route path="/login" element={
-          <AuthProvider>
-            <Login />
-          </AuthProvider>
-        } />
-        <Route path="/panel" element={
-          <AuthProvider>
-            <ServicesProvider>
+      <AuthProvider>
+        <ServicesProvider>
+          <Routes>
+            <Route path="/" element={<Navigate to="/inicio" />} />
+            <Route path="/inicio" element={<Home />} />
+            <Route path="/servicios" element={<Services />} />
+            <Route path="/instituciones" element={<InstitutionalServices />} />
+            <Route path="/profesionales" element={<Profesionals />} />
+            <Route path="/nosotros" element={<AboutUs />} />
+            <Route path="/trabaja-con-nosotros" element={<WorkWithUs />} />
+            <Route path="/contacto" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/panel" element={
               <ProtectedRoute element={<EditPanel />} />
-            </ServicesProvider>
-          </AuthProvider>
-        } />
-        <Route path='*' element={<NotFound />} />
-      </Routes>
+            } />
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+        </ServicesProvider>
+      </AuthProvider>
       <Footer />
     </Router>
   )
