@@ -19,47 +19,37 @@ import { AuthProvider } from './context/AuthProvider';
 
 const App: React.FC = () => {
 
-  if (window.self !== window.top) {
-    console.log("La aplicación está dentro de un iframe");
-  } else {
-    console.log("La aplicación está en la ventana principal");
-  }
-
   return (
     <Router>
       <ScrollToTop />
       <Header />
-      <AuthProvider>
-        <ServicesProvider>
-          <Routes>
-            <Route path="/" element={<Navigate to="/inicio" />} />
-            <Route path="/inicio" element={<Home />} />
-            <Route path="/servicios" element={
-              <ServicesProvider>
-                <Services />
-              </ServicesProvider>
-            } />
-            <Route path="/instituciones" element={<InstitutionalServices />} />
-            <Route path="/profesionales" element={<Profesionals />} />
-            <Route path="/nosotros" element={<AboutUs />} />
-            <Route path="/trabaja-con-nosotros" element={<WorkWithUs />} />
-            <Route path="/contacto" element={<Contact />} />
-            <Route path="/login" element={
-              <AuthProvider>
-                <Login />
-              </AuthProvider>
-            } />
-            <Route path="/panel" element={
-              <AuthProvider>
-                <ServicesProvider>
-                  <ProtectedRoute element={<EditPanel />} />
-                </ServicesProvider>
-              </AuthProvider>
-            } />
-            <Route path='*' element={<NotFound />} />
-          </Routes>
-        </ServicesProvider>
-      </AuthProvider>
+      <Routes>
+        <Route path="/" element={<Navigate to="/inicio" />} />
+        <Route path="/inicio" element={<Home />} />
+        <Route path="/servicios" element={
+          <ServicesProvider>
+            <Services />
+          </ServicesProvider>
+        } />
+        <Route path="/instituciones" element={<InstitutionalServices />} />
+        <Route path="/profesionales" element={<Profesionals />} />
+        <Route path="/nosotros" element={<AboutUs />} />
+        <Route path="/trabaja-con-nosotros" element={<WorkWithUs />} />
+        <Route path="/contacto" element={<Contact />} />
+        <Route path="/login" element={
+          <AuthProvider>
+            <Login />
+          </AuthProvider>
+        } />
+        <Route path="/panel" element={
+          <AuthProvider>
+            <ServicesProvider>
+              <ProtectedRoute element={<EditPanel />} />
+            </ServicesProvider>
+          </AuthProvider>
+        } />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
       <Footer />
     </Router>
   )

@@ -3,7 +3,7 @@
 }
 
 .Edit_panel_menu {
-    width: 15vw;
+    width: 15%;
     border: solid 1px grey;
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@
 }
 
 .Edit_panel_visualizer {
-    width: 85vw;
+    width: 85%;
     border: solid 1px grey;
 }
 
@@ -70,7 +70,6 @@
     box-shadow: 0 0 10px 1200px rgba(0, 0, 0, 0.493);
     left: 50%;
     transform: translateX(-50%);
-    top: 200px;
     max-width: 540px;
     width: 100%;
     overflow: hidden;
