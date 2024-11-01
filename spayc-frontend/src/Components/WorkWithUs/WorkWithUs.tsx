@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Link } from 'react-router-dom';
-import WorkWithUsImage from '../../assets/images/WorkWithUs/WorkWithUs.webp';
+import WorkWithUsImage from '../../assets/images/WorkWithUs/WorkWithUs_img.webp';
 import './WorkWithUs.css'
 import { validationRules } from '../../utils/validationRules';
 import { WorkWithUsFormInputs } from '../../utils/Interface';
