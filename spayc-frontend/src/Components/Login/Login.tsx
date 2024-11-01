@@ -23,8 +23,12 @@ const Login: React.FC = () => {
   const { isAuthenticated, setIsAuthenticated } = useAuthContext();
   const { showModal, ModalComponent } = useConfirmationModal();
 
-  const handlePanel = () => {
-    navigate('/panel')
+  const handlePanel = async () => {
+    if (isMobile) {
+      await showModal('Ingresa desde una computadora para usar el panel.');
+    } else {
+      navigate('/panel');
+    }
 }
 
   const handleLogin = () => {
