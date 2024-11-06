@@ -185,6 +185,12 @@
 
 /* Responsive section */
 
+@media screen and (min-width: 1400px) {
+    .professional_sections .main_banner {
+        background-position-y: -120px;
+    }
+}
+
 @media screen and (max-width: 1280px) {
     .professional_profile_skills_description {
         row-gap: 20px;
