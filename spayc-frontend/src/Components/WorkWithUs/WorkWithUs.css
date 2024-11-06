@@ -3,7 +3,13 @@
 }
 
 .WorkWithUs_sections .main_banner {
-    background-image: url('../../assets/images/Banners/img-prueba-banner.webp');
+    background-image: url('../../assets/images/Banners/trabaj_banner.webp');
+    transform: scaleX(-1);
+    background-position-y: -125px;
+}
+
+.WorkWithUs_sections .main_banner_title {
+    transform: scaleX(-1);
 }
 
 .WorkWithUs_section_info {
@@ -172,7 +178,17 @@ textarea.WorkWithUs_input {
 
 /* Responsive section */
 
+@media screen and (max-width: 1279px) {
+    .WorkWithUs_sections .main_banner {
+        background-position-y: -50px;
+    }    
+}
+
 @media screen and (max-width: 900px) {
+    .WorkWithUs_sections .main_banner {
+        background-position-y: center;
+    }    
+
     .WorkWithUs_section_info {
         width: 100%;
         padding: 0 30px;

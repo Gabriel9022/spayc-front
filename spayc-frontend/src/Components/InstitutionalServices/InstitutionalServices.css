@@ -7,7 +7,8 @@
 }
 
 .InstitutionalServices_sections .main_banner {
-    background-image: url('../../assets/images/Banners/img-prueba-banner.webp');
+    background-image: url('../../assets/images/Banners/inst_banner.webp');
+    background-position-y: unset;
 }
 
 .InstitutionalServices_introduction, .InstitucionalServices_why {
