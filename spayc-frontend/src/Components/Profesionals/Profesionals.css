@@ -6,7 +6,8 @@
 }
 
 .professional_sections .main_banner {
-    background-image: url('../../assets/images/Banners/img-prueba-banner.webp');
+    background-image: url('../../assets/images/Banners/prof_baner.webp');
+    background-position-y: unset;
 }
 
 .professional_profile {
@@ -303,6 +304,10 @@
 }
 
 @media screen and (max-width: 390px) {
+    .professional_sections .main_banner {
+        background-position-x: right;
+    }
+
     .professional_profile_intro p {
         font-size: 18px;
     }

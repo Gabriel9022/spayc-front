@@ -5,6 +5,7 @@
 
 .home_sections .main_banner {
     background-image: url('../../assets/images/Banners/in_banner.webp');
+    background-position-y: unset;
 }
 
 .home_introduction {
@@ -385,6 +386,10 @@
 }
 
 @media screen and (max-width: 450px) {
+    .home_sections .main_banner {
+        background-position-y: center;
+    }
+
     .home_introduction_us p {
         text-wrap: balance;
     }
