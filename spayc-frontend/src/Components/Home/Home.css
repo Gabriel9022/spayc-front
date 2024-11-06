@@ -301,6 +301,12 @@
 
 /* Responsive section */
 
+@media screen and (min-width: 1400px) {
+    .home_sections .main_banner {
+        background-position-y: -100px;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .home_introduction_container {
         flex-wrap: wrap;
