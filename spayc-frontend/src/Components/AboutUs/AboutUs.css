@@ -7,7 +7,8 @@
 }
 
 .AboutUs_sections .main_banner {
-    background-image: url('../../assets/images/Banners/img-prueba-banner.webp');
+    background-image: url('../../assets/images/Banners/nos_banner.webp');
+    background-size: cover;
 }
 
 .AboutUs_intro_section {
@@ -134,7 +135,18 @@ padding: 20px 10px 20px 20px;
 
 /* Responsive section */
 
+@media screen and (min-width: 1400px) {
+    .AboutUs_sections .main_banner {
+        background-position-y: -200px;
+    }
+}
+
 @media screen and (max-width: 900px) {
+    .AboutUs_sections .main_banner {
+        background-position-x: center;
+        background-position-y: center;
+    }
+
     .AboutUs_intro_section p {
         width: 100%;
         padding: 20px 40px;

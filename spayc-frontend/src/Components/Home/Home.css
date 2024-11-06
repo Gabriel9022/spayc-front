@@ -5,6 +5,7 @@
 
 .home_sections .main_banner {
     background-image: url('../../assets/images/Banners/in_banner.webp');
+    background-position-y: unset;
 }
 
 .home_introduction {
@@ -300,6 +301,12 @@
 
 /* Responsive section */
 
+@media screen and (min-width: 1400px) {
+    .home_sections .main_banner {
+        background-position-y: -100px;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .home_introduction_container {
         flex-wrap: wrap;
@@ -385,6 +392,10 @@
 }
 
 @media screen and (max-width: 450px) {
+    .home_sections .main_banner {
+        background-position-y: center;
+    }
+
     .home_introduction_us p {
         text-wrap: balance;
     }

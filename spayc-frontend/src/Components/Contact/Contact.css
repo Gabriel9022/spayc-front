@@ -3,7 +3,7 @@
 }
 
 .Contact_sections .main_banner {
-    background-image: url('../../assets/images/Banners/img-prueba-banner.webp');
+    background-image: url('../../assets/images/Banners/contact_banner.webp');
 }
 
 .Contact_intro_section {
@@ -123,6 +123,12 @@ textarea.Contact_input {
 
 /* Responsive section */
 
+@media screen and (max-width: 1279px) {
+    .Contact_sections .main_banner {
+        background-position-y: -100px;    
+    }
+}
+
 @media screen and (max-width: 900px) {
     .Contact_intro_section p {
         width: 100%;
@@ -146,6 +152,10 @@ textarea.Contact_input {
 }
 
 @media screen and (max-width: 450px) {
+    .Contact_sections .main_banner {
+        background-position-y: center;    
+    }
+
     .Contact_intro_section p {
         font-size: 20px;
         text-wrap: balance;
