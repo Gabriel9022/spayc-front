@@ -1,4 +1,5 @@
 import React from "react";
+import professionalsImage1 from "../../assets/images/Professionals/prof1.webp";
 import professionalsImage from "../../assets/images/Professionals/professionalsImage.webp";
 import black_arrow from "../../assets/images/Professionals/black_arrow.png"
 import "./Profesionals.css";
@@ -59,7 +60,7 @@ const Profesionals: React.FC = () => {
               </div>
             </div>
             <div className="professional_profile_skills_image">
-              <img src={professionalsImage} alt="imagen profesional" />
+              <img src={professionalsImage1} alt="imagen profesional" />
             </div>
           </div>
           <div className="professional_profile_skills">
