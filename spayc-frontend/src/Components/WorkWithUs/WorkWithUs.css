@@ -258,6 +258,17 @@ textarea.WorkWithUs_input {
     }
 }
 
+@media screen and (max-width: 390px) {
+    .WorkWithUs_form_container {
+        padding: 0;
+    }
+
+    .WorkWithUs_form {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
 @media screen and (max-width: 375px) {
     .WorkWithUs_perfil_description {
         font-size: var(--font-size-p);
