@@ -439,6 +439,16 @@
     .home_introduction_us p {
         text-align: left;
     }
+
+    .home_compromise,
+    .home_services {
+        padding: 0;
+    }
+
+    .home_professionals_container, 
+    .home_contact_container {
+        padding: 40px 20px;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -462,6 +472,12 @@
     }
 }
 
+@media screen and (max-width: 360px) {
+    .home_services_introduction {
+        max-width: 320px;
+    }
+}
+
 @media screen and (max-width: 320px) {
 
     .home_introduction_us p {
@@ -479,6 +495,10 @@
     .home_compromise_service p a, 
     .home_services_link p a {
         font-size: 14px;
+    }
+
+    .home_services_introduction {
+        max-width: 300px;
     }
 
     .home_services_introduction p {

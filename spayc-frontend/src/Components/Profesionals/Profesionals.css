@@ -270,17 +270,17 @@
         align-items: center;
     }
 
-    /* .professional_profile_skills_image:nth-child(2) {
+    .professional_profile_skills_image:nth-child(2) {
         width: 80%;
         height: auto;
     }
     .professional_profile_skills_image:nth-child(1) {
         width: 50%;
-    } SE COMENTA PORQUE HAY QUE AJUSTAR LUEGO EN TODAS LAS MEDIA QUERYS INFERIORES*/
-
+    } 
+/* 
     .professional_profile_skills_image {
         width: 50%;
-    }
+    } */
 }
 
 @media screen and (max-width: 450px) {
@@ -293,8 +293,9 @@
         text-wrap: balance;
     }
 
-    .professional_profile_skills_image {
+    .professional_profile_skills_image:nth-child(1) {
         width: 70%;
+        height: auto;
     }
 
     .professional_profile_functions h2 {
@@ -339,12 +340,16 @@
     }
 
     .professional_profile_skills_image {
-        width: 90%;
+        padding: 0;
     }
 
     .professional_profile_functions h2 {
         font-size: 20px;
         padding: 30px 20px 0px;
+    }
+        
+    .professional_profile_functions_item {
+        margin: 0;
     }
 
     .professional_profile_conclusion p {
