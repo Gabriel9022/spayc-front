@@ -53,6 +53,8 @@
 .WorkWithUs_image {
     width: 516px;
     height: 786px;
+    object-fit: cover;
+    object-position: left center;
     border-radius: 20px;
     box-shadow: 10px 10px 10px #00417330;
 }
@@ -253,6 +255,17 @@ textarea.WorkWithUs_input {
 
     .WorkWithUs_form_container {
         padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .WorkWithUs_form_container {
+        padding: 0;
+    }
+
+    .WorkWithUs_form {
+        width: 80%;
+        margin: 0 auto;
     }
 }
 

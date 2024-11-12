@@ -1,6 +1,7 @@
 import React from "react";
 import handsImage from "../../assets/images/Home/intr_img_home.webp";
-import attendingPerson from "../../assets/images/Home/old-patient-suffering-from-parkinson.webp";
+import homeProfessionalImage from "../../assets/images/Home/home_professional.webp";
+import homeContactImage from "../../assets/images/Home/home_contact.webp";
 import "./Home.css";
 import { Link } from "react-router-dom";
 
@@ -123,7 +124,7 @@ const Home: React.FC = () => {
         <section className="home_professionals">
           <div className="home_professionals_container">
             <div className="home_proffesionals_image">
-              <img src={attendingPerson} alt="Imagen de persona asistiendo a otra" />
+              <img src={homeProfessionalImage} alt="Imagen de persona asistiendo a otra" />
             </div>
             <div className="home_professionals_introduction">
               <p>Estos servicios son brindados por profesionales  altamente capacitados, con formación y experiencia en el sector.</p>
@@ -147,7 +148,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="home_contact_image">
-              <img src={attendingPerson} alt="Imagen de persona asistiendo a otra" />
+              <img src={homeContactImage} alt="Imagen de persona asistiendo a otra" />
             </div>
           </div>
         </section>

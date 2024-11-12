@@ -8,7 +8,7 @@
 
 .InstitutionalServices_sections .main_banner {
     background-image: url('../../assets/images/Banners/inst_banner.webp');
-    background-position-y: unset;
+    background-position-y: -100px;
 }
 
 .InstitutionalServices_introduction, .InstitucionalServices_why {
@@ -123,6 +123,10 @@
 }
 
 @media screen and (max-width: 900px) {
+    .InstitutionalServices_sections .main_banner {
+        background-position-y: unset;
+    }
+
     .InstitutionalServices_introduction p {
         width: 100%;
         padding: 20px 50px;
@@ -191,6 +195,12 @@
 
     .InstitutionalServices_why_final h3 {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .InstitutionalServices_sections .main_banner {
+        background-position-x: right;
     }
 }
 
