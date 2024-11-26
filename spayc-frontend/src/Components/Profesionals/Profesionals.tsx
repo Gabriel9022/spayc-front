@@ -111,14 +111,14 @@ const Profesionals: React.FC = () => {
                 <h3>Cuidado Personal</h3>
                 <p>
                   Asistencia con actividades de la vida diaria (AVD) como aseo
-                  personal, alimentación, movilidad, entre otras
+                  personal, alimentación, movilidad, entre otras.
                 </p>
               </div>
               <div className="professional_profile_functions_item">
                 <h3>Apoyo Emocional y Social</h3>
                 <p>
                   Proporcionar compañía, conversación y actividades recreativas
-                  que promuevan la interacción social y el bienestar emocional
+                  que promuevan la interacción social y el bienestar emocional.
                 </p>
               </div>
             </div>
@@ -128,7 +128,7 @@ const Profesionals: React.FC = () => {
                 <p>
                   Promoción de la salud en todas sus dimensiones, administración
                   de medicamentos según las indicaciones, y comunicación con
-                  profesionales de la salud cuando sea necesario
+                  profesionales de la salud cuando sea necesario.
                 </p>
               </div>
               <div className="professional_profile_functions_item">
@@ -136,7 +136,7 @@ const Profesionals: React.FC = () => {
                 <p>
                   Mantener registros precisos de las actividades diarias,
                   cambios en la salud y comunicación relevante con la familia y
-                  el equipo de atención
+                  el equipo de atención.
                 </p>
               </div>
             </div>
