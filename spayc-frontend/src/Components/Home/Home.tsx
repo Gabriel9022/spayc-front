@@ -25,7 +25,7 @@ const Home: React.FC = () => {
             </div>
             <div className="home_introduction_us">
               <p>
-                Somos un equipo de profesionales al cuidado integral y personalizado
+                Somos un equipo de profesionales dedicado al cuidado integral y personalizado
                 de personas mayores. Ofrecemos una amplia variedad de servicios
                 de la más alta calidad profesional y humana, diseñados para
                 brindar apoyo y cuidado a las personas mayores en el
@@ -130,7 +130,7 @@ const Home: React.FC = () => {
               <p>Estos servicios son brindados por profesionales  altamente capacitados, con formación y experiencia en el sector.</p>
               <p>Nos caracterizamos por trabajar desde un enfoque de derechos, con perspectiva de género y mirada gerontológica.</p>
               <div className="home_professionals_link">
-                <p>Conoce el perfil </p>
+                <p>Conocé el perfil de</p>
                 <p><Link to={"/profesionales"}>NUESTROS PROFESIONALES</Link></p>
               </div>
             </div>
@@ -142,7 +142,7 @@ const Home: React.FC = () => {
             <div className="home_contact_introduction">
               <p>Más  que un proveedor de servicios de cuidados, somos un socio de confianza en el bienestar y calidad de vida de las personas mayores. Estamos comprometidos con hacer una diferencia tangible en cada vida que acompañamos y nos enorgullece servir con pasión y excelencia en el campo gerontológico.</p>
               <div className="home_contact_link">
-                <p>PARA CONOCER MAS SOBRE COMO PODEMOS AYUDARLE, NO DUDE EN 
+                <p>PARA CONOCER MAS SOBRE COMO PODEMOS AYUDARTE, NO DUDES EN 
                   <span><Link to={"/contacto"}>CONTACTARNOS</Link></span> 
                 </p>
               </div>
