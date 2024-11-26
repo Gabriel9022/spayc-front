@@ -110,6 +110,12 @@
 
 /* Responsive section */
 
+@media screen and (min-width: 1400px) {
+    .InstitutionalServices_sections .main_banner {
+        background-position-y: -180px;
+    }
+}
+
 @media screen and (max-width: 1280px) {
     .InstitutionalServices_services {
         padding: 0 20px;
