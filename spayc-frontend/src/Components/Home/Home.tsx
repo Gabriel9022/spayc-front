@@ -117,7 +117,7 @@ const Home: React.FC = () => {
             </div>
           </div>
           <div className="home_services_link">
-            <p>Conoce nuestros</p>
+            <p>Conocé nuestros</p>
             <p><Link to={"/instituciones"}>SERVICIOS PARA INSTITUCIONES</Link></p>
           </div>
         </section>
