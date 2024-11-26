@@ -11,7 +11,7 @@ const AboutUs: React.FC = () => {
           </div>
         </section>
         <section className='AboutUs_intro_section'>
-          <p>Somos un equipo de profesionales dedicado al cuidado integral y personalizado de personas mayores, comprometida en ofrecer servicios de alta calidad que mejoren su vida y promuevan su bienestar y autonomía. Con un equipo especializado en gerontología y una profunda vocación de servicio, nos dedicamos a proporcionar soluciones adaptadas a las necesidades únicas de cada individuo y su familia, diseñando planes de cuidados personalizados que abarcan desde la asistencia en actividades básicas de la vida diaria hasta el apoyo y estimulación biopsicosocial.</p>
+          <p>Somos un equipo de profesionales dedicado al cuidado integral y personalizado de personas mayores, comprometidos en ofrecer servicios de alta calidad que mejoren su vida y promuevan su bienestar y autonomía. Con un equipo especializado en gerontología y una profunda vocación de servicio, nos dedicamos a proporcionar soluciones adaptadas a las necesidades únicas de cada individuo y su familia, diseñando planes de cuidados personalizados que abarcan desde la asistencia en actividades básicas de la vida diaria hasta el apoyo y estimulación biopsicosocial.</p>
         </section>
         <section className='AboutUs_description_section'>
           <div className='AboutUs_description_container'>
