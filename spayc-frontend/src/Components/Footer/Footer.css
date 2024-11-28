@@ -72,16 +72,25 @@
     margin-right: 10px;
 }
 
+.Footer_secondSection_ul li:nth-child(3) p {
+    font-size: 18px;
+}
+
 .Footer_secondSection_ul li:nth-child(2)::before {
+    background-image: url('../../assets/images/Footer/contact_icons/whatsapp_black_icon.png');
+}
+
+.Footer_secondSection_ul li:nth-child(3)::before {
     background-image: url('../../assets/images/Footer/contact_icons/telephone_black_icon.png');
 }
 
-.Footer_secondSection_ul li:nth-child(3)::before {
+.Footer_secondSection_ul li:nth-child(4)::before {
     background-image: url('../../assets/images/Footer/contact_icons/email_black_icon.png');
 }
 
-.Footer_secondSection_ul li:nth-child(2)::before, 
-.Footer_secondSection_ul li:nth-child(3)::before {
+.Footer_secondSection_ul li:nth-child(2)::before,
+.Footer_secondSection_ul li:nth-child(3)::before, 
+.Footer_secondSection_ul li:nth-child(4)::before {
     filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg) brightness(1) contrast(1);
 }
 
