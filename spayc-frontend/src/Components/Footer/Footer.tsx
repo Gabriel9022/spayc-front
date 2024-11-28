@@ -24,23 +24,27 @@ const Footer: React.FC = () => {
                 <ul className='Footer_secondSection_ul'>
                     <li><p>Contactanos</p></li>
                     <li><a href='https://wa.me/5493547571781?text=SPAYC%20leí%20los%20servicios%20en%20su%20página%20y%20quería%20consultar%20acerca%20de:' target="_blank" rel="noopener noreferrer">3547 571781</a></li>
+                    <li><p>351 6152355</p></li>
                     <li><a href='mailto:spaycserviciosprofesionales@gmail.com' target="_blank" rel="noopener noreferrer">spaycserviciosprofesionales@gmail.com</a></li>
                 </ul>
                 <div className='Footer_secondSection_socialMedia'> 
                     <div className='socialMedia_container'>
                         <div className='socialMedia_icon_container'>
                             <a className='Footer_socialmedia_link' href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                                <img className='socialMedia_icon' src={facebook_circle_black_icon} alt="" />
+                                <img className='socialMedia_icon' src={facebook_circle_black_icon} alt="facebook icon" />
                             </a>
                         </div>
                         <div className='socialMedia_icon_container'>
                             <a className='Footer_socialmedia_link' href='https://www.instagram.com/spaycserviciospersonasmayores/' target="_blank" rel="noopener noreferrer">
-                                <img className='socialMedia_icon' src={instagram_black_icon} alt=""/>                           
+                                <img className='socialMedia_icon' src={instagram_black_icon} alt="instagram icon"/>                           
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div className='Freepik_atribution_section'>
+            <p className='Freepik_atribution'>Algunas imágenes utilizadas en este sitio son propiedad de <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik.com</a></p>
         </div>
         <div className="Rights_reserved_section">
         <p>{`© ${new Date().getFullYear()} SPAYC. Todos los derechos reservados - Powered by Gabriel Machado & Luis Tourn`}</p>

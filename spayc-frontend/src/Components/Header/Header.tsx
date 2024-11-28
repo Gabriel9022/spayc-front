@@ -8,7 +8,7 @@ import NavMobile from './nav/NavMobile';
 import WindowSize from '../../hooks/windowsSize';
 import facebook_circle_black_icon from '../../assets/images/Footer/social_media_icons/facebook_circle_black_icon.png';
 import instagram_black_icon from '../../assets/images/Footer/social_media_icons/instagram_black_icon.png';
-import tel from '../../assets/images/Footer/contact_icons/telephone_black_icon.png';
+import tel from '../../assets/images/Footer/contact_icons/whatsapp_black_icon.png';
 
 const Header: React.FC = () => {
   const { pathname } = useLocation();
