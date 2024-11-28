@@ -43,6 +43,9 @@ const Footer: React.FC = () => {
                 </div>
             </div>
         </div>
+        <div className='Freepik_atribution_section'>
+            <p className='Freepik_atribution'>Algunas imágenes utilizadas en este sitio son propiedad de <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik.com</a></p>
+        </div>
         <div className="Rights_reserved_section">
         <p>{`© ${new Date().getFullYear()} SPAYC. Todos los derechos reservados - Powered by Gabriel Machado & Luis Tourn`}</p>
       </div>
