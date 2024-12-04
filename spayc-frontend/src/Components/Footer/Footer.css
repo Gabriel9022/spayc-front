@@ -72,10 +72,6 @@
     margin-right: 10px;
 }
 
-.Footer_secondSection_ul li:nth-child(3) p {
-    font-size: 18px;
-}
-
 .Footer_secondSection_ul li:nth-child(2)::before {
     background-image: url('../../assets/images/Footer/contact_icons/whatsapp_black_icon.png');
 }
@@ -163,10 +159,6 @@
     .Footer_secondSection_ul li {
         font-size: 16px;
     }
-
-    .Footer_secondSection_ul li:nth-child(3) p {
-        font-size: 16px;
-    }
 }
 
 @media screen and (max-width: 450px) {
@@ -209,10 +201,6 @@
     }
 
     .Footer_secondSection_ul li {
-        font-size: 14px;
-    }
-
-    .Footer_secondSection_ul li:nth-child(3) p {
         font-size: 14px;
     }
 }
