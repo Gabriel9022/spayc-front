@@ -68,7 +68,7 @@ const Header: React.FC = () => {
                     <div className='Header_info_block'>
                       <div className='socialMedia_container_h'>
                         <div className='socialMedia_icon_container'>
-                          <a className='Footer_socialmedia_link' href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                          <a className='Footer_socialmedia_link' href="https://www.facebook.com/profile.php?id=61564592275289" target="_blank" rel="noopener noreferrer">
                             <img className='socialMedia_icon' src={facebook_circle_black_icon} alt="" />
                           </a>
                         </div>
