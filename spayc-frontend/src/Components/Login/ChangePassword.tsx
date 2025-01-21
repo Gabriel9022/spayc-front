@@ -61,7 +61,7 @@ const ChangePassword: React.FC = () => {
             if (logoutResponse.ok) {
                 setIsAuthenticated(false);
                 localStorage.setItem('isAuthenticated', 'false');
-                navigate('/login');
+                navigate('/sp-login');
             } else {
                 await showModal('Error al cerrar la sesión. Inténtalo de nuevo.');
             }

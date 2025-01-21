@@ -1,5 +1,6 @@
 .loading_logo_container {
     margin: 0 auto;
+    margin-bottom: 60px;
     width: 300px;
     height: auto;
     display: flex;

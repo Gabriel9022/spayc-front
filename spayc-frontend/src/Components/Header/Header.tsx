@@ -12,7 +12,7 @@ import tel from '../../assets/images/Footer/contact_icons/whatsapp_black_icon.pn
 
 const Header: React.FC = () => {
   const { pathname } = useLocation();
-  const url = pathname !== '/panel' && pathname !== '/login';
+  const url = pathname !== '/sp-panel' && pathname !== '/sp-login';
   const windowWidth = WindowSize();
   const isMobile = windowWidth <= 768;
   const [isSticky, setIsSticky] = useState(false);

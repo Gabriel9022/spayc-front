@@ -34,8 +34,8 @@ const App: React.FC = () => {
             <Route path="/nosotros" element={<AboutUs />} />
             <Route path="/trabaja-con-nosotros" element={<WorkWithUs />} />
             <Route path="/contacto" element={<Contact />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/panel" element={
+            <Route path="/sp-login" element={<Login />} />
+            <Route path="/sp-panel" element={
               <ProtectedRoute element={<EditPanel />} />
             } />
             <Route path='*' element={<NotFound />} />
