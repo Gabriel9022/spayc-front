@@ -27,7 +27,7 @@ const Login: React.FC = () => {
     if (isMobile) {
       await showModal('Ingresa desde una computadora para usar el panel.');
     } else {
-      navigate('/panel');
+      navigate('/sp-panel');
     }
 }
 
@@ -64,12 +64,12 @@ const Login: React.FC = () => {
         });
         if (response.ok) {
           await showModal('Revisa tu mail');
-          window.location.href = '/login'; // Redireccionar a otra página
+          window.location.href = '/sp-login'; // Redireccionar a otra página
         }
 
       } else {
         // Lógica de inicio de sesión
-        const response: Response = await fetch(`${API_URL}/users/login`, {
+        const response: Response = await fetch(`${API_URL}/users/sp-login`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ const Login: React.FC = () => {
             if (isMobile) {
               setShowMobileWarning(true);
             } else {
-              navigate('/panel');
+              navigate('/sp-panel');
             }
           } else {
             navigate('/inicio');

@@ -7,7 +7,7 @@ import logo from '../../assets/images/Footer/spayc_logo.svg';
 
 const Footer: React.FC = () => {
     const { pathname } = useLocation();
-    const url = pathname !== '/panel' && pathname !== '/login';
+    const url = pathname !== '/sp-panel' && pathname !== '/sp-login';
   return (
     url ?
     <div className='Footer_component'>
