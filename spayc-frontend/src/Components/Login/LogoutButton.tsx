@@ -21,7 +21,7 @@ const LogoutButton: React.FC<{ showModal: (msg: string) => Promise<void>}> = ({s
         await showModal('Sesión cerrada correctamente');
         setIsAuthenticated(false);
         localStorage.setItem('isAuthenticated', 'false');
-        navigate('/login');
+        navigate('/sp-login');
       } else {
         await showModal('Error al cerrar sesión');
       }

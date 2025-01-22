@@ -18,7 +18,7 @@ const ProtectedRoute: React.FC<{ element: JSX.Element }> = ({ element }) => {
     useEffect(() => {
         const authValidation: () => Promise<void> = async () => {
             try {
-                const response = await fetch(`${API_URL}/users/panel`, {
+                const response = await fetch(`${API_URL}/users/sp-panel`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const ProtectedRoute: React.FC<{ element: JSX.Element }> = ({ element }) => {
                         </div>
                     </div>
                 }
-                {loginSuccessful && <Navigate to="/login" replace />}
+                {loginSuccessful && <Navigate to="/sp-login" replace />}
             </>
         );
     }
