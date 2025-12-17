@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import type { ReactElement } from "react";
 import { Navigate } from 'react-router-dom';
 import logo from "../../assets/images/Header/spayc_logo.svg";
 import "./ProtectedRoute.css";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
-const ProtectedRoute: React.FC<{ element: JSX.Element }> = ({ element }) => {
+const ProtectedRoute: React.FC<{ element: ReactElement  }> = ({ element }) => {
     const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
     const [loginSuccessfulModal, setLoginSuccessfulModal] = useState<boolean>(false);
     const [loginSuccessful, setLoginSuccessful] = useState<boolean>(false);
@@ -33,6 +34,7 @@ const ProtectedRoute: React.FC<{ element: JSX.Element }> = ({ element }) => {
                     setLoginSuccessfulModal(true);
                 }
             } catch (error) {
+                console.error(error);
                 setIsAuthenticated(false);
             }
         };
